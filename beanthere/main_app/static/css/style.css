@@ -37,11 +37,11 @@
   }
 
   .Rectangle-5 {
-    width: 50px;
+    width: 330px;
     height: 15px;
     flex-grow: 0;
     margin: 11px 19px 5px 13px;
-    padding: 17px 290.8px 17px 16.3px;
+    padding: 17px 0px 17px 16.3px;
     border-radius: 16px;
     border: solid 0.5px #909090;
     background-color: #fff;
@@ -49,11 +49,11 @@
   }
 
   .Rectangle-6 {
-    width: 80px;
+    width: 330px;
     height: 15px;
     flex-grow: 0;
     margin: 10px 19px 11px 13px;
-    padding: 17px 261.8px 17px 16.3px;
+    padding: 17px 0px 17px 16.3px;
     border-radius: 16px;
     border: solid 0.5px #909090;
     background-color: #fff;
@@ -82,7 +82,7 @@
     background-color: #d9d9d9;
   }
 
-  button {
+  .login-btn {
     width: 344px;
     height: 48px;
     display: flex;
@@ -95,5 +95,9 @@
     color: white;
     background-color: #4e4235;
     font-family: Mulish;
+  }
+
+  .signup-btn {
+    margin: 25px 15px 0 16px;
   }
 }
