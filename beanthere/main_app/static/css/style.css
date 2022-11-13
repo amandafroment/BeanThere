@@ -1,5 +1,120 @@
 @import url("https://fonts.googleapis.com/css2?family=Mulish:wght@500&display=swap");
 
+.Desktop---17 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50%;
+  flex-grow: 0;
+  /* padding: 45px 467px 44px 517px; */
+  background-color: #fff;
+}
+
+.header-logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+.logo {
+  width: 348px;
+  height: 368px;
+  margin: 200px 25px 0 29px;
+  align-self: center;
+}
+
+.Welcome {
+  align-self: center;
+  margin: 10px 50px 21px 34px;
+  font-family: Mulish;
+  font-size: 55px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  color: #a7a7a7;
+}
+
+.desktop-inputs {
+  display: flex;
+  flex-direction: column;
+}
+
+.Rectangle-5 {
+  width: 343px;
+  height: 30px;
+  flex-grow: 0;
+  margin: 3px 73px 12px 40px;
+  padding: 17px 0px 17px 25px;
+  border-radius: 16px;
+  border: solid 0.5px #1f1f1f;
+  background-color: #fff;
+  font-family: Mulish;
+  font-size: 16px;
+}
+
+.Rectangle-6 {
+  width: 343px;
+  height: 30px;
+  flex-grow: 0;
+  margin: 3px 73px 11px 40px;
+  padding: 16px 0px 16px 25px;
+  border-radius: 16px;
+  border: solid 0.5px #1f1f1f;
+  background-color: #fff;
+  font-family: Mulish;
+  font-size: 16px;
+}
+
+.Forgot-Password {
+  float: right;
+  height: 14px;
+  margin: 11px 0px 18px 200px;
+  font-family: Mulish;
+  font-size: 16px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  color: #a7a7a7;
+  text-decoration: underline;
+}
+
+.login-btn {
+  width: 344px;
+  height: 48px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 15px 69px 0 43px;
+  padding: 17px 120px;
+  border-radius: 16px;
+  background-color: #4e4235;
+  color: white;
+  font-family: Mulish;
+  font-size: 18px;
+}
+
+.login {
+  background-color: #d9d9d9;
+  border: solid 0.5px #d9d9d9;
+  color: #4e4235;
+}
+
+.Rectangle-4 {
+  width: 350px;
+  height: 5px;
+  margin: 50px 66px 128px 40px;
+  border-radius: 10px;
+  background-color: #d9d9d9;
+  font-family: Mulish;
+}
+
 @media only screen and (max-width: 450px) {
   .iPhone-13-13-Pro---29 {
     width: 390px;
