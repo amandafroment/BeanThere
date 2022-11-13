@@ -1,18 +1,30 @@
-@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@500&display=swap");
 
 @media only screen and (max-width: 450px) {
   .iPhone-13-13-Pro---29 {
     width: 390px;
     height: 844px;
     flex-grow: 0;
-    padding: 0 7px 163px 8px;
+    padding: 0 0px 163px 0px;
     background-color: #fff;
   }
 
+  .header-logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .logo {
+    width: 87px;
+    height: 92px;
+    margin: 70px 0 11px 13px;
+  }
+
   .Welcome {
-    width: 149px;
+    width: 50%;
     height: 32px;
-    margin: 94px 126px 47px 0;
+    margin: 94px 0px 47px 0;
     font-family: Mulish;
     font-size: 32px;
     font-weight: bold;
@@ -28,7 +40,7 @@
     width: 50px;
     height: 15px;
     flex-grow: 0;
-    margin: 11px 19px 16px 13px;
+    margin: 11px 19px 5px 13px;
     padding: 17px 290.8px 17px 16.3px;
     border-radius: 16px;
     border: solid 0.5px #909090;
@@ -37,10 +49,10 @@
   }
 
   .Rectangle-6 {
-    width: 50px;
+    width: 80px;
     height: 15px;
     flex-grow: 0;
-    margin: 16px 19px 11px 13px;
+    margin: 10px 19px 11px 13px;
     padding: 17px 261.8px 17px 16.3px;
     border-radius: 16px;
     border: solid 0.5px #909090;
@@ -49,18 +61,17 @@
   }
 
   .Forgot-Password {
+    float: right;
     width: 121px;
     height: 14px;
-    margin: 11px 21px 41px 133px;
+    margin: 11px 21px 0px 5px;
     font-family: Mulish;
     font-size: 14px;
     font-weight: bold;
-    font-stretch: normal;
-    font-style: normal;
     line-height: 1;
     letter-spacing: normal;
-    text-align: left;
     color: #a7a7a7;
+    text-decoration: underline;
   }
 
   .Rectangle-4 {
@@ -78,7 +89,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin: 128px 15px 0 16px;
+    margin: 65px 15px 0 16px;
     padding: 17px 120px;
     border-radius: 16px;
     color: white;
