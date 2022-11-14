@@ -19,7 +19,7 @@
         <img src="/static/css/images/logo.png" class="logo" />
         <span class="Welcome"> Welcome </span>
       </div>
-      <div class="desktop-inputs">
+      <div class="desktop-inputs mobile-inputs">
         <form method="post" action="{% url 'login' %}">
           {% csrf_token %} {{ form.as_div }}
 
