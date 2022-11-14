@@ -8,9 +8,13 @@
 </div>
 
 <div>
-  <button class="login-btn">Login</button>
+  <button class="login-btn">
+    <a href="{% url 'login' %}">Login</a>
+  </button>
 
-  <button class="login-btn join-us-btn">Join Us</button>
+  <button class="login-btn join-us-btn">
+    <a href="{% url 'signup' %}">Join Us</a>
+  </button>
 </div>
 
 {% endblock %}
