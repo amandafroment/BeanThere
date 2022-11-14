@@ -43,6 +43,11 @@ form {
   flex-direction: column;
 }
 
+.desktop-inputs {
+  display: flex;
+  flex-direction: column;
+}
+
 .Rectangle-5 {
   width: 343px;
   height: 30px;

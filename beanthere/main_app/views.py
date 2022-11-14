@@ -6,7 +6,7 @@ def landing(request):
     return render(request, 'landing.html')
 
 def signup (request):
-  return render(request, 'signup.html')
+  return render(request, 'registration/signup.html')
 
 # Define the home view
 def home(request):
