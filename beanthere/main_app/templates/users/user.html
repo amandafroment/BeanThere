@@ -1,5 +1,23 @@
 {% extends 'base.html' %} {% block content %}
 
-<h1>User Profile</h1>
+<h1>Hi, {{ user.name }} !</h1>
+
+<div class="Search">
+<h2>Recently Bean</h2>
+
+{% for review in reviews %}
+    <a href="{% url 'detail' review.id %}">
+        <div class="card">
+            <div class="card-content">
+                <span class="card-title">{{ review.cafe_name }}</span>
+
+                {% endif %}
+            </div>
+        </div>
+    </a> 
+{% endfor %}
+</div>
+
+<!-- <h2>Favourite Beans</h2> -->
 
 {% endblock %}
