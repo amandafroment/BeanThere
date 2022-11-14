@@ -1,26 +1,31 @@
-{% extends 'base.html' %} {% block content %}
+{% load static %}
 
-<div class="iPhone-13-13-Pro---29 Desktop---17">
-  <div class="header-logo">
-    <img src="/static/css/images/logo.png" class="logo" />
-    <span class="Welcome">Join Us</span>
-  </div>
-  <div class="desktop-inputs">
-    <form method="post" action="{% url 'home' %}">
-      {% csrf_token %} {{ form }}
-      <input
-        type="text"
-        class="Rectangle-5"
-        placeholder="Full Name"
-        value="Full Name"
-      />
-      <input class="Rectangle-6" placeholder="Email" />
-      <input class="Rectangle-6" placeholder="Password" />
-      <input class="Rectangle-6" placeholder="Re-type Password" />
-      <input type="submit" class="signup-btn login-btn" value="Sign Up" />
-      <input type="hidden" name="next" value="{{ next }}" />
-    </form>
-  </div>
-</div>
-
-{% endblock %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/style.css' %}"
+    />
+    <title>Bean There</title>
+  </head>
+  <body>
+    <div class="iPhone-13-13-Pro---29 Desktop---17">
+      <div class="header-logo">
+        <img src="/static/css/images/logo.png" class="logo" />
+        <span class="Welcome">Join Us</span>
+      </div>
+      <div class="desktop-inputs">
+        <form method="post" action="{% url 'home' %}">
+          {% csrf_token %} {{ form }}
+          <input type="submit" class="signup-btn login-btn" value="Sign Up" />
+          <input type="hidden" name="next" value="{{ next }}" />
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
