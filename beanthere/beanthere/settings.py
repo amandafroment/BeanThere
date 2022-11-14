@@ -124,3 +124,8 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 LOGIN_REDIRECT_URL = '/home/'
+
+import environ
+environ.Env()
+environ.Env.read_env()
+LOGOUT_REDIRECT_URL = '/'

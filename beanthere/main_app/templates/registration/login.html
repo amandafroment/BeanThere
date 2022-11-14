@@ -7,11 +7,17 @@
   </div>
   <div class="desktop-inputs">
     <form method="post" action="{% url 'login' %}">
-      {% csrf_token %} {{ form.as_p }}
+      {% csrf_token %} {{ form.as_div }}
+      <label for="id_email">
+        <input
+          class="Rectangle-5"
+          name="email"
+          placeholder="Email"
+          id="id_email"
+      /></label>
 
-      <input class="Rectangle-5" placeholder="Email" />
       <input
-        typ="password"
+        type="password"
         class="Rectangle-6"
         placeholder="Password"
         style="-webkit-text-security: circle"
@@ -22,7 +28,9 @@
   </div>
   <span class="Forgot-Password"> Forgot Password? </span>
   <div class="Rectangle-4"></div>
-  <button class="login-btn join-us-btn">Join Us</button>
+  <button class="login-btn join-us-btn">
+    <a href="{% url 'signup' %}">Join Us</a>
+  </button>
 </div>
 
 {% endblock %}
