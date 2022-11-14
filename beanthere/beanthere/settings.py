@@ -128,4 +128,5 @@ LOGIN_REDIRECT_URL = '/home/'
 import environ
 environ.Env()
 environ.Env.read_env()
+
 LOGOUT_REDIRECT_URL = '/'

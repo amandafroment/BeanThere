@@ -1,36 +1,37 @@
-{% extends 'base.html' %} {% block content %}
+{% load static %}
 
-<div class="iPhone-13-13-Pro---29 Desktop---17">
-  <div class="header-logo">
-    <img src="/static/css/images/logo.png" class="logo" />
-    <span class="Welcome"> Welcome </span>
-  </div>
-  <div class="desktop-inputs">
-    <form method="post" action="{% url 'login' %}">
-      {% csrf_token %} {{ form.as_div }}
-      <label for="id_email">
-        <input
-          class="Rectangle-5"
-          name="email"
-          placeholder="Email"
-          id="id_email"
-      /></label>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/style.css' %}"
+    />
+    <title>Bean There</title>
+  </head>
+  <body>
+    <div class="iPhone-13-13-Pro---29 Desktop---17">
+      <div class="header-logo">
+        <img src="/static/css/images/logo.png" class="logo" />
+        <span class="Welcome"> Welcome </span>
+      </div>
+      <div class="desktop-inputs">
+        <form method="post" action="{% url 'login' %}">
+          {% csrf_token %} {{ form.as_div }}
 
-      <input
-        type="password"
-        class="Rectangle-6"
-        placeholder="Password"
-        style="-webkit-text-security: circle"
-      />
-      <input class="login-btn login" type="submit" value="Login" />
-      <input type="hidden" name="next" value="{{ next }}" />
-    </form>
-  </div>
-  <span class="Forgot-Password"> Forgot Password? </span>
-  <div class="Rectangle-4"></div>
-  <button class="login-btn join-us-btn">
-    <a href="{% url 'signup' %}">Join Us</a>
-  </button>
-</div>
-
-{% endblock %}
+          <input class="login-btn login" type="submit" value="Login" />
+          <input type="hidden" name="next" value="{{ next }}" />
+        </form>
+      </div>
+      <span class="Forgot-Password"> Forgot Password? </span>
+      <div class="Rectangle-4"></div>
+      <button class="login-btn join-us-btn">
+        <a href="{% url 'signup' %}">Join Us</a>
+      </button>
+    </div>
+  </body>
+</html>
