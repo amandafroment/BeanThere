@@ -38,7 +38,7 @@
   color: #a7a7a7;
 }
 
-.desktop-inputs {
+form {
   display: flex;
   flex-direction: column;
 }
@@ -192,7 +192,7 @@
   .Rectangle-4 {
     width: 350px;
     height: 5px;
-    margin: 54px 12px 128px 13px;
+    margin: 54px 12px 100px 13px;
     border-radius: 10px;
     background-color: #d9d9d9;
   }
@@ -212,7 +212,11 @@
     font-family: Mulish;
   }
 
+  .join-us-btn {
+    margin: 15px 15px 0 16px;
+  }
+
   .signup-btn {
-    margin: 25px 15px 0 16px;
+    margin: 5px 15px 0 16px;
   }
 }
