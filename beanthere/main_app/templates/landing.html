@@ -14,16 +14,17 @@
   </head>
   <body class="landing-container">
     <div class="iPhone-13-13-Pro---29 Desktop---17">
-      <div class="header-logo">
-        <img src="/static/css/images/logo.png" class="logo" />
-        <span class="Welcome"> Bean There </span>
+      <div class="landing-header">
+        <img src="/static/css/images/logo.png" class="mobile-logo" />
+        <div class="header-container">
+          <span class="landing-title"> Bean There</span>
+        </div>
       </div>
     </div>
     <div>
       <button class="login-btn landing-btn">
         <a href="{% url 'login' %}">Login</a>
       </button>
-
       <button class="login-btn join-us-btn">
         <a href="{% url 'signup' %}">Join Us</a>
       </button>
