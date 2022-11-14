@@ -6,7 +6,7 @@
     <span class="Welcome">Join Us</span>
   </div>
   <div class="desktop-inputs">
-    <form method="post" action="{% url 'signup' %}">
+    <form method="post" action="{% url 'home' %}">
       {% csrf_token %} {{ form }}
       <input
         type="text"
@@ -18,7 +18,7 @@
       <input class="Rectangle-6" placeholder="Password" />
       <input class="Rectangle-6" placeholder="Re-type Password" />
       <input type="submit" class="signup-btn login-btn" value="Sign Up" />
-      <!-- <input type="hidden" name="next" value="{{ next }}" /> -->
+      <input type="hidden" name="next" value="{{ next }}" />
     </form>
   </div>
 </div>
