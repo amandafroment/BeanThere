@@ -297,6 +297,15 @@ label {
   background-color: #fff;
 }
 
+.Rectangle-16 {
+  width: 125px;
+  height: 36px;
+  flex-grow: 0;
+  margin: 8px 7px 5px 0;
+  padding: 9px 33px 5px 37px;
+  border-radius: 15px;
+  background-color: #d9d9d9;
+}
 .Rectangle-17 {
   width: 390px;
   height: 844px;

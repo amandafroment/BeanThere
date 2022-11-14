@@ -6,7 +6,7 @@ import os
 import argparse
 import json
 import pprint
-# import requests
+import requests
 import sys
 import urllib
 
@@ -110,3 +110,4 @@ def api_details(host, path, api_key, yelp_id):
   print(u'Querying {0} ...'.format(url))
   response = requests.request('GET', url, headers=headers)
   return response.json()
+
