@@ -1,20 +1,32 @@
-{% extends 'base.html' %} {% block content %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/style.css' %}"
+    />
+    <title>Bean There</title>
+  </head>
+  <body class="landing-container">
+    <div class="iPhone-13-13-Pro---29 Desktop---17">
+      <div class="header-logo">
+        <img src="/static/css/images/logo.png" class="logo" />
+        <span class="Welcome"> Bean There </span>
+      </div>
+    </div>
+    <div>
+      <button class="login-btn landing-btn">
+        <a href="{% url 'login' %}">Login</a>
+      </button>
 
-<div class="iPhone-13-13-Pro---29 Desktop---17">
-  <div class="header-logo">
-    <img src="/static/css/images/logo.png" class="logo" />
-    <span class="Welcome"> Bean There </span>
-  </div>
-</div>
-
-<div>
-  <button class="login-btn">
-    <a href="{% url 'login' %}">Login</a>
-  </button>
-
-  <button class="login-btn join-us-btn">
-    <a href="{% url 'signup' %}">Join Us</a>
-  </button>
-</div>
-
-{% endblock %}
+      <button class="login-btn join-us-btn">
+        <a href="{% url 'signup' %}">Join Us</a>
+      </button>
+    </div>
+  </body>
+</html>
