@@ -9,5 +9,5 @@ urlpatterns = [
     path('details/', views.details, name='details'), # Individual Cafe Details
     path('user/', views.user, name='user'), # User Profile
     path('review/', views.review, name='review'), # Review Form
-    path('accounts/signup', views.signup, name='signup'),
+    path('accounts/signup/', views.signup, name='signup'),
 ]

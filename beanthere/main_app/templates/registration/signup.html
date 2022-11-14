@@ -6,12 +6,16 @@
     <span class="Welcome">Join Us</span>
   </div>
   <div class="desktop-inputs">
-    <input class="Rectangle-5" placeholder="Full Name" />
-    <input class="Rectangle-6" placeholder="Email" />
-    <input class="Rectangle-6" placeholder="Password" />
-    <input class="Rectangle-6" placeholder="Re-type Password" />
+    <form method="post" action="{% url 'signup' %}">
+      {% csrf_token %} {{ form.as_p }}
+      <input class="Rectangle-5" placeholder="Full Name" />
+      <input class="Rectangle-6" placeholder="Email" />
+      <input class="Rectangle-6" placeholder="Password" />
+      <input class="Rectangle-6" placeholder="Re-type Password" />
+      <input type="submit" class="signup-btn login-btn" value="Sign Up" />
+      <!-- <input type="hidden" name="next" value="{{ next }}" /> -->
+    </form>
   </div>
-  <button class="signup-btn login-btn">Sign Up</button>
 </div>
 
 {% endblock %}
