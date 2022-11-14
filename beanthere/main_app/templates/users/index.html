@@ -1,3 +1,10 @@
 {% for b in businesses %}
-<div>{{ b.name }}</div>
+<div style="margin: 30px; border: 2px black solid">
+  <div><a href="{% url 'details' b.id %}">{{ b.name }}</a></div>
+  <div>Rating: {{ b.rating }}</div>
+  <div>Review Count: {{ b.review_count }}</div>
+  <div><a href="{{ b.url }}">Link to Yelp Page</a></div>
+  <div>Address: {{ b.location.display_address }}</div>
+  <img src="{{ b.image_url }}" width="250px" />
+</div>
 {% endfor %}

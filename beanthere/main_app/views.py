@@ -13,9 +13,11 @@ import urllib
 from urllib.error import HTTPError
 from urllib.parse import quote
 from urllib.parse import urlencode
+from urllib.parse import urljoin
 
 API_HOST = 'https://api.yelp.com'
 SEARCH_PATH = '/v3/businesses/search'
+DETAILS_PATH = 'https://api.yelp.com/v3/businesses/'
 
 API_KEY = os.environ['YELP_KEY'] 
 
@@ -61,12 +63,13 @@ def home(request):
 def index(request):
   response_data = api_search(API_KEY, DEFAULT_TERM, DEFAULT_LOCATION)
   search_data = response_data.get('businesses')
-  print(search_data)
   return render(request, 'users/index.html', { 'businesses': search_data })
 
 # Define the details view
-def details(request):
-  return render(request, 'users/details.html')
+def details(request, yelp_id):
+  response_data = api_details(API_HOST, DETAILS_PATH, API_KEY, yelp_id)
+  print(response_data)
+  return render(request, 'users/details.html', {'data': response_data})
 
 # Define the user profile view
 def user(request):
@@ -96,4 +99,14 @@ def api_request(host, path, api_key, url_params=None):
 
   response = requests.request('GET', url, headers=headers, params=url_params)
 
+  return response.json()
+
+def api_details(host, path, api_key, yelp_id):
+  url = urljoin(path, yelp_id)
+  print(url)
+  headers = {
+    'Authorization': 'Bearer %s' % api_key,
+  }
+  print(u'Querying {0} ...'.format(url))
+  response = requests.request('GET', url, headers=headers)
   return response.json()
