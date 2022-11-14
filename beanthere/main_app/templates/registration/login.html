@@ -7,7 +7,8 @@
   </div>
   <div class="desktop-inputs">
     <form method="post" action="{% url 'login' %}">
-      {% csrf_token %}
+      {% csrf_token %} {{ form.as_p }}
+
       <input class="Rectangle-5" placeholder="Email" />
       <input
         typ="password"
@@ -15,11 +16,11 @@
         placeholder="Password"
         style="-webkit-text-security: circle"
       />
+      <input class="login-btn login" type="submit" value="Login" />
       <input type="hidden" name="next" value="{{ next }}" />
     </form>
   </div>
   <span class="Forgot-Password"> Forgot Password? </span>
-  <button class="login-btn login" type="submit" value="Login">Login</button>
   <div class="Rectangle-4"></div>
   <button class="login-btn join-us-btn">Join Us</button>
 </div>
