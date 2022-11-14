@@ -1,6 +1,6 @@
 {% for b in businesses %}
 <div style="margin: 30px; border: 2px black solid">
-  <div>Name: {{ b.name }}</div>
+  <div><a href="{% url 'details' b.id %}">{{ b.name }}</a></div>
   <div>Rating: {{ b.rating }}</div>
   <div>Review Count: {{ b.review_count }}</div>
   <div><a href="{{ b.url }}">Link to Yelp Page</a></div>
