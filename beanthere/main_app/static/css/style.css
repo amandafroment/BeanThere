@@ -40,6 +40,13 @@ a {
   background-color: #f4f4f4;
 }
 
+.mobile-logo {
+  width: 348px;
+  height: 368px;
+  margin-top: 200px;
+  align-self: center;
+}
+
 .header-logo {
   display: flex;
   flex-direction: column;
@@ -52,6 +59,18 @@ a {
   height: 368px;
   margin: 200px 25px 0 29px;
   align-self: center;
+}
+
+.landing-title {
+  font-family: Mulish;
+  font-size: 55px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  text-align: center;
+  color: #a7a7a7;
 }
 
 .Welcome {
@@ -283,6 +302,8 @@ label {
   .mobile-logo {
     width: 153px;
     height: 50%;
+    margin-top: 50px;
+
     align-self: center;
   }
 
