@@ -7,8 +7,13 @@
   </div>
   <div class="desktop-inputs">
     <form method="post" action="{% url 'signup' %}">
-      {% csrf_token %} {{ form.as_p }}
-      <input class="Rectangle-5" placeholder="Full Name" />
+      {% csrf_token %} {{ form }}
+      <input
+        type="text"
+        class="Rectangle-5"
+        placeholder="Full Name"
+        value="Full Name"
+      />
       <input class="Rectangle-6" placeholder="Email" />
       <input class="Rectangle-6" placeholder="Password" />
       <input class="Rectangle-6" placeholder="Re-type Password" />

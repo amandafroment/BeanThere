@@ -61,6 +61,23 @@ form {
   font-size: 16px;
 }
 
+label {
+  font-family: Mulish;
+}
+
+#id_username {
+  width: 343px !important;
+  height: 30px;
+  flex-grow: 0;
+  margin: 3px 73px 12px 40px;
+  padding: 17px 0px 17px 25px;
+  border-radius: 16px;
+  border: solid 0.5px #1f1f1f;
+  background-color: #fff;
+  font-family: Mulish;
+  font-size: 16px;
+}
+
 .Rectangle-6 {
   width: 343px;
   height: 30px;
@@ -72,6 +89,49 @@ form {
   background-color: #fff;
   font-family: Mulish;
   font-size: 16px;
+}
+
+#id_password {
+  width: 343px;
+  height: 30px;
+  flex-grow: 0;
+  margin: 3px 73px 11px 40px;
+  padding: 16px 0px 16px 25px;
+  border-radius: 16px;
+  border: solid 0.5px #1f1f1f;
+  background-color: #fff;
+  font-family: Mulish;
+  font-size: 16px;
+}
+
+#id_password1 {
+  width: 343px;
+  height: 30px;
+  flex-grow: 0;
+  margin: 3px 73px 11px 40px;
+  padding: 16px 0px 16px 25px;
+  border-radius: 16px;
+  border: solid 0.5px #1f1f1f;
+  background-color: #fff;
+  font-family: Mulish;
+  font-size: 16px;
+}
+
+#id_password2 {
+  width: 343px;
+  height: 30px;
+  flex-grow: 0;
+  margin: 3px 73px 11px 40px;
+  padding: 16px 0px 16px 25px;
+  border-radius: 16px;
+  border: solid 0.5px #1f1f1f;
+  background-color: #fff;
+  font-family: Mulish;
+  font-size: 16px;
+}
+
+.helptext {
+  display: none;
 }
 
 .Forgot-Password {
