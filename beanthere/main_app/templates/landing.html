@@ -1,5 +1,9 @@
 {% extends 'base.html' %} {% block content %}
 
+<form name="myform" method="GET" action="{% url 'search' %}">
+  <input type="text" name="search" placeholder="Search" />
+</form>
+
 <div class="iPhone-13-13-Pro---29 Desktop---17">
   <div class="header-logo">
     <img src="/static/css/images/logo.png" class="logo" />
