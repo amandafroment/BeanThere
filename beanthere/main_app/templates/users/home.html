@@ -1,3 +1,34 @@
 {% extends 'base.html' %} {% block content %}
-<h1>Home</h1>
+
+<h1>Hi, {{ user.name }} !</h1>
+
+<div class="profile">
+  <h2 class="recents">Recently Bean</h2>
+  {% for review in reviews %}
+  <a href="{% url 'detail' review.id %}">
+    <div class="card">
+      <div class="card-content">
+        <span class="card-title">{{ review.cafe_name }}</span>
+        {% endif %}
+      </div>
+    </div>
+  </a>
+  {% endfor %}
+</div>
+
+<!-- <div class="Rectangle-4"></div> -->
+
+<!-- <div class="profile">
+  <h2 class="recents">Favourite Beans</h2>
+  {% for favorite in favorites %}
+  <div class="card" style="width: 18rem">
+    <img src="{{ favorite.cocktail_thumbnail }}" class="card-img-top" alt="" />
+    <div class="card-body">
+      <h5 class="card-title">{{ favorite.cocktail_name }}</h5>
+    </div>
+  </div>
+
+  {% endfor %}
+</div> -->
+
 {% endblock %}
