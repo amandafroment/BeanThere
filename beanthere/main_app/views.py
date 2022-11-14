@@ -62,7 +62,7 @@ def index(request):
 def details(request):
   return render(request, 'users/details.html')
 
-# Define the user view
+# Define the user profile view
 def user(request):
   return render(request, 'users/user.html')
 

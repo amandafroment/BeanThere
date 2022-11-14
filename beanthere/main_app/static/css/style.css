@@ -285,3 +285,14 @@ label {
     margin: 5px 15px 0 16px;
   }
 }
+
+.searchbar {
+  width: 293px;
+  height: 41px;
+  flex-grow: 0;
+  margin: 31px 15px 8px 20px;
+  padding: 14.8px 223.4px 14.8px 13.8px;
+  border-radius: 16px;
+  border: solid 0.5px #909090;
+  background-color: #fff;
+}
