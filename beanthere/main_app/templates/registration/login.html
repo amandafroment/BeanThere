@@ -1,0 +1,28 @@
+{% extends 'base.html' %} {% block content %}
+
+<div class="iPhone-13-13-Pro---29 Desktop---17">
+  <div class="header-logo">
+    <img src="/static/css/images/logo.png" class="logo" />
+    <span class="Welcome"> Welcome </span>
+  </div>
+  <div class="desktop-inputs">
+    <form method="post" action="{% url 'login' %}">
+      {% csrf_token %}
+      <input class="Rectangle-5" placeholder="Email" />
+      <input
+        typ="password"
+        class="Rectangle-6"
+        placeholder="Password"
+        style="-webkit-text-security: circle"
+      />
+      <input type="hidden" name="next" value="{{ next }}" />
+    </form>
+  </div>
+  <span class="Forgot-Password"> Forgot Password? </span>
+  <button class="login-btn login" type="submit">Login</button>
+  <div class="Rectangle-4"></div>
+
+  <button class="login-btn join-us-btn">Join Us</button>
+</div>
+
+{% endblock %}
