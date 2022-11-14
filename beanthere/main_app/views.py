@@ -55,7 +55,6 @@ def home(request):
 def index(request):
   response_data = api_search(API_KEY, DEFAULT_TERM, DEFAULT_LOCATION)
   search_data = response_data.get('businesses')
-  print(search_data)
   return render(request, 'users/index.html', { 'businesses': search_data })
 
 # Define the details view
