@@ -1,11 +1,60 @@
 {% extends 'base.html' %} {% block content %}
 <div>{{ data.name }}</div>
 <div>{{ data.rating }}</div>
-<div>{{ data.review_count }}</div>
-<div><a href="{{ data.url }}">Link to Yelp Page</a></div>
-<div>{{ data.location.display_address }}</div>
+{% if data.rating == 5.0 %}
+<img src="/static/css/images/yelp_stars/web_and_ios/small/small_5@2x.png" />
+{% elif data.rating == 4.5 %}
+<img
+  src="/static/css/images/yelp_stars/web_and_ios/small/small_4_half@2x.png"
+/>
+{% elif data.rating == 4.0 %}
+<img src="/static/css/images/yelp_stars/web_and_ios/small/small_4@2x.png" />
+{% elif data.rating == 3.5 %}
+<img
+  src="/static/css/images/yelp_stars/web_and_ios/small/small_3_half@2x.png"
+/>
+{% elif data.rating == 3.0 %}
+<img src="/static/css/images/yelp_stars/web_and_ios/small/small_3@2x.png" />
+{% elif data.rating == 2.5 %}
+<img
+  src="/static/css/images/yelp_stars/web_and_ios/small/small_2_half@2x.png"
+/>
+{% elif data.rating == 2.0 %}
+<img src="/static/css/images/yelp_stars/web_and_ios/small/small_2@2x.png" />
+{% elif data.rating == 1.5 %}
+<img
+  src="/static/css/images/yelp_stars/web_and_ios/small/small_1_half@2x.png"
+/>
+{% elif data.rating == 1.0 %}
+<img src="/static/css/images/yelp_stars/web_and_ios/small/small_1@2x.png" />
+{% elif data.rating == 0.5 %}
+<img
+  src="/static/css/images/yelp_stars/web_and_ios/small/small_0_half@2x.png"
+/>
+{% else %}
+<img src="/static/css/images/yelp_stars/web_and_ios/small/small_0@2x.png" />
+{% endif %}
+
+<div>Based on {{ data.review_count }} Reviews</div>
+<div>
+  <a href="{{ data.url }}"
+    ><img src="/static/css/images/yelp_stars/yelp_logo.png" width="100px"
+  /></a>
+</div>
+<div>
+  {{ data.location.address1 }}, {{ data.location.city }} {{data.location.state}}
+</div>
 <div>
   <h4>Hours</h4>
-  <div>{{ data.hours }}</div>
+  <div>
+    {% for day in hours_data %}
+    <div>{{day_names.day.day}}: {{day.start}} - {{day.end}}</div>
+    {% endfor %}
+  </div>
+</div>
+<div>
+  {% for photo in data.photos %}
+  <img src="{{ photo }}" width="200px" />
+  {% endfor %}
 </div>
 {% endblock %}

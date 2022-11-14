@@ -31,7 +31,9 @@
       ><img src="/static/css/images/yelp_stars/yelp_logo.png" width="100px"
     /></a>
   </div>
-  <div>Address: {{ b.location.display_address }}</div>
+  <div>
+    {{ b.location.address1 }}, {{ b.location.city }} {{b.location.state}}
+  </div>
   <img src="{{ b.image_url }}" width="250px" />
 </div>
 {% endfor %} {% endblock %}
