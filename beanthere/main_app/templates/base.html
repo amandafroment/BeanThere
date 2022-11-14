@@ -13,6 +13,10 @@
     <title>Bean There</title>
   </head>
   <body>
+    <form name="myform" method="GET" action="{% url 'search' %}">
+      <input type="text" name="search" placeholder="Search" />
+    </form>
+
     {% block content %} {% endblock %}
   </body>
 </html>

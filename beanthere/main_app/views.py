@@ -21,7 +21,7 @@ API_KEY = os.environ['YELP_KEY']
 
 DEFAULT_TERM = 'coffee'
 DEFAULT_LOCATION = 'Toronto'
-SEARCH_LIMIT = 3
+SEARCH_LIMIT = 10
 
 # Create your views here.
 
@@ -43,6 +43,12 @@ def signup(request):
   form = UserCreationForm()
   context = {'form': form, 'error_message': error_message}
   return render(request, 'registration/signup.html', context)
+
+def search(request):
+  city = request.GET.get('search') #put form name here 
+  response_data = api_search(API_KEY, DEFAULT_TERM, city)
+  search_data = response_data.get('businesses')
+  return render(request, 'users/index.html', { 'businesses': search_data })
 
 def landing(request):
     return render(request, 'landing.html')
