@@ -1,10 +1,39 @@
-{% for b in businesses %}
+{% extends 'base.html' %} {% block content %} {% for b in businesses %}
 <div style="margin: 30px; border: 2px black solid">
   <div><a href="{% url 'details' b.id %}">{{ b.name }}</a></div>
   <div>Rating: {{ b.rating }}</div>
-  <div>Review Count: {{ b.review_count }}</div>
-  <div><a href="{{ b.url }}">Link to Yelp Page</a></div>
-  <div>Address: {{ b.location.display_address }}</div>
+  {% if b.rating == 5.0 %}
+  <img src="/static/css/images/yelp_stars/web_and_ios/small/small_5.png" />
+  {% elif b.rating == 4.5 %}
+  <img src="/static/css/images/yelp_stars/web_and_ios/small/small_4_half.png" />
+  {% elif b.rating == 4.0 %}
+  <img src="/static/css/images/yelp_stars/web_and_ios/small/small_4.png" />
+  {% elif b.rating == 3.5 %}
+  <img src="/static/css/images/yelp_stars/web_and_ios/small/small_3_half.png" />
+  {% elif b.rating == 3.0 %}
+  <img src="/static/css/images/yelp_stars/web_and_ios/small/small_3.png" />
+  {% elif b.rating == 2.5 %}
+  <img src="/static/css/images/yelp_stars/web_and_ios/small/small_2_half.png" />
+  {% elif b.rating == 2.0 %}
+  <img src="/static/css/images/yelp_stars/web_and_ios/small/small_2.png" />
+  {% elif b.rating == 1.5 %}
+  <img src="/static/css/images/yelp_stars/web_and_ios/small/small_1_half.png" />
+  {% elif b.rating == 1.0 %}
+  <img src="/static/css/images/yelp_stars/web_and_ios/small/small_1.png" />
+  {% elif b.rating == 0.5 %}
+  <img src="/static/css/images/yelp_stars/web_and_ios/small/small_0_half.png" />
+  {% else %}
+  <img src="/static/css/images/yelp_stars/web_and_ios/small/small_0.png" />
+  {% endif %}
+  <div>Based on {{ b.review_count }} Reviews</div>
+  <div>
+    <a href="{{ b.url }}"
+      ><img src="/static/css/images/yelp_stars/yelp_logo.png" width="100px"
+    /></a>
+  </div>
+  <div>
+    {{ b.location.address1 }}, {{ b.location.city }} {{b.location.state}}
+  </div>
   <img src="{{ b.image_url }}" width="250px" />
 </div>
-{% endfor %}
+{% endfor %} {% endblock %}
