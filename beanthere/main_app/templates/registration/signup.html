@@ -20,7 +20,7 @@
         <span class="Welcome">Join Us</span>
       </div>
       <div class="desktop-inputs">
-        <form method="post" action="{% url 'home' %}">
+        <form method="post" action="{% url 'signup' %}">
           {% csrf_token %} {{ form }}
           <input type="submit" class="signup-btn login-btn" value="Sign Up" />
           <input type="hidden" name="next" value="{{ next }}" />
