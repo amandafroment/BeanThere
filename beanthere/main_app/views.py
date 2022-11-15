@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.decorators import login_required
 from .models import Review
 import os
 import argparse
@@ -50,6 +51,7 @@ def signup(request):
   context = {'form': form, 'error_message': error_message}
   return render(request, 'registration/signup.html', context)
 
+@login_required
 def search(request):
   city = request.GET.get('search') #put form name here 
   response_data = api_search(API_KEY, DEFAULT_TERM, city)
@@ -60,16 +62,19 @@ def landing(request):
     return render(request, 'landing.html')
 
 # Define the home view
+@login_required
 def home(request):
   return render(request, 'users/home.html')
 
 # Define the home view
+@login_required
 def index(request):
   response_data = api_search(API_KEY, DEFAULT_TERM, DEFAULT_LOCATION)
   search_data = response_data.get('businesses')
   return render(request, 'users/index.html', { 'businesses': search_data })
 
 # Define the details view
+@login_required
 def details(request, yelp_id):
   reviews = Review.objects.filter(cafe_id__exact=yelp_id)
   print(reviews)
@@ -81,6 +86,7 @@ def details(request, yelp_id):
     hours_data = []
   return render(request, 'users/details.html', {'data': response_data, 'hours_data': hours_data, 'reviews': reviews})
 
+@login_required
 def hours_format(hours_raw):
   hours_clean = []
   for day in hours_raw:
@@ -92,6 +98,7 @@ def hours_format(hours_raw):
     hours_clean.append(day_info)
   return hours_clean
 
+@login_required
 def format_time(time):
   timeInt = int(time)
   hours = int(timeInt/100)
@@ -104,12 +111,15 @@ def format_time(time):
     return f'{hours-12}:{minutes} PM'
 
 # Define the user profile view
+@login_required
 def user(request):
   return render(request, 'users/user.html')
 
+@login_required
 def create_review(request, yelp_id):
   return render(request, 'users/review.html', {'yelp_id': yelp_id})
 
+@login_required
 def add_review(request, yelp_id):
   data = request.POST
   print(data)
