@@ -7,31 +7,32 @@
 <form action="/details" method="POST">
     <div class="close-1"></div>
     <div><span class="Food-Drinks">Food & Drinks</span></div>
-    <input type="button" id="select1" class="Rectangle-16" onclick="selectedButton()" value="Espresso"></input>
-    <input type="button" id="select2" class="Rectangle-16" onclick="selectedButton()" value="Drinks"></input>
+        <input type="button" id="select1" class="Rectangle-16" onclick="selectedButton()" value="Espresso"></input>
+        <input type="button" id="select2" class="Rectangle-16" onclick="selectedButton()" value="Drinks"></input>
     <div><span class="Technical">Technical</span></div>
-    <input type="button" id="select3" class="Rectangle-16" onclick="selectedButton()" value="Wifi"></input>
-    <input type="button" id="select4" class="Rectangle-16" onclick="selectedButton()" value="Outlets"></input>
+        <input type="button" id="select3" class="Rectangle-16" onclick="selectedButton()" value="Wifi"></input>
+        <input type="button" id="select4" class="Rectangle-16" onclick="selectedButton()" value="Outlets"></input>
     <div><span class="Ambience">Ambience</span></div>
-    <input type="button" id="select5" class="Rectangle-16" onclick="selectedButton()" value="Bright"></input>
-    <input type="button" id="select6" class="Rectangle-16" onclick="selectedButton()" value="Quiet"></input>
-    <input type="button" id="select7" class="Rectangle-16" onclick="selectedButton()" value="Busy"></input>
-    <input type="button" id="select8" class="Rectangle-16" onclick="selectedButton()" value="AC"></input>
-    <input type="button" id="select9" class="Rectangle-16" onclick="selectedButton()" value="Patio"></input>
-    <input type="button" id="select10" class="Rectangle-16" onclick="selectedButton()" value="Pet Friendly"></input>
+        <input type="button" id="select5" class="Rectangle-16" onclick="selectedButton()" value="Bright"></input>
+        <input type="button" id="select6" class="Rectangle-16" onclick="selectedButton()" value="Quiet"></input>
+        <input type="button" id="select7" class="Rectangle-16" onclick="selectedButton()" value="Busy"></input>
+        <input type="button" id="select8" class="Rectangle-16" onclick="selectedButton()" value="AC"></input>
+        <input type="button" id="select9" class="Rectangle-16" onclick="selectedButton()" value="Patio"></input>
+        <input type="button" id="select10" class="Rectangle-16" onclick="selectedButton()" value="Pet Friendly"></input>
     <div><span class="Additional-Comments">Additional Comments</span></div>
-    <div id="select11" class="Rectangle-21"><textarea rows="5" cols="30" name="comment-box"></textarea></div>
-    <div id="select12" class="Rectangle-20"><button class="Submit">
-    Submit
+        <div id="select11" class="Rectangle-21"><textarea rows="5" cols="30" name="comment-box"></textarea></div>
+        <div id="select12" class="Rectangle-20"><button class="Submit">
+        Submit
     </button></div>
 </form>
 
 </div>
 <script>
-
-
+let choice = document.querySelectorAll("input");
+let collection = [];
 function selectedButton() {
-  document.getElementById("select1").style.backgroundColor = "#4E4235";
+
+  document.getElementsById("Rectangle-16").style.backgroundColor = "#988C7A";
 }
 </script>
 
