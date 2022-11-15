@@ -14,7 +14,11 @@
   </head>
   <body>
     <div class="search-header-container">
-      <img src="/static/css/images/logo.png" class="search-logo" />
+      <div>
+        <a href="{% url 'home' %}"
+          ><img src="/static/css/images/logo.png" class="search-logo"
+        /></a>
+      </div>
       <div class="search-bar">
         <form name="myform" method="GET" action="{% url 'search' %}">
           <input
