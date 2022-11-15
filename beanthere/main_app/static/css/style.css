@@ -550,4 +550,26 @@ label {
     background-color: #fff;
     font-family: Mulish;
   }
+
+  .card-container {
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    border: solid 0.5px #909090;
+    border-radius: 16px;
+  }
+
+  .index-img-container {
+    width: 30%;
+  }
+
+  .index-img {
+    width: 100%;
+  }
+
+  .index-info {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+  }
 }
