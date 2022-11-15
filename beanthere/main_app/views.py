@@ -25,6 +25,8 @@ DEFAULT_TERM = 'coffee'
 DEFAULT_LOCATION = 'Toronto'
 SEARCH_LIMIT = 10
 
+DAY_NAMES = {'0': 'Mon', 1: 'Tue', 2: 'Wed', 3: 'Thu', 4: 'Fri', 5: 'Sat', 6: 'Sun'}
+
 # Create your views here.
 
 def signup(request):
@@ -68,8 +70,9 @@ def index(request):
 # Define the details view
 def details(request, yelp_id):
   response_data = api_details(API_HOST, DETAILS_PATH, API_KEY, yelp_id)
-  print(response_data)
-  return render(request, 'users/details.html', {'data': response_data})
+  hours_data = response_data.get('hours')[0].get('open')
+  print(hours_data)
+  return render(request, 'users/details.html', {'data': response_data, 'hours_data': hours_data, 'day_names': DAY_NAMES})
 
 # Define the user profile view
 def user(request):
