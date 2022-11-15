@@ -57,4 +57,7 @@
   <img src="{{ photo }}" width="200px" />
   {% endfor %}
 </div>
+<form method="get" action="{% url 'create_review' data.id %}">
+  <button type="submit">Add Review</button>
+</form>
 {% endblock %}

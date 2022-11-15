@@ -4,22 +4,30 @@
 <div class="Rectangle-17">
     <span class="Tell-us-what-you-think-about-this-place">
   Tell us what you think about this place!</span>
-    <form action="/details" method="POST">
+    <form action="{% url 'add_review' yelp_id %}" method="POST">
+        {% csrf_token %}
         <div class="close-1"></div>
         <div><span class="Ambience">Ambience</span></div>
-            <input type="range" class="slider" id="select1" min="1" max="5" value="3">Lighting</input>
-            <input type="range" class="slider" id="select2" min="1" max="5" value="3">Sound</input>
-            <input type="range" class="slider" id="select3" min="1" max="5" value="3">Traffic</input>
+            <input type="range" class="slider" id="select1" min="1" max="5" value="3" name="lighting">Lighting</input>
+            <input type="range" class="slider" id="select2" min="1" max="5" value="3" name="sound">Sound</input>
+            <input type="range" class="slider" id="select3" min="1" max="5" value="3" name="traffic">Traffic</input>
         <div><span class="Food-Drinks">Food & Drinks</span></div>
-            <input type="button" id="select4" class="rev-btn" onclick="selectedButton()" value="Vegan"></input>
-            <input type="button" id="select5" class="rev-btn" onclick="selectedButton()" value="GF"></input>
-            <input type="button" id="select6" class="rev-btn" onclick="selectedButton()" value="DF"></input>
+            <input type="button" id="select4" class="rev-btn" onclick="selectedButton('select4')" value="Vegan"></input>
+            <input type="hidden" id="select4val" value="false" name="vegan">
+            <input type="button" id="select5" class="rev-btn" onclick="selectedButton('select5')" value="GF"></input>
+            <input type="hidden" id="select5val" value="false" name="gluten_free">
+            <input type="button" id="select6" class="rev-btn" onclick="selectedButton('select6')" value="DF"></input>
+            <input type="hidden" id="select6val" value="false" name="lactose_free">
         <div><span class="Technical">Technical</span></div>
-            <input type="button" id="select7" class="rev-btn" onclick="selectedButton()" value="Wifi"></input>
-            <input type="button" id="select8" class="rev-btn" onclick="selectedButton()" value="Outlets"></input>
-            <input type="button" id="select9" class="rev-btn" onclick="selectedButton()" value="Patio"></input>
-            <input type="button" id="select10" class="rev-btn" onclick="selectedButton()" value="Pet Friendly"></input>
-            <input type="range" class="slider" id="select11" min="1" max="5" value="3">Service</input>
+            <input type="button" id="select7" class="rev-btn" onclick="selectedButton('select7')" value="Wifi"></input>
+            <input type="hidden" id="select7val" value="false" name="wifi">
+            <input type="button" id="select8" class="rev-btn" onclick="selectedButton('select8')" value="Outlets"></input>
+            <input type="hidden" id="select8val" value="false" name="outlets">
+            <input type="button" id="select9" class="rev-btn" onclick="selectedButton('select9')" value="Patio"></input>
+            <input type="hidden" id="select9val" value="false" name="patio">
+            <input type="button" id="select10" class="rev-btn" onclick="selectedButton('select10')" value="Pet Friendly"></input>
+            <input type="hidden" id="select10val" value="false" name="pet_friendly">
+            <input type="range" class="slider" id="select11" min="1" max="5" value="3" name="service">Service</input>
         <div><span class="Additional-Comments">Additional Comments</span></div>
             <div id="select12" class="Rectangle-21"><textarea rows="5" cols="30" name="comment-box"></textarea></div>
             <div id="select13" class="Rectangle-20"><button class="Submit">
