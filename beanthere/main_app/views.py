@@ -25,7 +25,7 @@ DEFAULT_TERM = 'coffee'
 DEFAULT_LOCATION = 'Toronto'
 SEARCH_LIMIT = 10
 
-DAY_NAMES = {'0': 'Mon', 1: 'Tue', 2: 'Wed', 3: 'Thu', 4: 'Fri', 5: 'Sat', 6: 'Sun'}
+DAY_NAMES = {0: 'Mon', 1: 'Tue', 2: 'Wed', 3: 'Thu', 4: 'Fri', 5: 'Sat', 6: 'Sun'}
 
 # Create your views here.
 
@@ -70,9 +70,31 @@ def index(request):
 # Define the details view
 def details(request, yelp_id):
   response_data = api_details(API_HOST, DETAILS_PATH, API_KEY, yelp_id)
-  hours_data = response_data.get('hours')[0].get('open')
-  print(hours_data)
-  return render(request, 'users/details.html', {'data': response_data, 'hours_data': hours_data, 'day_names': DAY_NAMES})
+  hours_raw = response_data.get('hours')[0].get('open')
+  hours_data = hours_format(hours_raw)
+  return render(request, 'users/details.html', {'data': response_data, 'hours_data': hours_data})
+
+def hours_format(hours_raw):
+  hours_clean = []
+  for day in hours_raw:
+    day_info = {
+      'start': format_time(day.get('start')),
+      'end': format_time(day.get('end')),
+      'day_name': DAY_NAMES.get(day.get('day'))
+    }
+    hours_clean.append(day_info)
+  return hours_clean
+
+def format_time(time):
+  timeInt = int(time)
+  hours = int(timeInt/100)
+  minutes = timeInt - hours*100
+  if minutes == 0:
+    minutes = '00'
+  if hours <= 12:
+    return f'{hours}:{minutes} AM'
+  else:
+    return f'{hours-12}:{minutes} PM'
 
 # Define the user profile view
 def user(request):
