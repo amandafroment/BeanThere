@@ -1,6 +1,5 @@
 {% extends 'base.html' %} {% block content %}
 <div>{{ data.name }}</div>
-<div>{{ data.rating }}</div>
 {% if data.rating == 5.0 %}
 <img src="/static/css/images/yelp_stars/web_and_ios/small/small_5@2x.png" />
 {% elif data.rating == 4.5 %}
