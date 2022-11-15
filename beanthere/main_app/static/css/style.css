@@ -299,6 +299,65 @@ label {
   background-color: #f4f4f4;
 }
 
+.body-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  margin: 10px 0px;
+  border: solid 0.3px #909090;
+  border-radius: 16px;
+  padding: 10px;
+  width: 60%;
+}
+
+.index-img-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 30%;
+}
+
+.index-img {
+  width: 70%;
+  border-radius: 10px;
+  margin: 5px;
+}
+
+.index-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 55%;
+  font-family: Mulish;
+  margin: 20px;
+  color: #909090;
+}
+
+.index-info > img {
+  width: 25%;
+  margin: 5px 0px;
+}
+
+.index-title {
+  font-size: 20px;
+  color: #787878;
+}
+
+.yelp-logo {
+  width: 75px;
+}
+
 /* MOBILE QUERIES ONLY - ALL DESK TOP QUERIES ABOVE*/
 
 @media only screen and (max-width: 450px) {
@@ -563,23 +622,47 @@ label {
     display: flex;
     flex-direction: row;
     margin: 10px;
-    border: solid 0.5px #909090;
+    border: solid 0.3px #909090;
     border-radius: 16px;
+    padding: 10px;
+    width: 90%;
   }
 
   .index-img-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     width: 30%;
   }
 
   .index-img {
     width: 100%;
+    border-radius: 10px;
+    margin-left: 5px;
   }
 
   .index-info {
     display: flex;
     flex-direction: column;
-    width: 60%;
+    justify-content: center;
+    width: 55%;
     font-family: Mulish;
+    margin: 20px;
+    color: #909090;
+  }
+
+  .index-info > img {
+    width: 50%;
+    margin: 5px 0px;
+  }
+
+  .index-title {
+    font-size: 18px;
+    color: #787878;
+  }
+
+  .yelp-logo {
+    width: 50px;
   }
 
   .logout-btn {
