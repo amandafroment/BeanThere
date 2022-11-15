@@ -71,8 +71,9 @@ def home(request):
       'price': response_data.get('price'),
       'rating': response_data.get('rating'),
       'image_url': response_data.get('photos')[0],
-      'timestamp': review.timestamp
-    }
+      'timestamp': review.timestamp,
+      'cafe_id': response_data.get('id'),
+      }
     recents.append(yelp_info)
   return render(request, 'users/home.html', {'recents': recents})
 
@@ -159,20 +160,14 @@ def api_request(host, path, api_key, url_params=None):
   headers = {
     'Authorization': 'Bearer %s' % api_key,
   }
-
-  print(u'Querying {0} ...'.format(url))
-
   response = requests.request('GET', url, headers=headers, params=url_params)
-
   return response.json()
 
 def api_details(host, path, api_key, yelp_id):
   url = urljoin(path, yelp_id)
-  print(url)
   headers = {
     'Authorization': 'Bearer %s' % api_key,
   }
-  print(u'Querying {0} ...'.format(url))
   response = requests.request('GET', url, headers=headers)
   return response.json()
 

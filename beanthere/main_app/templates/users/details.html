@@ -1,6 +1,5 @@
 {% extends 'base.html' %} {% block content %}
 <div>{{ data.name }}</div>
-<div>{{ data.rating }}</div>
 {% if data.rating == 5.0 %}
 <img src="/static/css/images/yelp_stars/web_and_ios/small/small_5@2x.png" />
 {% elif data.rating == 4.5 %}
@@ -36,6 +35,7 @@
 {% endif %}
 
 <div>Based on {{ data.review_count }} Reviews</div>
+<div>{{ data.price }}</div>
 <div>
   <a href="{{ data.url }}"
     ><img src="/static/css/images/yelp_stars/yelp_logo.png" width="100px"
