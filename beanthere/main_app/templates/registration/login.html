@@ -19,7 +19,7 @@
         <img src="/static/css/images/logo.png" class="logo" />
         <span class="Welcome"> Welcome </span>
       </div>
-      <div class="desktop-inputs">
+      <div class="desktop-inputs mobile-inputs">
         <form method="post" action="{% url 'login' %}">
           {% csrf_token %} {{ form.as_div }}
 
@@ -27,7 +27,6 @@
           <input type="hidden" name="next" value="{{ next }}" />
         </form>
       </div>
-      <span class="Forgot-Password"> Forgot Password? </span>
       <div class="Rectangle-4"></div>
       <button class="login-btn join-us-btn">
         <a href="{% url 'signup' %}">Join Us</a>

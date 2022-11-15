@@ -6,7 +6,7 @@ import os
 import argparse
 import json
 import pprint
-# import requests
+import requests
 import sys
 import urllib
 

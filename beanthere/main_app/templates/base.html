@@ -13,10 +13,20 @@
     <title>Bean There</title>
   </head>
   <body>
-    <form name="myform" method="GET" action="{% url 'search' %}">
-      <input type="text" name="search" placeholder="Search" />
-    </form>
-
+    <div class="search-header-container">
+      <img src="/static/css/images/logo.png" class="search-logo" />
+      <div class="search-bar">
+        <form name="myform" method="GET" action="{% url 'search' %}">
+          <input
+            class="search-input"
+            type="text"
+            name="search"
+            placeholder="Search"
+          />
+        </form>
+        <!-- <p class="location"></p> need to add in location that is searched here -->
+      </div>
+    </div>
     {% block content %} {% endblock %}
   </body>
 </html>
