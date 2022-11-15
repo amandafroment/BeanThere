@@ -513,12 +513,20 @@ label {
     margin: 0px 15px 0 0px;
   }
 
+  .search-logo {
+    width: 50px;
+    height: 60px;
+    align-self: center;
+    margin-right: 2px;
+    margin-bottom: 10px;
+  }
+
   .search-bar {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 25px;
+    margin-top: 5px;
   }
 
   .Rectangle-18 {
@@ -542,12 +550,23 @@ label {
   }
 
   .search-input {
-    width: 150px;
+    width: 100px;
     height: 20px;
     flex-grow: 0;
     border-radius: 16px;
     border: solid 0.5px #909090;
     background-color: #fff;
+    font-family: Mulish;
+  }
+
+  .logout-btn {
+    height: 35px;
+    width: 75px;
+    background-color: #4e4235;
+    align-self: center;
+    margin: 0px 0px 0px 10px;
+    border-radius: 10px;
+    font-size: 14px;
     font-family: Mulish;
   }
 }
