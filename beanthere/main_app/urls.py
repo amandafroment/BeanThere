@@ -7,8 +7,9 @@ urlpatterns = [
     path('home/', views.home, name='home'), # Initial search page
     path('index/', views.index, name='index'), # Search Results
     path('details/<str:yelp_id>', views.details, name='details'), # Individual Cafe Details
+    path('details/<str:yelp_id>/review/', views.create_review, name='create_review'), # Individual Cafe Details
+    path('details/<str:yelp_id>/addreview/', views.add_review, name='add_review'), # Individual Cafe Details
     path('user/', views.user, name='user'), # User Profile
-    path('review/', views.review, name='review'), # Review Form
     path('accounts/signup/', views.signup, name='signup'),
     path('search', views.search, name='search'),
 ]

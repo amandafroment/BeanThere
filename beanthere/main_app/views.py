@@ -100,10 +100,11 @@ def format_time(time):
 def user(request):
   return render(request, 'users/user.html')
 
-# Define the review view
-def review(request):
-  return render(request, 'users/review.html')
+def create_review(request, yelp_id):
+  return render(request, 'users/review.html', {'yelp_id': yelp_id})
 
+def add_review(request, yelp_id):
+  return redirect('details', yelp_id=yelp_id)
 
 def api_search(api_key, term, location):
     url_params = {
