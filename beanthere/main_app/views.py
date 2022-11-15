@@ -86,7 +86,6 @@ def details(request, yelp_id):
     hours_data = []
   return render(request, 'users/details.html', {'data': response_data, 'hours_data': hours_data, 'reviews': reviews})
 
-@login_required
 def hours_format(hours_raw):
   hours_clean = []
   for day in hours_raw:
@@ -98,7 +97,6 @@ def hours_format(hours_raw):
     hours_clean.append(day_info)
   return hours_clean
 
-@login_required
 def format_time(time):
   timeInt = int(time)
   hours = int(timeInt/100)
@@ -111,7 +109,6 @@ def format_time(time):
     return f'{hours-12}:{minutes} PM'
 
 # Define the user profile view
-@login_required
 def user(request):
   return render(request, 'users/user.html')
 
