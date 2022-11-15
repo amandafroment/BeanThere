@@ -113,3 +113,4 @@ def api_details(host, path, api_key, yelp_id):
   print(u'Querying {0} ...'.format(url))
   response = requests.request('GET', url, headers=headers)
   return response.json()
+

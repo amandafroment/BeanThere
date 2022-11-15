@@ -510,7 +510,27 @@ label {
     margin-top: 25px;
   }
 
-  .search-input {
+.Rectangle-18 {
+  width: 350px;
+  height: 627px;
+  flex-grow: 0;
+  margin: 0 4px 0 0;
+  padding: 21px 0 23px;
+  border-radius: 15px;
+  background-color: #f4f4f4;
+}
+
+.Rectangle-16 {
+  width: 125px;
+  height: 36px;
+  flex-grow: 0;
+  margin: 5px 5px 12px 0;
+  padding: 9px 34px 5px 36px;
+  border-radius: 15px;
+  background-color: #d9d9d9;
+}
+
+.search-input {
     width: 150px;
     height: 20px;
     flex-grow: 0;
