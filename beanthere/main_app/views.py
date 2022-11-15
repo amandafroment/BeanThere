@@ -61,7 +61,20 @@ def landing(request):
 
 # Define the home view
 def home(request):
-  return render(request, 'users/home.html')
+  all_reviews = Review.objects.filter(user__exact=request.user)
+  selected_reviews = all_reviews.order_by('-timestamp')[:4]
+  recents = []
+  for review in selected_reviews:
+    response_data = api_details(API_HOST, DETAILS_PATH, API_KEY, review.cafe_id)
+    yelp_info = {
+      'name': response_data.get('name'),
+      'price': response_data.get('price'),
+      'rating': response_data.get('rating'),
+      'image_url': response_data.get('photos')[0],
+      'timestamp': review.timestamp
+    }
+    recents.append(yelp_info)
+  return render(request, 'users/home.html', {'recents': recents})
 
 # Define the home view
 def index(request):
@@ -72,7 +85,6 @@ def index(request):
 # Define the details view
 def details(request, yelp_id):
   reviews = Review.objects.filter(cafe_id__exact=yelp_id)
-  print(reviews)
   response_data = api_details(API_HOST, DETAILS_PATH, API_KEY, yelp_id)
   if response_data.get('hours'):
     hours_raw = response_data.get('hours')[0].get('open')
