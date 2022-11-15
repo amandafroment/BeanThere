@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
+from .models import Review
 import os
 import argparse
 import json
@@ -9,6 +10,7 @@ import pprint
 import requests
 import sys
 import urllib
+import datetime
 
 from urllib.error import HTTPError
 from urllib.parse import quote
@@ -104,6 +106,26 @@ def create_review(request, yelp_id):
   return render(request, 'users/review.html', {'yelp_id': yelp_id})
 
 def add_review(request, yelp_id):
+  data = request.POST
+  print(data)
+  lighting = data['lighting']
+  sound = data['sound']
+  traffic = data['traffic']
+  vegan = bool(data['vegan'])
+  gluten_free = bool(data['gluten_free'])
+  lactose_free = bool(data['lactose_free'])
+  service = data['service']
+  wifi = bool(data['wifi'])
+  outlets = bool(data['outlets'])
+  patio = bool(data['patio'])
+  pet_friendly = bool(data['pet_friendly'])
+  comments = data['comment-box']
+  cafe_id = yelp_id
+  timestamp = datetime.datetime.now()
+  user = request.user
+  r = Review(lighting=lighting, sound=sound, traffic=traffic, vegan=vegan, gluten_free=gluten_free, lactose_free=lactose_free, service=service, wifi=wifi, outlets=outlets, 
+  patio=patio, pet_friendly=pet_friendly, comments=comments, cafe_id=cafe_id, timestamp=timestamp, user=user)
+  r.save()
   return redirect('details', yelp_id=yelp_id)
 
 def api_search(api_key, term, location):
