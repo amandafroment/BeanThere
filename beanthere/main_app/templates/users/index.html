@@ -5,7 +5,6 @@
   </div>
   <div class="index-info">
     <div><a href="{% url 'details' b.id %}">{{ b.name }}</a></div>
-    <div>Rating: {{ b.rating }}</div>
     {% if b.rating == 5.0 %}
     <img src="/static/css/images/yelp_stars/web_and_ios/small/small_5.png" />
     {% elif b.rating == 4.5 %}
@@ -45,9 +44,9 @@
         ><img src="/static/css/images/yelp_stars/yelp_logo.png" width="100px"
       /></a>
     </div>
-  </div>
-  <div>
-    {{ b.location.address1 }}, {{ b.location.city }} {{b.location.state}}
+    <div>
+      {{ b.location.address1 }}, {{ b.location.city }} {{b.location.state}}
+    </div>
   </div>
 </div>
 {% endfor %} {% endblock %}
