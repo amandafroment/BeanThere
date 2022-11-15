@@ -27,6 +27,9 @@
         </form>
         <!-- <p class="location"></p> need to add in location that is searched here -->
       </div>
+      <button class="logout-btn">
+        <a href="{% url 'logout' %}" class="anchor-btn">Log Out</a>
+      </button>
     </div>
     {% block content %} {% endblock %}
   </body>

@@ -10,7 +10,7 @@
   background-color: #fff;
 }
 
-a {
+.anchor-btn {
   color: white;
   text-decoration: none;
 }
@@ -270,6 +270,17 @@ label {
   margin-top: 25px;
 }
 
+.logout-btn {
+  height: 40px;
+  width: 125px;
+  background-color: #4e4235;
+  align-self: center;
+  margin: 25px 0px 0px 25px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-family: Mulish;
+}
+
 .Rectangle-17 {
   width: 390px;
   height: 844px;
@@ -502,41 +513,60 @@ label {
     margin: 0px 15px 0 0px;
   }
 
+  .search-logo {
+    width: 50px;
+    height: 60px;
+    align-self: center;
+    margin-right: 2px;
+    margin-bottom: 10px;
+  }
+
   .search-bar {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 25px;
+    margin-top: 5px;
   }
 
-.Rectangle-18 {
-  width: 350px;
-  height: 627px;
-  flex-grow: 0;
-  margin: 0 4px 0 0;
-  padding: 21px 0 23px;
-  border-radius: 15px;
-  background-color: #f4f4f4;
-}
+  .Rectangle-18 {
+    width: 350px;
+    height: 627px;
+    flex-grow: 0;
+    margin: 0 4px 0 0;
+    padding: 21px 0 23px;
+    border-radius: 15px;
+    background-color: #f4f4f4;
+  }
 
-.Rectangle-16 {
-  width: 125px;
-  height: 36px;
-  flex-grow: 0;
-  margin: 5px 5px 12px 0;
-  padding: 9px 34px 5px 36px;
-  border-radius: 15px;
-  background-color: #d9d9d9;
-}
+  .Rectangle-16 {
+    width: 125px;
+    height: 36px;
+    flex-grow: 0;
+    margin: 5px 5px 12px 0;
+    padding: 9px 34px 5px 36px;
+    border-radius: 15px;
+    background-color: #d9d9d9;
+  }
 
-.search-input {
-    width: 150px;
+  .search-input {
+    width: 100px;
     height: 20px;
     flex-grow: 0;
     border-radius: 16px;
     border: solid 0.5px #909090;
     background-color: #fff;
+    font-family: Mulish;
+  }
+
+  .logout-btn {
+    height: 35px;
+    width: 75px;
+    background-color: #4e4235;
+    align-self: center;
+    margin: 0px 0px 0px 10px;
+    border-radius: 10px;
+    font-size: 14px;
     font-family: Mulish;
   }
 }
