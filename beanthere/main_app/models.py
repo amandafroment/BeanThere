@@ -4,9 +4,9 @@ from django.contrib.auth.models import User
 # Create your models here.
 
 class Review(models.Model):
-    lighting = models.IntegerField()
-    sound = models.IntegerField()
-    traffic = models.IntegerField()
+    lighting = models.IntegerField(default=3)
+    sound = models.IntegerField(default=3)
+    traffic = models.IntegerField(default=3)
     vegan = models.BooleanField()
     gluten_free = models.BooleanField()
     lactose_free = models.BooleanField()
