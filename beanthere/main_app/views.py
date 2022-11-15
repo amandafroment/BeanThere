@@ -64,7 +64,21 @@ def landing(request):
 # Define the home view
 @login_required
 def home(request):
-  return render(request, 'users/home.html')
+  all_reviews = Review.objects.filter(user__exact=request.user)
+  selected_reviews = all_reviews.order_by('-timestamp')[:4]
+  recents = []
+  for review in selected_reviews:
+    response_data = api_details(API_HOST, DETAILS_PATH, API_KEY, review.cafe_id)
+    yelp_info = {
+      'name': response_data.get('name'),
+      'price': response_data.get('price'),
+      'rating': response_data.get('rating'),
+      'image_url': response_data.get('photos')[0],
+      'timestamp': review.timestamp,
+      'cafe_id': response_data.get('id'),
+      }
+    recents.append(yelp_info)
+  return render(request, 'users/home.html', {'recents': recents})
 
 # Define the home view
 @login_required
@@ -77,7 +91,6 @@ def index(request):
 @login_required
 def details(request, yelp_id):
   reviews = Review.objects.filter(cafe_id__exact=yelp_id)
-  print(reviews)
   response_data = api_details(API_HOST, DETAILS_PATH, API_KEY, yelp_id)
   if response_data.get('hours'):
     hours_raw = response_data.get('hours')[0].get('open')
@@ -154,20 +167,14 @@ def api_request(host, path, api_key, url_params=None):
   headers = {
     'Authorization': 'Bearer %s' % api_key,
   }
-
-  print(u'Querying {0} ...'.format(url))
-
   response = requests.request('GET', url, headers=headers, params=url_params)
-
   return response.json()
 
 def api_details(host, path, api_key, yelp_id):
   url = urljoin(path, yelp_id)
-  print(url)
   headers = {
     'Authorization': 'Bearer %s' % api_key,
   }
-  print(u'Querying {0} ...'.format(url))
   response = requests.request('GET', url, headers=headers)
   return response.json()
 

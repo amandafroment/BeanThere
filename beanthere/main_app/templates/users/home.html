@@ -4,30 +4,49 @@
 
 <div class="profile">
   <h2 class="recents">Recently Bean</h2>
-  {% for review in reviews %}
-  <a href="{% url 'detail' review.id %}">
-    <div class="card">
-      <div class="card-content">
-        <span class="card-title">{{ review.cafe_name }}</span>
-      </div>
+  {% for recent in recents %}
+  <a href="{% url 'details' recent.cafe_id %}">
+    <div style="border: 2px solid black">
+      <div>{{recent.timestamp}}</div>
+      <div>{{recent.name}}</div>
+      <div>{{recent.price}}</div>
+      {% if recent.rating == 5.0 %}
+      <img src="/static/css/images/yelp_stars/web_and_ios/small/small_5.png" />
+      {% elif recent.rating == 4.5 %}
+      <img
+        src="/static/css/images/yelp_stars/web_and_ios/small/small_4_half.png"
+      />
+      {% elif recent.rating == 4.0 %}
+      <img src="/static/css/images/yelp_stars/web_and_ios/small/small_4.png" />
+      {% elif recent.rating == 3.5 %}
+      <img
+        src="/static/css/images/yelp_stars/web_and_ios/small/small_3_half.png"
+      />
+      {% elif recent.rating == 3.0 %}
+      <img src="/static/css/images/yelp_stars/web_and_ios/small/small_3.png" />
+      {% elif recent.rating == 2.5 %}
+      <img
+        src="/static/css/images/yelp_stars/web_and_ios/small/small_2_half.png"
+      />
+      {% elif recent.rating == 2.0 %}
+      <img src="/static/css/images/yelp_stars/web_and_ios/small/small_2.png" />
+      {% elif recent.rating == 1.5 %}
+      <img
+        src="/static/css/images/yelp_stars/web_and_ios/small/small_1_half.png"
+      />
+      {% elif recent.rating == 1.0 %}
+      <img src="/static/css/images/yelp_stars/web_and_ios/small/small_1.png" />
+      {% elif recent.rating == 0.5 %}
+      <img
+        src="/static/css/images/yelp_stars/web_and_ios/small/small_0_half.png"
+      />
+      {% else %}
+      <img src="/static/css/images/yelp_stars/web_and_ios/small/small_0.png" />
+      {% endif %}
+      <img src="{{recent.image_url}}" width="200px" />
     </div>
   </a>
   {% endfor %}
 </div>
-
-<!-- <div class="Rectangle-4"></div> -->
-
-<!-- <div class="profile">
-  <h2 class="recents">Favourite Beans</h2>
-  {% for favorite in favorites %}
-  <div class="card" style="width: 18rem">
-    <img src="{{ favorite.cocktail_thumbnail }}" class="card-img-top" alt="" />
-    <div class="card-body">
-      <h5 class="card-title">{{ favorite.cocktail_name }}</h5>
-    </div>
-  </div>
-
-  {% endfor %}
-</div> -->
 
 {% endblock %}
