@@ -65,6 +65,7 @@
   {% for review in reviews %}
   <div>
     <div>
+      <p>Review by: {{user.get_username}}</p>
       <p>Lighting: {{review.lighting}}/5</p>
       <p>Sound: {{review.sound}}/5</p>
       <p>Traffic: {{review.traffic}}/5</p>
@@ -78,7 +79,7 @@
       <p>Service: {{review.service}}/5</p>
     </div>
   </div>
-  {% end for %}
+  {% endfor %}
 </div>
 
 {% endblock %}
