@@ -60,4 +60,26 @@
 <form method="get" action="{% url 'create_review' data.id %}">
   <button type="submit">Add Review</button>
 </form>
+<div>
+  <h2>Reviews</h2>
+  {% for review in reviews %}
+  <div>
+    <div>
+      <p>Review by: {{user.get_username}}</p>
+      <p>Lighting: {{review.lighting}}/5</p>
+      <p>Sound: {{review.sound}}/5</p>
+      <p>Traffic: {{review.traffic}}/5</p>
+      <p>Vegan?: {{review.vegan}}</p>
+      <p>Gluten-Free Options?: {{review.gluten_free}}</p>
+      <p>Lactose-Free Options?: {{review.lactose_free}}</p>
+      <p>Wifi?: {{review.wifi}}</p>
+      <p>Outlets?: {{review.outlets}}</p>
+      <p>Patio?: {{review.patio}}</p>
+      <p>Pet Friendly?: {{review.pet_friendly}}</p>
+      <p>Service: {{review.service}}/5</p>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
 {% endblock %}

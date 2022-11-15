@@ -71,10 +71,15 @@ def index(request):
 
 # Define the details view
 def details(request, yelp_id):
+  reviews = Review.objects.filter(cafe_id__exact=yelp_id)
+  print(reviews)
   response_data = api_details(API_HOST, DETAILS_PATH, API_KEY, yelp_id)
-  hours_raw = response_data.get('hours')[0].get('open')
-  hours_data = hours_format(hours_raw)
-  return render(request, 'users/details.html', {'data': response_data, 'hours_data': hours_data})
+  if response_data.get('hours'):
+    hours_raw = response_data.get('hours')[0].get('open')
+    hours_data = hours_format(hours_raw)
+  else:
+    hours_data = []
+  return render(request, 'users/details.html', {'data': response_data, 'hours_data': hours_data, 'reviews': reviews})
 
 def hours_format(hours_raw):
   hours_clean = []
