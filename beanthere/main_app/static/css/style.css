@@ -916,4 +916,20 @@ label {
     margin: 0px 10px;
     color: #787878;
   }
+
+  .username-lbl {
+    font-size: 18px;
+    margin-top: 10px;
+  }
+
+  .review-body {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .review-body > p {
+    margin: 0;
+  }
 }
