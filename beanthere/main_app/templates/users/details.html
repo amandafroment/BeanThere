@@ -91,28 +91,50 @@
         </form>
       </div>
       <div class="divider"></div>
-
       {% for review in reviews %}
       <div>
         <div class="detail-review-form">
-          <p>Review by: {{user.get_username}}</p>
-          <p>Lighting: {{review.lighting}}/5</p>
-          <p>Sound: {{review.sound}}/5</p>
-          <p>Traffic: {{review.traffic}}/5</p>
-          <p>Vegan?: {{review.vegan}}</p>
-          <p>Gluten-Free Options?: {{review.gluten_free}}</p>
-          <p>Lactose-Free Options?: {{review.lactose_free}}</p>
-          <p>Wifi?: {{review.wifi}}</p>
-          <p>Outlets?: {{review.outlets}}</p>
-          <p>Patio?: {{review.patio}}</p>
-          <p>Pet Friendly?: {{review.pet_friendly}}</p>
-          <p>Service: {{review.service}}/5</p>
+          <div class="username-delete">
+            <p class="username-lbl">Review by: {{user.get_username}}</p>
+            <div>
+              <a
+                href="{% url 'delete_review' data.id review.id %}"
+                class="delete-btn"
+                >X</a
+              >
+            </div>
+          </div>
+
+          <div class="review-body">
+            <div class="inner-review-body">
+              <p>Lighting: {{review.lighting}}/5 |</p>
+              <p>Sound: {{review.sound}}/5 |</p>
+              <p>Traffic: {{review.traffic}}/5</p>
+            </div>
+            <div class="inner-review-body">
+              <p>Vegan: {{review.vegan}} |</p>
+              <p>| Gluten-Free Options: {{review.gluten_free}}</p>
+              <p>Lactose-Free Options: {{review.lactose_free}}</p>
+            </div>
+            <div class="inner-review-body wifi">
+              <p>Wifi: {{review.wifi}} |</p>
+              <p>Outlets: {{review.outlets}}</p>
+            </div>
+            <div class="inner-review-body">
+              <p>Patio: {{review.patio}} |</p>
+              <p>Pet Friendly: {{review.pet_friendly}} |</p>
+              <p>Service: {{review.service}}/5</p>
+            </div>
+            <div class="comments-div">
+              <p>Comments: {{review.comments}}</p>
+            </div>
+          </div>
         </div>
-        <div>
-          <a href="{% url 'delete_review' data.id review.id %}">X</a>
-        </div>
+        <div class="divider"></div>
       </div>
       {% endfor %}
+    </div>
+  </div>
 </body>
 <script>
   function overlayOn() {
