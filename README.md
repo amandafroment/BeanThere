@@ -1,5 +1,5 @@
 
-<img src="beanthere/main_app/static/css/images/logo.png" width="300">
+<img src="beanthere/main_app/static/css/images/logo.png" width="200">
 
 
 # Bean There
