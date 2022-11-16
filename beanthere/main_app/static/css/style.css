@@ -803,4 +803,67 @@ label {
   .favourites-title {
     margin-top: 15px;
   }
+
+  .data-container {
+    margin: 10px;
+  }
+
+  .detail-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    font-family: Mulish;
+  }
+
+  .detail-img-container {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    width: 60%;
+    margin: 0;
+  }
+
+  .detail-imgs {
+    width: 125px;
+    height: 175px;
+    margin: 1px;
+    border-radius: 16px;
+  }
+
+  .detail-title {
+    font-size: 20px;
+    color: #787878;
+    margin-bottom: 2px;
+  }
+
+  .rating-container > img {
+    width: 25%;
+    margin: 5px 0px;
+  }
+
+  .rating-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .reviews-num {
+    margin-left: 10px;
+  }
+
+  .hours-container > h4 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 16px;
+  }
+
+  .hours-container > p {
+    margin: 0px;
+    font-size: 14px;
+  }
+
+  .review-container {
+    font-family: Mulish;
+  }
 }
