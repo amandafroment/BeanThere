@@ -1,5 +1,5 @@
 
-![Logo](<img src="BeanThere/beanthere/main_app/static/css/images/logo.png" width="600">)
+<img src="BeanThere/beanthere/main_app/static/css/images/logo.png">
 
 
 # Bean There
