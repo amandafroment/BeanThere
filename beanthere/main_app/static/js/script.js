@@ -1,5 +1,7 @@
 function selectedButton(evt) {
+    console.log(evt)
   let evtVal = `${evt}val`;
+      console.log(evtVal)
   displayBtn = document.getElementById(evt);
   dataVal = document.getElementById(evtVal);
   if (dataVal.value === "false") {

@@ -1,22 +1,21 @@
-from django.shortcuts import render, redirect
-from django.http import HttpResponse
-from django.contrib.auth import login
-from django.contrib.auth.forms import UserCreationForm
-from django.contrib.auth.decorators import login_required
-from .models import Review
-import os
 import argparse
+import datetime
 import json
+import os
 import pprint
-import requests
 import sys
 import urllib
-import datetime
-
 from urllib.error import HTTPError
-from urllib.parse import quote
-from urllib.parse import urlencode
-from urllib.parse import urljoin
+from urllib.parse import quote, urlencode, urljoin
+
+import requests
+from django.contrib.auth import login
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.forms import UserCreationForm
+from django.http import HttpResponse
+from django.shortcuts import redirect, render
+
+from .models import Review
 
 API_HOST = 'https://api.yelp.com'
 SEARCH_PATH = '/v3/businesses/search'
@@ -29,6 +28,8 @@ DEFAULT_LOCATION = 'Toronto'
 SEARCH_LIMIT = 10
 
 DAY_NAMES = {0: 'Mon', 1: 'Tue', 2: 'Wed', 3: 'Thu', 4: 'Fri', 5: 'Sat', 6: 'Sun'}
+
+NEW_REVIEW = False
 
 # Create your views here.
 
@@ -97,7 +98,10 @@ def details(request, yelp_id):
     hours_data = hours_format(hours_raw)
   else:
     hours_data = []
-  return render(request, 'users/details.html', {'data': response_data, 'hours_data': hours_data, 'reviews': reviews})
+  global NEW_REVIEW
+  display_overlay = NEW_REVIEW
+  NEW_REVIEW = False
+  return render(request, 'users/details.html', {'data': response_data, 'hours_data': hours_data, 'reviews': reviews, 'display_overlay': display_overlay})
 
 def hours_format(hours_raw):
   hours_clean = []
@@ -151,6 +155,8 @@ def add_review(request, yelp_id):
   r = Review(lighting=lighting, sound=sound, traffic=traffic, vegan=vegan, gluten_free=gluten_free, lactose_free=lactose_free, service=service, wifi=wifi, outlets=outlets, 
   patio=patio, pet_friendly=pet_friendly, comments=comments, cafe_id=cafe_id, timestamp=timestamp, user=user)
   r.save()
+  global NEW_REVIEW
+  NEW_REVIEW = True
   return redirect('details', yelp_id=yelp_id)
 
 def api_search(api_key, term, location):
