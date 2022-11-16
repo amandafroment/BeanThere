@@ -389,7 +389,7 @@ label {
 
 .recent-title {
   height: 32px;
-  margin: 25px 800px 0px 0px;
+  margin: 25px 0px 0px 0px;
   font-family: Mulish;
   font-size: 20px;
   font-weight: bold;
@@ -398,13 +398,13 @@ label {
   line-height: 1;
   letter-spacing: normal;
   color: #a7a7a7;
-  align-self: left;
+  align-self: unset;
 }
 
 .divider {
   width: 350px;
   height: 3px;
-  margin: 0px 600px 5px 13px;
+  margin: 0px 0px 5px 13px;
   border-radius: 10px;
   background-color: #d9d9d9;
 }
@@ -425,7 +425,7 @@ label {
   margin: 10px;
   border: solid 0.3px #909090;
   border-radius: 16px;
-  width: 90%;
+  width: 60%;
 }
 
 #overlay {
@@ -750,7 +750,7 @@ label {
     margin: 10px;
     border: solid 0.3px #909090;
     border-radius: 16px;
-    /* padding: 10px; */
+    padding: 10px;
     width: 90%;
   }
 
