@@ -11,6 +11,13 @@
       <img src="{{ photo }}" class="detail-imgs" />
       {% endfor %}
     </div>
+    <form action="{% url 'add_favourite' data.id %}" method="POST">
+      {% csrf_token %}
+      <input type="hidden" name="name" value="{{ data.name }}">
+      <input type="hidden" name="rating" value="{{ data.rating }}">
+      <input type="hidden" name="price" value="{{ data.price }}">
+      <input type="submit" value="Add Favourite">
+    </form>
     <div class="data-container">
       <h1 class="detail-title">{{ data.name }}</h1>
       <div>

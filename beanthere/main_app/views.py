@@ -15,7 +15,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.http import HttpResponse
 from django.shortcuts import redirect, render
 
-from .models import Review
+from .models import Review, Favourite
 
 from django.contrib.auth.mixins import LoginRequiredMixin
 
@@ -195,3 +195,13 @@ def api_details(host, path, api_key, yelp_id):
   response = requests.request('GET', url, headers=headers)
   return response.json()
 
+def add_favourite(request, yelp_id):
+  data = request.POST
+  name = data['name']
+  rating = data['rating']
+  price = data['price']
+  user = request.user
+  timestamp = datetime.datetime.now()
+  f = Favourite(name=name, rating=rating, price=price, user=user, cafe_id=yelp_id, timestamp=timestamp)
+  f.save()
+  return redirect('details', yelp_id=yelp_id)
