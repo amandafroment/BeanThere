@@ -270,15 +270,33 @@ label {
   margin-top: 25px;
 }
 
+.search-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
 .logout-btn {
   height: 40px;
-  width: 125px;
+  width: 100px;
   background-color: #4e4235;
   align-self: center;
-  margin: 25px 0px 0px 25px;
+  margin: 20px 0px 0px 5px;
   border-radius: 10px;
   font-size: 16px;
   font-family: Mulish;
+}
+
+.go-btn {
+  height: 40px;
+  width: 75px;
+  background-color: #a4978a;
+  margin: 5px 0px 0px 10px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-family: Mulish;
+  color: white;
+  cursor: pointer;
 }
 
 .Rectangle-17 {
@@ -628,7 +646,7 @@ label {
     width: 50px;
     height: 60px;
     align-self: center;
-    margin-right: 2px;
+    margin-right: 0px;
     margin-bottom: 10px;
   }
 
@@ -637,7 +655,7 @@ label {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 5px;
+    margin-top: 10px;
   }
 
   .Rectangle-18 {
@@ -661,12 +679,35 @@ label {
   }
 
   .search-input {
-    width: 100px;
+    width: 75px;
     height: 20px;
     flex-grow: 0;
     border-radius: 16px;
     border: solid 0.5px #909090;
     background-color: #fff;
+    font-family: Mulish;
+  }
+
+  .go-btn {
+    height: 35px;
+    width: 40px;
+    background-color: #a4978a;
+    margin: 5px 0px 0px 5px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-family: Mulish;
+    color: white;
+    cursor: pointer;
+  }
+
+  .logout-btn {
+    height: 35px;
+    width: 70px;
+    background-color: #4e4235;
+    align-self: center;
+    margin: 10px 0px 0px 5px;
+    border-radius: 10px;
+    font-size: 14px;
     font-family: Mulish;
   }
 
@@ -725,17 +766,6 @@ label {
 
   .yelp-logo {
     width: 50px;
-  }
-
-  .logout-btn {
-    height: 35px;
-    width: 75px;
-    background-color: #4e4235;
-    align-self: center;
-    margin: 0px 0px 0px 10px;
-    border-radius: 10px;
-    font-size: 14px;
-    font-family: Mulish;
   }
 
   .username-title {

@@ -21,14 +21,19 @@
         /></a>
       </div>
       <div class="search-bar">
-        <form name="myform" method="GET" action="{% url 'search' %}">
+        <form
+          name="myform"
+          method="GET"
+          action="{% url 'search' %}"
+          class="search-form"
+        >
           <input
             class="search-input"
             type="text"
             name="search"
             placeholder="Search"
           />
-          <input class="" type="submit" value="Go" />
+          <input class="go-btn anchor-btn" type="submit" value="Go" />
         </form>
         <!-- <p class="location"></p> need to add in location that is searched here -->
       </div>
