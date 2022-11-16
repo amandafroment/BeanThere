@@ -4,13 +4,13 @@
 # Bean There
 
 Bean There is an online directory for discovering your local cafe scene!
-The application is catered to students and those who work from home who are looking for a change of scenery while they work.  
+The application is catered for students and those who work from home that are looking for a change of scenery while they work. 
 
-After signing up and logging in, you are able to find cafes in your area using the search bar!  By clicking on the cafe of your choice, you will have access to more cafe information as well as reviews left by other students and WFH'ers. 
+After signing up and logging in, you are able to find cafes in your area using the search bar!  By clicking on the cafe of your choice, you will have access to more cafe information as well as reviews left by other students and WFH'ers. You can even create a review of your own to help others decide if that workspace fits their needs.  Is there reliable wifi and lots of outlets?  Can you bring your fury friend or sit out on the patio?  Do they cater to any dietary restrictions?  Let your friends on Bean There know!
 
 
 
-## Project Link
+## Try it out!
 
 ![Click Here!](projectlink)
 
