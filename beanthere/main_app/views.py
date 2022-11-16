@@ -103,7 +103,12 @@ def details(request, yelp_id):
   global NEW_REVIEW
   display_overlay = NEW_REVIEW
   NEW_REVIEW = False
-  return render(request, 'users/details.html', {'data': response_data, 'hours_data': hours_data, 'reviews': reviews, 'display_overlay': display_overlay})
+  if Favourite.objects.filter(cafe_id__exact=yelp_id).filter(user_id__exact=request.user).count() > 0:
+    print("true")
+    fave = True
+  else:
+    fave = False
+  return render(request, 'users/details.html', {'data': response_data, 'hours_data': hours_data, 'reviews': reviews, 'display_overlay': display_overlay, 'fave':fave})
 
 def hours_format(hours_raw):
   hours_clean = []
@@ -200,8 +205,12 @@ def add_favourite(request, yelp_id):
   name = data['name']
   rating = data['rating']
   price = data['price']
+  images = data['image_url']
+  images_strip = images.strip("[']")
+  images_split = images_strip.split("', '")
+  image_url = images_split[0]
   user = request.user
   timestamp = datetime.datetime.now()
-  f = Favourite(name=name, rating=rating, price=price, user=user, cafe_id=yelp_id, timestamp=timestamp)
+  f = Favourite(name=name, rating=rating, price=price, user=user, cafe_id=yelp_id, timestamp=timestamp, image_url=image_url)
   f.save()
   return redirect('details', yelp_id=yelp_id)
