@@ -814,6 +814,7 @@ label {
     width: 100%;
     height: 100%;
     font-family: Mulish;
+    color: #787878;
   }
 
   .detail-img-container {
@@ -865,5 +866,31 @@ label {
 
   .review-container {
     font-family: Mulish;
+    margin: 0px 10px;
+  }
+
+  .review-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 10px;
+    color: #787878;
+    font-family: Mulish;
+  }
+
+  .review-btn {
+    width: 124px;
+    height: 48px;
+    border-radius: 16px;
+    background-color: #d9d9d9;
+    font-family: Mulish;
+    font-size: 16px;
+    border: none;
+  }
+
+  .detail-review-form {
+    margin: 0px 10px;
+    color: #787878;
   }
 }

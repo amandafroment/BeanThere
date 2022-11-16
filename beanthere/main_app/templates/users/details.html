@@ -76,16 +76,18 @@
     </div>
   </div>
 </div>
-<form method="get" action="{% url 'create_review' data.id %}">
-  <button type="submit">Add Review</button>
-</form>
 <div class="review-container">
-  <h2>Reviews</h2>
+  <div class="review-header">
+    <h2>Reviews</h2>
+    <form method="get" action="{% url 'create_review' data.id %}">
+      <button type="submit" class="review-btn">Add Review</button>
+    </form>
+  </div>
   <div class="divider"></div>
 
   {% for review in reviews %}
   <div>
-    <div>
+    <div class="detail-review-form">
       <p>Review by: {{user.get_username}}</p>
       <p>Lighting: {{review.lighting}}/5</p>
       <p>Sound: {{review.sound}}/5</p>
