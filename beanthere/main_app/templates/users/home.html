@@ -1,9 +1,11 @@
 {% extends 'base.html' %} {% block content %}
 
-<h1>Hi, {{ user.username }} !</h1>
+<h1 class="username-title">Welcome back, {{ user.username }} !</h1>
 
 <div class="profile">
-  <h2 class="recents">Recently Bean</h2>
+  <h2 class="recent-title">Recently Bean</h2>
+  <div class="divider"></div>
+
   {% for recent in recents %}
   <a href="{% url 'details' recent.cafe_id %}" class="index-title">
     <div class="card-container">
@@ -13,7 +15,6 @@
       <div class="index-info">
         <div>{{recent.timestamp}}</div>
         <div>{{recent.name}}</div>
-        <div>{{recent.price}}</div>
         {% if recent.rating == 5.0 %}
         <img
           src="/static/css/images/yelp_stars/web_and_ios/small/small_5.png"
@@ -59,10 +60,13 @@
           src="/static/css/images/yelp_stars/web_and_ios/small/small_0.png"
         />
         {% endif %}
+        <div>{{recent.price}}</div>
       </div>
     </div>
   </a>
   {% endfor %}
+  <h2 class="recent-title favourites-title">My Favourites</h2>
+  <div class="divider"></div>
 </div>
 
 {% endblock %}
