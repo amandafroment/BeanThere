@@ -2,11 +2,10 @@
 
 <h1 class="username-title">Welcome back, {{ user.username }} !</h1>
 
+<h2 class="recent-title">Recently Bean</h2>
+<div class="divider"></div>
 <div class="profile">
-  <h2 class="recent-title">Recently Bean</h2>
-  <div class="divider"></div>
-
-  <div class="card-container">
+  <div class="card-container card-container1">
     {% for recent in recents %}
     <div class="index-img-container">
       <img src="{{recent.image_url}}" class="index-img" />
