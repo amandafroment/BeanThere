@@ -912,8 +912,22 @@ label {
     border: none;
   }
 
+  .username-delete {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .delete-btn {
+    text-decoration: none;
+    font-size: 25px;
+    color: #787878;
+    cursor: pointer;
+  }
+
   .detail-review-form {
-    margin: 0px 10px;
+    margin: 0px 5px;
     color: #787878;
   }
 
@@ -924,12 +938,24 @@ label {
 
   .review-body {
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
     flex-wrap: wrap;
+    margin-top: 0;
   }
 
-  .review-body > p {
-    margin: 0;
+  .inner-review-body {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .inner-review-body > p {
+    margin: 5px;
+  }
+
+  .comments-div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 }
