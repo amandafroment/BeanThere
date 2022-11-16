@@ -108,20 +108,19 @@
           <p>Pet Friendly?: {{review.pet_friendly}}</p>
           <p>Service: {{review.service}}/5</p>
         </div>
+        <div>
+          <a href="{% url 'delete_review' data.id review.id %}">X</a>
+        </div>
       </div>
       {% endfor %}
-    </div>
-  </div>
 </body>
 <script>
   function overlayOn() {
     document.getElementById("overlay").style.display = "block";
-    console.log("overlay");
   }
 
   function overlayOff() {
     document.getElementById("overlay").style.display = "none";
   }
 </script>
-
 {% endblock %}

@@ -17,6 +17,8 @@ from django.shortcuts import redirect, render
 
 from .models import Review
 
+from django.contrib.auth.mixins import LoginRequiredMixin
+
 API_HOST = 'https://api.yelp.com'
 SEARCH_PATH = '/v3/businesses/search'
 DETAILS_PATH = 'https://api.yelp.com/v3/businesses/'
@@ -158,6 +160,15 @@ def add_review(request, yelp_id):
   global NEW_REVIEW
   NEW_REVIEW = True
   return redirect('details', yelp_id=yelp_id)
+
+def delete_review(request, review_id, yelp_id):
+  return render(request, 'users/review_confirm_delete.html', {'yelp_id':yelp_id, 'review_id':review_id})
+
+def review_confirm_delete(request, yelp_id, review_id):
+  delete=Review.objects.get(id=review_id)
+  delete.delete()
+  return redirect('details', yelp_id=yelp_id)
+  
 
 def api_search(api_key, term, location):
     url_params = {
