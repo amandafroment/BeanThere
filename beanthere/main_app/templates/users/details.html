@@ -1,4 +1,13 @@
 {% extends 'base.html' %} {% block content %}
+
+{% if display_overlay %}
+<body onload="overlayOn()">
+{% endif %}
+<div id="overlay" onclick="overlayOff()">
+  <h1 id="overlayMessage">Thank you!</h1>
+</div>
+
+
 <div>{{ data.name }}</div>
 {% if data.rating == 5.0 %}
 <img src="/static/css/images/yelp_stars/web_and_ios/small/small_5@2x.png" />
@@ -81,5 +90,15 @@
   </div>
   {% endfor %}
 </div>
+</body>
+<script>
+  function overlayOn() {
+  document.getElementById("overlay").style.display = "block";
+  console.log("overlay")
+}
 
+function overlayOff() {
+  document.getElementById("overlay").style.display = "none";
+}
+</script>
 {% endblock %}
