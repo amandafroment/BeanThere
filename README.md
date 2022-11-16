@@ -9,12 +9,20 @@ The application is catered to students and those who work from home who are look
 After signing up and logging in, you are able to find cafes in your area using the search bar!  By clicking on the cafe of your choice, you will have access to more cafe information as well as reviews left by other students and WFH'ers. 
 
 
+
+## Project Link
+
+![Click Here!](projectlink)
+
+
+
 ## Authors
 
 - [@amandafroment](https://github.com/amandafroment)
 - [@matthewTiberio](https://github.com/matthewTiberio)
 - [@raeganmb](https://github.com/raeganmb)
 - [@rasl76](https://github.com/rasl76)
+
 
 
 ## Tech Stack
@@ -26,9 +34,11 @@ After signing up and logging in, you are able to find cafes in your area using t
 **Deployed with:** Heroku
 
 
+
 ## Screenshots
 
 ![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+
 
 
 ## Example Code
@@ -71,7 +81,24 @@ def details(request, yelp_id):
   NEW_REVIEW = False
   return render(request, 'users/details.html', {'data': response_data, 'hours_data': hours_data, 'reviews': reviews, 'display_overlay': display_overlay})
 ```
+
+
 ## Demo
 
 Insert gif or link to demo
+
+
+
+## Icebox Items and Next Steps
+
+- 
+- 
+- 
+
+
+
+## Project Link
+
+![Click Here!](projectlink)
+
 
