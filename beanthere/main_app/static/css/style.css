@@ -470,8 +470,8 @@ label {
 }
 
 .detail-imgs {
-  width: 250px;
-  height: 325px;
+  width: 275px;
+  height: 350px;
   margin: 25px 5px 0px 5px;
   border-radius: 16px;
 }
@@ -481,7 +481,7 @@ label {
   display: flex;
   flex-direction: column;
   align-self: center;
-  width: 45%;
+  width: 50%;
 }
 
 .detail-title {
@@ -519,6 +519,7 @@ label {
 .review-container {
   font-family: Mulish;
   margin: 0px 10px;
+  width: 55%;
 }
 
 .review-header {
@@ -526,7 +527,7 @@ label {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin: 0px 10px;
+  margin: 0px 15px;
   color: #787878;
   font-family: Mulish;
 }
@@ -550,13 +551,13 @@ label {
 
 .delete-btn {
   text-decoration: none;
-  font-size: 25px;
+  font-size: 30px;
   color: #787878;
   cursor: pointer;
 }
 
 .detail-review-form {
-  margin: 0px 5px;
+  margin: 0px 15px;
   color: #787878;
 }
 
@@ -579,7 +580,7 @@ label {
   flex-wrap: wrap;
 }
 .inner-review-body > p {
-  margin: 5px;
+  margin: 5px 0px 5px 0px;
 }
 
 .comments-div {
@@ -966,6 +967,10 @@ label {
 
   .data-container {
     margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    width: 90%;
   }
 
   .detail-container {
@@ -980,9 +985,9 @@ label {
   .detail-img-container {
     display: flex;
     flex-direction: row;
-    align-content: center;
-    width: 60%;
-    margin: 0;
+    align-content: flex-start;
+    width: 100%;
+    margin: 5;
   }
 
   .detail-imgs {
@@ -1027,6 +1032,7 @@ label {
   .review-container {
     font-family: Mulish;
     margin: 0px 10px;
+    width: 100%;
   }
 
   .review-header {
