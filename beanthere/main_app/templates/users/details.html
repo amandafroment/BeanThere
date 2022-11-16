@@ -3,15 +3,15 @@
   <div class="detail-img-container">
     {% for photo in data.photos %}
     <img src="{{ photo }}" class="detail-imgs" />
-    {% endfor %}
-  </div>
-  <div class="data-container">
-    <h1 class="detail-title">{{ data.name }}</h1>
-    <div>
-      {{ data.location.address1 }}, {{ data.location.city }}
-      {{data.location.state}}
-    </div>
-    <div class="rating-container">
+
+    {% if display_overlay %}
+    <body onload="overlayOn()">
+      {% endif %}
+      <div id="overlay" onclick="overlayOff()">
+        <h1 id="overlayMessage">Thank you!</h1>
+      </div>
+
+      <div>{{ data.name }}</div>
       {% if data.rating == 5.0 %}
       <img
         src="/static/css/images/yelp_stars/web_and_ios/small/small_5@2x.png"
@@ -58,52 +58,137 @@
       />
       {% endif %}
 
-      <span class="reviews-num">Based on {{ data.review_count }} Reviews</span>
-    </div>
-    <div>
-      <a href="{{ data.url }}"
-        ><img
-          src="/static/css/images/yelp_stars/yelp_logo.png"
-          class="yelp-logo"
-      /></a>
-    </div>
-    <div>{{ data.price }}</div>
-    <div class="hours-container">
-      <h4>Hours</h4>
-      {% for day in hours_data %}
-      <p>{{day.day_name}}: {{day.start}} - {{day.end}}</p>
-      {% endfor %}
-    </div>
+      <div>Based on {{ data.review_count }} Reviews</div>
+      <div>{{ data.price }}</div>
+      <div>
+        <a href="{{ data.url }}"
+          ><img src="/static/css/images/yelp_stars/yelp_logo.png" width="100px"
+        /></a>
+      </div>
+      <div>
+        {{ data.location.address1 }}, {{ data.location.city }}
+        {{data.location.state}}
+      </div>
+      <div>
+        <h4>Hours</h4>
+        <div>
+          {% for day in hours_data %}
+          <div>{{day.day_name}}: {{day.start}} - {{day.end}}</div>
+          {% endfor %}
+        </div>
+        <div class="data-container">
+          <h1 class="detail-title">{{ data.name }}</h1>
+          <div>
+            {{ data.location.address1 }}, {{ data.location.city }}
+            {{data.location.state}}
+          </div>
+          <div class="rating-container">
+            {% if data.rating == 5.0 %}
+            <img
+              src="/static/css/images/yelp_stars/web_and_ios/small/small_5@2x.png"
+            />
+            {% elif data.rating == 4.5 %}
+            <img
+              src="/static/css/images/yelp_stars/web_and_ios/small/small_4_half@2x.png"
+            />
+            {% elif data.rating == 4.0 %}
+            <img
+              src="/static/css/images/yelp_stars/web_and_ios/small/small_4@2x.png"
+            />
+            {% elif data.rating == 3.5 %}
+            <img
+              src="/static/css/images/yelp_stars/web_and_ios/small/small_3_half@2x.png"
+            />
+            {% elif data.rating == 3.0 %}
+            <img
+              src="/static/css/images/yelp_stars/web_and_ios/small/small_3@2x.png"
+            />
+            {% elif data.rating == 2.5 %}
+            <img
+              src="/static/css/images/yelp_stars/web_and_ios/small/small_2_half@2x.png"
+            />
+            {% elif data.rating == 2.0 %}
+            <img
+              src="/static/css/images/yelp_stars/web_and_ios/small/small_2@2x.png"
+            />
+            {% elif data.rating == 1.5 %}
+            <img
+              src="/static/css/images/yelp_stars/web_and_ios/small/small_1_half@2x.png"
+            />
+            {% elif data.rating == 1.0 %}
+            <img
+              src="/static/css/images/yelp_stars/web_and_ios/small/small_1@2x.png"
+            />
+            {% elif data.rating == 0.5 %}
+            <img
+              src="/static/css/images/yelp_stars/web_and_ios/small/small_0_half@2x.png"
+            />
+            {% else %}
+            <img
+              src="/static/css/images/yelp_stars/web_and_ios/small/small_0@2x.png"
+            />
+            {% endif %}
+
+            <span class="reviews-num"
+              >Based on {{ data.review_count }} Reviews</span
+            >
+          </div>
+          <div>
+            <a href="{{ data.url }}"
+              ><img
+                src="/static/css/images/yelp_stars/yelp_logo.png"
+                class="yelp-logo"
+            /></a>
+          </div>
+          <div>{{ data.price }}</div>
+          <div class="hours-container">
+            <h4>Hours</h4>
+            {% for day in hours_data %}
+            <p>{{day.day_name}}: {{day.start}} - {{day.end}}</p>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+      <div class="review-container">
+        <div class="review-header">
+          <h2>Reviews</h2>
+          <form method="get" action="{% url 'create_review' data.id %}">
+            <button type="submit" class="review-btn">Add Review</button>
+          </form>
+        </div>
+        <div class="divider"></div>
+
+        {% for review in reviews %}
+        <div>
+          <div class="detail-review-form">
+            <p>Review by: {{user.get_username}}</p>
+            <p>Lighting: {{review.lighting}}/5</p>
+            <p>Sound: {{review.sound}}/5</p>
+            <p>Traffic: {{review.traffic}}/5</p>
+            <p>Vegan?: {{review.vegan}}</p>
+            <p>Gluten-Free Options?: {{review.gluten_free}}</p>
+            <p>Lactose-Free Options?: {{review.lactose_free}}</p>
+            <p>Wifi?: {{review.wifi}}</p>
+            <p>Outlets?: {{review.outlets}}</p>
+            <p>Patio?: {{review.patio}}</p>
+            <p>Pet Friendly?: {{review.pet_friendly}}</p>
+            <p>Service: {{review.service}}/5</p>
+          </div>
+        </div>
+        <div></div>
+        {% endfor %}
+      </div>
+    </body>
+    <script>
+      function overlayOn() {
+        document.getElementById("overlay").style.display = "block";
+        console.log("overlay");
+      }
+
+      function overlayOff() {
+        document.getElementById("overlay").style.display = "none";
+      }
+    </script>
+    {% endblock %}
   </div>
 </div>
-<div class="review-container">
-  <div class="review-header">
-    <h2>Reviews</h2>
-    <form method="get" action="{% url 'create_review' data.id %}">
-      <button type="submit" class="review-btn">Add Review</button>
-    </form>
-  </div>
-  <div class="divider"></div>
-
-  {% for review in reviews %}
-  <div>
-    <div class="detail-review-form">
-      <p>Review by: {{user.get_username}}</p>
-      <p>Lighting: {{review.lighting}}/5</p>
-      <p>Sound: {{review.sound}}/5</p>
-      <p>Traffic: {{review.traffic}}/5</p>
-      <p>Vegan?: {{review.vegan}}</p>
-      <p>Gluten-Free Options?: {{review.gluten_free}}</p>
-      <p>Lactose-Free Options?: {{review.lactose_free}}</p>
-      <p>Wifi?: {{review.wifi}}</p>
-      <p>Outlets?: {{review.outlets}}</p>
-      <p>Patio?: {{review.patio}}</p>
-      <p>Pet Friendly?: {{review.pet_friendly}}</p>
-      <p>Service: {{review.service}}/5</p>
-    </div>
-  </div>
-  <div></div>
-  {% endfor %}
-</div>
-
-{% endblock %}
