@@ -1,5 +1,7 @@
 
-<img src="beanthere/main_app/static/css/images/logo.png" width="200">         # Bean There
+<img src="beanthere/main_app/static/css/images/logo.png" width="200">         
+
+# Bean There
 
 Bean There is an online directory for discovering your local cafe scene!
 The application is catered to students and those who work from home who are looking for a change of scenery while they work.  
