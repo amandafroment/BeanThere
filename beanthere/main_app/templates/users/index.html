@@ -4,7 +4,7 @@
     <img src="{{ b.image_url }}" class="index-img" />
   </div>
   <div class="index-info">
-    <div><a href="{% url 'details' b.id %}">{{ b.name }}</a></div>
+    <a href="{% url 'details' b.id %}" class="index-title">{{ b.name }} </a>
     {% if b.rating == 5.0 %}
     <img src="/static/css/images/yelp_stars/web_and_ios/small/small_5.png" />
     {% elif b.rating == 4.5 %}
@@ -39,9 +39,12 @@
     <img src="/static/css/images/yelp_stars/web_and_ios/small/small_0.png" />
     {% endif %}
     <div>Based on {{ b.review_count }} Reviews</div>
+    <div>{{ b.price }}</div>
     <div>
       <a href="{{ b.url }}"
-        ><img src="/static/css/images/yelp_stars/yelp_logo.png" width="100px"
+        ><img
+          src="/static/css/images/yelp_stars/yelp_logo.png"
+          class="yelp-logo"
       /></a>
     </div>
     <div>

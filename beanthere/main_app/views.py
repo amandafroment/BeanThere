@@ -1,21 +1,21 @@
-from django.shortcuts import render, redirect
-from django.http import HttpResponse
-from django.contrib.auth import login
-from django.contrib.auth.forms import UserCreationForm
-from .models import Review
-import os
 import argparse
+import datetime
 import json
+import os
 import pprint
-import requests
 import sys
 import urllib
-import datetime
-
 from urllib.error import HTTPError
-from urllib.parse import quote
-from urllib.parse import urlencode
-from urllib.parse import urljoin
+from urllib.parse import quote, urlencode, urljoin
+
+import requests
+from django.contrib.auth import login
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.forms import UserCreationForm
+from django.http import HttpResponse
+from django.shortcuts import redirect, render
+
+from .models import Review
 
 from django.contrib.auth.mixins import LoginRequiredMixin
 
@@ -30,6 +30,8 @@ DEFAULT_LOCATION = 'Toronto'
 SEARCH_LIMIT = 10
 
 DAY_NAMES = {0: 'Mon', 1: 'Tue', 2: 'Wed', 3: 'Thu', 4: 'Fri', 5: 'Sat', 6: 'Sun'}
+
+NEW_REVIEW = False
 
 # Create your views here.
 
@@ -52,6 +54,7 @@ def signup(request):
   context = {'form': form, 'error_message': error_message}
   return render(request, 'registration/signup.html', context)
 
+@login_required
 def search(request):
   city = request.GET.get('search') #put form name here 
   response_data = api_search(API_KEY, DEFAULT_TERM, city)
@@ -62,26 +65,45 @@ def landing(request):
     return render(request, 'landing.html')
 
 # Define the home view
+@login_required
 def home(request):
-  return render(request, 'users/home.html')
+  all_reviews = Review.objects.filter(user__exact=request.user)
+  selected_reviews = all_reviews.order_by('-timestamp')[:4]
+  recents = []
+  for review in selected_reviews:
+    response_data = api_details(API_HOST, DETAILS_PATH, API_KEY, review.cafe_id)
+    yelp_info = {
+      'name': response_data.get('name'),
+      'price': response_data.get('price'),
+      'rating': response_data.get('rating'),
+      'image_url': response_data.get('photos')[0],
+      'timestamp': review.timestamp,
+      'cafe_id': response_data.get('id'),
+      }
+    recents.append(yelp_info)
+  return render(request, 'users/home.html', {'recents': recents})
 
 # Define the home view
+@login_required
 def index(request):
   response_data = api_search(API_KEY, DEFAULT_TERM, DEFAULT_LOCATION)
   search_data = response_data.get('businesses')
   return render(request, 'users/index.html', { 'businesses': search_data })
 
 # Define the details view
+@login_required
 def details(request, yelp_id):
   reviews = Review.objects.filter(cafe_id__exact=yelp_id)
-  print(reviews)
   response_data = api_details(API_HOST, DETAILS_PATH, API_KEY, yelp_id)
   if response_data.get('hours'):
     hours_raw = response_data.get('hours')[0].get('open')
     hours_data = hours_format(hours_raw)
   else:
     hours_data = []
-  return render(request, 'users/details.html', {'data': response_data, 'hours_data': hours_data, 'reviews': reviews})
+  global NEW_REVIEW
+  display_overlay = NEW_REVIEW
+  NEW_REVIEW = False
+  return render(request, 'users/details.html', {'data': response_data, 'hours_data': hours_data, 'reviews': reviews, 'display_overlay': display_overlay})
 
 def hours_format(hours_raw):
   hours_clean = []
@@ -109,9 +131,11 @@ def format_time(time):
 def user(request):
   return render(request, 'users/user.html')
 
+@login_required
 def create_review(request, yelp_id):
   return render(request, 'users/review.html', {'yelp_id': yelp_id})
 
+@login_required
 def add_review(request, yelp_id):
   data = request.POST
   print(data)
@@ -133,6 +157,8 @@ def add_review(request, yelp_id):
   r = Review(lighting=lighting, sound=sound, traffic=traffic, vegan=vegan, gluten_free=gluten_free, lactose_free=lactose_free, service=service, wifi=wifi, outlets=outlets, 
   patio=patio, pet_friendly=pet_friendly, comments=comments, cafe_id=cafe_id, timestamp=timestamp, user=user)
   r.save()
+  global NEW_REVIEW
+  NEW_REVIEW = True
   return redirect('details', yelp_id=yelp_id)
 
 def delete_review(request, review_id, yelp_id):
@@ -158,20 +184,14 @@ def api_request(host, path, api_key, url_params=None):
   headers = {
     'Authorization': 'Bearer %s' % api_key,
   }
-
-  print(u'Querying {0} ...'.format(url))
-
   response = requests.request('GET', url, headers=headers, params=url_params)
-
   return response.json()
 
 def api_details(host, path, api_key, yelp_id):
   url = urljoin(path, yelp_id)
-  print(url)
   headers = {
     'Authorization': 'Bearer %s' % api_key,
   }
-  print(u'Querying {0} ...'.format(url))
   response = requests.request('GET', url, headers=headers)
   return response.json()
 
