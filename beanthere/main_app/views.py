@@ -214,3 +214,8 @@ def add_favourite(request, yelp_id):
   f = Favourite(name=name, rating=rating, price=price, user=user, cafe_id=yelp_id, timestamp=timestamp, image_url=image_url)
   f.save()
   return redirect('details', yelp_id=yelp_id)
+
+def remove_favourite(request, yelp_id):
+  delete = Favourite.objects.get(cafe_id=yelp_id, user=request.user)
+  delete.delete()
+  return redirect('details', yelp_id=yelp_id)

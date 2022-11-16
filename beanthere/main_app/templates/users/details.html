@@ -12,7 +12,8 @@
       {% endfor %}
     </div>
     {% if fave %}
-    <form>
+    <form action="{% url 'remove_favourite' data.id %}" method="POST">
+      {% csrf_token %}
       <input type="submit" value="Remove As Favourite">
     </form>
     {% else %}
