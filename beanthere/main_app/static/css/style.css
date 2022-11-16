@@ -451,6 +451,143 @@ label {
   transform: translate(-50%, -50%);
 }
 
+.detail-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  font-family: Mulish;
+  color: #787878;
+}
+
+.detail-img-container {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  margin: 0;
+}
+
+.detail-imgs {
+  width: 250px;
+  height: 325px;
+  margin: 25px 5px 0px 5px;
+  border-radius: 16px;
+}
+
+.data-container {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  width: 45%;
+}
+
+.detail-title {
+  font-size: 32px;
+  color: #787878;
+  margin-bottom: 2px;
+}
+
+.rating-container > img {
+  width: 20%;
+  margin: 5px 0px;
+}
+
+.rating-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.reviews-num {
+  margin-left: 10px;
+}
+
+.hours-container > h4 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+
+.hours-container > p {
+  margin: 0px;
+  font-size: 16px;
+}
+
+.review-container {
+  font-family: Mulish;
+  margin: 0px 10px;
+}
+
+.review-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0px 10px;
+  color: #787878;
+  font-family: Mulish;
+}
+
+.review-btn {
+  width: 124px;
+  height: 48px;
+  border-radius: 16px;
+  background-color: #d9d9d9;
+  font-family: Mulish;
+  font-size: 16px;
+  border: none;
+}
+
+.username-delete {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.delete-btn {
+  text-decoration: none;
+  font-size: 25px;
+  color: #787878;
+  cursor: pointer;
+}
+
+.detail-review-form {
+  margin: 0px 5px;
+  color: #787878;
+}
+
+.username-lbl {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.review-body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-top: 0;
+}
+
+.inner-review-body {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.inner-review-body > p {
+  margin: 5px;
+}
+
+.comments-div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
 /* MOBILE QUERIES ONLY - ALL DESK TOP QUERIES ABOVE*/
 
 @media only screen and (max-width: 450px) {
