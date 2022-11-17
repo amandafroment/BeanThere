@@ -595,7 +595,6 @@ label {
   flex-wrap: wrap;
 }
 
-<<<<<<< HEAD:beanthere/main_app/static/css/style.css
 .Rectangle-17{
     background-color: #e4e4e4;
     color: #666666;
@@ -728,7 +727,6 @@ label {
     letter-spacing: 0.5px;
   }
 
-=======
 .cafe-title-favourite-btn {
   display: flex;
   flex-direction: row;
@@ -807,7 +805,6 @@ label {
   font-family: Mulish;
   color: #909090;
 }
->>>>>>> main:main_app/static/css/style.css
 
 /* MOBILE QUERIES ONLY - ALL DESK TOP QUERIES ABOVE*/
 
@@ -1039,32 +1036,18 @@ label {
     align-items: center;
     margin-top: 10px;
   }
-<<<<<<< HEAD:beanthere/main_app/static/css/style.css
-
-  .Rectangle-17{
-    background-color: #e4e4e4;
-    color: #666666;
-    max-width: 300px;
-    max-height: 750px;
-=======
   .Rectangle-17 {
     background-color: #c7c7c7;
     color: #0f0f0f;
     width: 300px;
     max-height: 600px;
->>>>>>> main:main_app/static/css/style.css
     border-radius: 15px;
     margin: 20px 30px 30px 30px;
     padding: 22px 30px 30px 30px;
     font-size: 16px;
     font-family: Mulish;
   }
-<<<<<<< HEAD:beanthere/main_app/static/css/style.css
-
-  .Tell-us-what-you-think-about-this-place{
-=======
   .Tell-us-what-you-think-about-this-place {
->>>>>>> main:main_app/static/css/style.css
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -1074,23 +1057,16 @@ label {
   }
   .think{
     font-size: 20px;
-  .think {
     color: #000000;
   }
   .close-1 {
     margin-bottom: 10px;
   }
-<<<<<<< HEAD:beanthere/main_app/static/css/style.css
-
-  .form-headers{
-=======
   .form-headers {
->>>>>>> main:main_app/static/css/style.css
     align-self: center;
     margin: 15px;
     font-size: 16px;
   }
-<<<<<<< HEAD:beanthere/main_app/static/css/style.css
   .slider-descriptor-tags{
     display: flex;
     justify-content: space-between;
@@ -1099,9 +1075,7 @@ label {
     padding: 5px;
     letter-spacing: 0.5px;
   }
-  .slider-titles{
-    text-align: center;
-=======
+
   .food-drink-btns {
     display: flex;
     justify-content: space-around;
@@ -1118,11 +1092,10 @@ label {
     justify-content: space-around;
   }
   .slider-titles {
->>>>>>> main:main_app/static/css/style.css
     padding: 5px;
     margin-bottom: 5px;
     margin-top: 10px;
-
+    text-align: center;
   }
   .slider-title-1{
     text-align: center;
@@ -1135,20 +1108,11 @@ label {
     appearance: none;
     width: 100%;
     height: 8px;
-<<<<<<< HEAD:beanthere/main_app/static/css/style.css
     border-radius: 50px;  
     background: rgb(255, 255, 255);
     outline: none;
     -webkit-transition: .2s;
     transition: opacity .2s;
-=======
-    border-radius: 5px;
-    background: white;
-    outline: none;
-    opacity: 0.7;
-    -webkit-transition: 0.2s;
-    transition: opacity 0.2s;
->>>>>>> main:main_app/static/css/style.css
   }
 
   .slider::-webkit-slider-thumb {
