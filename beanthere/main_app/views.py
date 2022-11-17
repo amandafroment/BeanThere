@@ -38,9 +38,12 @@ def signup(request):
       login(request, user)
       return redirect('home')
     else:
-      error_message = 'Invalid sign up - try again'
+      error_message = ['Invalid sign up - try again',
+        'Password must contain 8 or more characters',
+        'Password must conatin letters and numbers']
   form = UserCreationForm()
   context = {'form': form, 'error_message': error_message}
+  print(error_message)
   return render(request, 'registration/signup.html', context)
 
 @login_required
