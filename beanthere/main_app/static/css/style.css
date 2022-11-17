@@ -540,6 +540,7 @@ label {
   font-family: Mulish;
   font-size: 16px;
   border: none;
+  cursor: pointer;
 }
 
 .username-delete {
@@ -587,6 +588,24 @@ label {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+}
+
+.cafe-title-favourite-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.favourite-btn {
+  width: 150px;
+  height: 48px;
+  border-radius: 16px;
+  background-color: #d9d9d9;
+  font-family: Mulish;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
 }
 
 /* MOBILE QUERIES ONLY - ALL DESK TOP QUERIES ABOVE*/
@@ -1053,6 +1072,7 @@ label {
     font-family: Mulish;
     font-size: 16px;
     border: none;
+    cursor: pointer;
   }
 
   .username-delete {
