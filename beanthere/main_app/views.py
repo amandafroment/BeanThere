@@ -68,7 +68,7 @@ def landing(request):
 @login_required
 def home(request):
   all_reviews = Review.objects.filter(user__exact=request.user)
-  selected_reviews = all_reviews.order_by('-timestamp')[:4]
+  selected_reviews = all_reviews.order_by('-timestamp')[:3]
   recents = []
   for review in selected_reviews:
     response_data = api_details(API_HOST, DETAILS_PATH, API_KEY, review.cafe_id)
@@ -81,7 +81,8 @@ def home(request):
       'cafe_id': response_data.get('id'),
       }
     recents.append(yelp_info)
-  return render(request, 'users/home.html', {'recents': recents})
+  faves = Favourite.objects.filter(user__exact=request.user)
+  return render(request, 'users/home.html', {'recents': recents, 'faves': faves})
 
 # Define the home view
 @login_required
@@ -104,7 +105,6 @@ def details(request, yelp_id):
   display_overlay = NEW_REVIEW
   NEW_REVIEW = False
   if Favourite.objects.filter(cafe_id__exact=yelp_id).filter(user_id__exact=request.user).count() > 0:
-    print("true")
     fave = True
   else:
     fave = False
@@ -143,7 +143,6 @@ def create_review(request, yelp_id):
 @login_required
 def add_review(request, yelp_id):
   data = request.POST
-  print(data)
   lighting = data['lighting']
   sound = data['sound']
   traffic = data['traffic']
