@@ -826,6 +826,11 @@ label {
   color: #909090;
 }
 
+.checkmark {
+  width: 20px;
+  height: 20px;
+}
+
 /* MOBILE QUERIES ONLY - ALL DESK TOP QUERIES ABOVE*/
 
 @media only screen and (max-width: 450px) {
