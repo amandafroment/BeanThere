@@ -101,7 +101,12 @@
     <div class="review-container">
       <div class="review-header">
         <h2>Reviews</h2>
-        <form method="get" action="{% url 'create_review' data.id %}">
+        <form method="POST" action="{% url 'create_review' data.id %}">
+          {% csrf_token %}
+          <input type="hidden" name="name" value="{{ data.name }}" />
+          <input type="hidden" name="rating" value="{{ data.rating }}" />
+          <input type="hidden" name="price" value="{{ data.price }}" />
+          <input type="hidden" name="image_url" value="{{ data.photos }}" />
           <button type="submit" class="review-btn">Add Review</button>
         </form>
       </div>
