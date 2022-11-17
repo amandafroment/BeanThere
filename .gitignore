@@ -1,0 +1,5 @@
+# main_app/migrations
+# main_app/__pycache__
+
+# **/migrations/**
+# !**/migrations/__init__.py

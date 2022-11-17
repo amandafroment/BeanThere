@@ -33,7 +33,7 @@
 .mobile-logo {
   width: 348px;
   height: 368px;
-  margin-top: 200px;
+  margin-top: 100px;
   align-self: center;
 }
 
@@ -47,7 +47,7 @@
 .logo {
   width: 348px;
   height: 368px;
-  margin: 200px 25px 0 29px;
+  margin: 100px 25px 0 29px;
   align-self: center;
 }
 
@@ -196,7 +196,7 @@ label {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin: 15px 69px 0 43px;
+  margin: 15px 69px 25px 43px;
   padding: 17px 120px;
   border-radius: 16px;
   background-color: #4e4235;
@@ -220,7 +220,7 @@ label {
 .Rectangle-4 {
   width: 350px;
   height: 5px;
-  margin: 50px 66px 128px 40px;
+  margin: 25px 66px 25px 40px;
   border-radius: 10px;
   background-color: #d9d9d9;
   font-family: Mulish;
@@ -310,6 +310,7 @@ label {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 50px;
 }
 
 .card-container {
@@ -428,15 +429,17 @@ label {
   background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
   z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
   cursor: pointer; /* Add a pointer on hover */
+  text-align: center;
 }
 
 #overlayMessage {
   position: absolute;
   top: 50%;
   left: 50%;
-  font-size: 50px;
+  font-size: 40px;
   color: white;
   transform: translate(-50%, -50%);
+  text-align: center;
 }
 
 .detail-container {
@@ -528,6 +531,7 @@ label {
   font-family: Mulish;
   font-size: 16px;
   border: none;
+  cursor: pointer;
 }
 
 .username-delete {
@@ -562,13 +566,27 @@ label {
   margin-top: 0;
 }
 
+.review-body > h4 {
+  margin-bottom: 5px;
+  font-size: 17px;
+}
+
+.review-body-first-header {
+  margin-top: 0;
+}
+
+.review-body-header {
+  margin-top: 15px;
+}
+
 .inner-review-body {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
+
 .inner-review-body > p {
-  margin: 5px 0px 5px 0px;
+  margin: 5px 20px 5px 0px;
 }
 
 .comments-div {
@@ -577,6 +595,7 @@ label {
   flex-wrap: wrap;
 }
 
+<<<<<<< HEAD:beanthere/main_app/static/css/style.css
 .Rectangle-17{
     background-color: #e4e4e4;
     color: #666666;
@@ -709,6 +728,86 @@ label {
     letter-spacing: 0.5px;
   }
 
+=======
+.cafe-title-favourite-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.favourite-btn {
+  width: 75px;
+  height: 48px;
+  border-radius: 16px;
+  background-color: #d9d9d9;
+  font-family: Mulish;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 5px;
+  margin-left: 15px;
+  position: relative;
+}
+
+.bigger-favourite-btn {
+  background-color: white;
+  border: none;
+  position: relative;
+}
+
+.favourite-bean {
+  width: 25px;
+  height: 35px;
+  right: 25px;
+  top: 5px;
+  position: absolute;
+}
+
+.delete-page {
+  width: 50%;
+  margin-top: 20%;
+}
+
+.delete-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  border: solid 0.3px #909090;
+  border-radius: 16px;
+  padding: 10px;
+  margin-left: 5px;
+  width: 100%;
+  font-family: Mulish;
+  color: #909090;
+}
+
+.delete-container > h1 {
+  margin-bottom: 0px;
+}
+
+.delete-form-btn {
+  width: 124px;
+  height: 40px;
+  border-radius: 16px;
+  background-color: #d9d9d9;
+  color: #4e4235;
+  font-family: Mulish;
+  font-size: 16px;
+  border: 0;
+  cursor: pointer;
+}
+
+.cancel {
+  margin: 10px;
+  align-self: center;
+  font-family: Mulish;
+  color: #909090;
+}
+>>>>>>> main:main_app/static/css/style.css
 
 /* MOBILE QUERIES ONLY - ALL DESK TOP QUERIES ABOVE*/
 
@@ -740,6 +839,7 @@ label {
     align-items: center;
     align-content: center;
     margin-top: 150px;
+    margin-bottom: 50px;
   }
 
   .landing-header {
@@ -917,7 +1017,7 @@ label {
   }
 
   .join-us-btn {
-    margin: 15px 15px 0 16px;
+    margin: 15px 15px 0px 16px;
   }
 
   .signup-btn {
@@ -939,20 +1039,32 @@ label {
     align-items: center;
     margin-top: 10px;
   }
+<<<<<<< HEAD:beanthere/main_app/static/css/style.css
 
   .Rectangle-17{
     background-color: #e4e4e4;
     color: #666666;
     max-width: 300px;
     max-height: 750px;
+=======
+  .Rectangle-17 {
+    background-color: #c7c7c7;
+    color: #0f0f0f;
+    width: 300px;
+    max-height: 600px;
+>>>>>>> main:main_app/static/css/style.css
     border-radius: 15px;
     margin: 20px 30px 30px 30px;
     padding: 22px 30px 30px 30px;
     font-size: 16px;
     font-family: Mulish;
   }
+<<<<<<< HEAD:beanthere/main_app/static/css/style.css
 
   .Tell-us-what-you-think-about-this-place{
+=======
+  .Tell-us-what-you-think-about-this-place {
+>>>>>>> main:main_app/static/css/style.css
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -962,16 +1074,23 @@ label {
   }
   .think{
     font-size: 20px;
+  .think {
+    color: #000000;
   }
-  .close-1{
+  .close-1 {
     margin-bottom: 10px;
   }
+<<<<<<< HEAD:beanthere/main_app/static/css/style.css
 
   .form-headers{
+=======
+  .form-headers {
+>>>>>>> main:main_app/static/css/style.css
     align-self: center;
     margin: 15px;
     font-size: 16px;
   }
+<<<<<<< HEAD:beanthere/main_app/static/css/style.css
   .slider-descriptor-tags{
     display: flex;
     justify-content: space-between;
@@ -982,6 +1101,24 @@ label {
   }
   .slider-titles{
     text-align: center;
+=======
+  .food-drink-btns {
+    display: flex;
+    justify-content: space-around;
+  }
+  .comment-box {
+    font-size: 14px;
+  }
+  .comment-input-box {
+    width: 300px;
+    font-size: 14px;
+  }
+  .technical-btns {
+    display: flex;
+    justify-content: space-around;
+  }
+  .slider-titles {
+>>>>>>> main:main_app/static/css/style.css
     padding: 5px;
     margin-bottom: 5px;
     margin-top: 10px;
@@ -993,18 +1130,27 @@ label {
     margin-bottom: 5px;
     margin-top: 0px;
   }
-  .slider{
+  .slider {
     -webkit-appearance: none;
     appearance: none;
     width: 100%;
     height: 8px;
+<<<<<<< HEAD:beanthere/main_app/static/css/style.css
     border-radius: 50px;  
     background: rgb(255, 255, 255);
     outline: none;
     -webkit-transition: .2s;
     transition: opacity .2s;
+=======
+    border-radius: 5px;
+    background: white;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: 0.2s;
+    transition: opacity 0.2s;
+>>>>>>> main:main_app/static/css/style.css
   }
-  
+
   .slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
@@ -1059,7 +1205,7 @@ label {
   }
 
   .submit-div {
-    display:flex;
+    display: flex;
     justify-content: center;
   }
   .submit {
@@ -1173,6 +1319,7 @@ label {
     line-height: 1;
     letter-spacing: normal;
     color: #a7a7a7;
+    text-align: center;
   }
 
   .recent-title {
@@ -1222,7 +1369,7 @@ label {
     flex-direction: row;
     align-content: flex-start;
     width: 100%;
-    margin: 5;
+    margin: 0px;
   }
 
   .detail-imgs {
@@ -1236,6 +1383,33 @@ label {
     font-size: 20px;
     color: #787878;
     margin-bottom: 2px;
+  }
+
+  .favourite-btn {
+    width: 75px;
+    height: 45px;
+    border-radius: 16px;
+    background-color: #d9d9d9;
+    font-family: Mulish;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 5px;
+    margin-left: 15px;
+    position: relative;
+  }
+
+  .bigger-favourite-btn {
+    background-color: white;
+    border: none;
+  }
+
+  .favourite-bean {
+    width: 25px;
+    height: 35px;
+    position: absolute;
+    right: 25px;
+    top: 5px;
   }
 
   .rating-container > img {
@@ -1280,14 +1454,21 @@ label {
     font-family: Mulish;
   }
 
+  .review-body > h4 {
+    margin-left: 5px;
+  }
+
+  .review-body-header {
+    margin-top: 5px;
+  }
+
   .review-btn {
     width: 124px;
-    height: 48px;
+    height: 40px;
     border-radius: 16px;
     background-color: #d9d9d9;
     font-family: Mulish;
     font-size: 16px;
-    border: none;
   }
 
   .username-delete {
@@ -1335,5 +1516,49 @@ label {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+  }
+
+  .delete-page {
+    margin-top: 50%;
+    width: 100%;
+  }
+
+  .delete-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    border: solid 0.3px #909090;
+    border-radius: 16px;
+    padding: 10px;
+    margin-left: 5px;
+    width: 90%;
+    font-family: Mulish;
+    color: #909090;
+  }
+
+  .delete-container > h1 {
+    margin-bottom: 0px;
+  }
+
+  .delete-form-btn {
+    width: 124px;
+    height: 40px;
+    border-radius: 16px;
+    background-color: #d9d9d9;
+    color: #4e4235;
+    font-family: Mulish;
+    font-size: 16px;
+    border: 0;
+    cursor: pointer;
+  }
+
+  .cancel {
+    margin: 10px;
+    align-self: center;
+    font-family: Mulish;
+    color: #909090;
   }
 }

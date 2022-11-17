@@ -2,7 +2,7 @@
 <body onload="overlayOn()">
   {% endif %}
   <div id="overlay" onclick="overlayOff()">
-    <h1 id="overlayMessage">Thank you!</h1>
+    <h1 id="overlayMessage">Thank you for leaving a review!</h1>
   </div>
 
   <div class="detail-container">
@@ -11,23 +11,37 @@
       <img src="{{ photo }}" class="detail-imgs" />
       {% endfor %}
     </div>
-    {% if fave %}
-    <form action="{% url 'remove_favourite' data.id %}" method="POST">
-      {% csrf_token %}
-      <input type="submit" value="Remove As Favourite" />
-    </form>
-    {% else %}
-    <form action="{% url 'add_favourite' data.id %}" method="POST">
-      {% csrf_token %}
-      <input type="hidden" name="name" value="{{ data.name }}" />
-      <input type="hidden" name="rating" value="{{ data.rating }}" />
-      <input type="hidden" name="price" value="{{ data.price }}" />
-      <input type="hidden" name="image_url" value="{{ data.photos }}" />
-      <input type="submit" value="Add As Favourite" />
-    </form>
-    {% endif %}
     <div class="data-container">
-      <h1 class="detail-title">{{ data.name }}</h1>
+      <div class="cafe-title-favourite-btn">
+        <h1 class="detail-title">{{ data.name }}</h1>
+        {% if fave %}
+        <form action="{% url 'remove_favourite' data.id %}" method="POST">
+          {% csrf_token %}
+          <div class="bigger-favourite-btn">
+            <input type="submit" value="" class="favourite-btn" />
+            <img
+              src="/static/css/images/solid-fave-bean.png"
+              class="favourite-bean"
+            />
+          </div>
+        </form>
+        {% else %}
+        <form action="{% url 'add_favourite' data.id %}" method="POST">
+          {% csrf_token %}
+          <input type="hidden" name="name" value="{{ data.name }}" />
+          <input type="hidden" name="rating" value="{{ data.rating }}" />
+          <input type="hidden" name="price" value="{{ data.price }}" />
+          <input type="hidden" name="image_url" value="{{ data.photos }}" />
+          <div class="bigger-favourite-btn">
+            <input type="submit" value="" class="favourite-btn" /><img
+              src="/static/css/images/fave-bean-stencil.png"
+              class="favourite-bean"
+            />
+          </div>
+        </form>
+        {% endif %}
+      </div>
+
       <div>
         {{ data.location.address1 }}, {{ data.location.city }}
         {{data.location.state}}
@@ -126,23 +140,27 @@
           </div>
 
           <div class="review-body">
+            <h4 class="review-body-first-header">Ambience</h4>
             <div class="inner-review-body">
-              <p>Lighting: {{review.lighting}}/5 |</p>
-              <p>Sound: {{review.sound}}/5 |</p>
+              <p>Lighting: {{review.lighting}}/5</p>
+              <p>Sound: {{review.sound}}/5</p>
               <p>Traffic: {{review.traffic}}/5</p>
             </div>
+            <h4 class="review-body-header">Food & Drink</h4>
             <div class="inner-review-body">
-              <p>Vegan: {{review.vegan}} |</p>
-              <p>| Gluten-Free Options: {{review.gluten_free}}</p>
+              <p>Vegan: {{review.vegan}}</p>
+              <p>Gluten-Free Options: {{review.gluten_free}}</p>
               <p>Lactose-Free Options: {{review.lactose_free}}</p>
             </div>
+            <h4 class="review-body-header">Technology Essentials</h4>
             <div class="inner-review-body wifi">
-              <p>Wifi: {{review.wifi}} |</p>
+              <p>Wifi: {{review.wifi}}</p>
               <p>Outlets: {{review.outlets}}</p>
             </div>
+            <h4 class="review-body-header">The Important Stuff</h4>
             <div class="inner-review-body">
-              <p>Patio: {{review.patio}} |</p>
-              <p>Pet Friendly: {{review.pet_friendly}} |</p>
+              <p>Patio: {{review.patio}}</p>
+              <p>Pet Friendly: {{review.pet_friendly}}</p>
               <p>Service: {{review.service}}/5</p>
             </div>
             <div class="comments-div">
@@ -165,4 +183,8 @@
     document.getElementById("overlay").style.display = "none";
   }
 </script>
+<script
+  src="https://kit.fontawesome.com/8e35e2679a.js"
+  crossorigin="anonymous"
+></script>
 {% endblock %}
