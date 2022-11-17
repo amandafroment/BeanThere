@@ -575,13 +575,27 @@ label {
   margin-top: 0;
 }
 
+.review-body > h4 {
+  margin-bottom: 5px;
+  font-size: 17px;
+}
+
+.review-body-first-header {
+  margin-top: 0;
+}
+
+.review-body-header {
+  margin-top: 15px;
+}
+
 .inner-review-body {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
+
 .inner-review-body > p {
-  margin: 5px 0px 5px 0px;
+  margin: 5px 20px 5px 0px;
 }
 
 .comments-div {
@@ -1006,7 +1020,7 @@ label {
     flex-direction: row;
     align-content: flex-start;
     width: 100%;
-    margin: 5;
+    margin: 0px;
   }
 
   .detail-imgs {
@@ -1020,6 +1034,19 @@ label {
     font-size: 20px;
     color: #787878;
     margin-bottom: 2px;
+  }
+
+  .favourite-btn {
+    width: 124px;
+    height: 40px;
+    border-radius: 16px;
+    background-color: #d9d9d9;
+    font-family: Mulish;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 5px;
+    margin-left: 15px;
   }
 
   .rating-container > img {
