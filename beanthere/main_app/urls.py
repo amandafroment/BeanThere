@@ -14,4 +14,6 @@ urlpatterns = [
     path('user/', views.user, name='user'), # User Profile
     path('accounts/signup/', views.signup, name='signup'),
     path('search', views.search, name='search'),
+    path('details/<str:yelp_id>/addfavourite/', views.add_favourite, name='add_favourite'),
+    path('details/<str:yelp_id>/removefavourite/', views.remove_favourite, name='remove_favourite'),
 ]

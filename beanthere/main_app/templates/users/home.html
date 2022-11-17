@@ -55,6 +55,53 @@
 </div>
 <h2 class="recent-title favourites-title">My Favourites</h2>
 <div class="divider"></div>
+{% for fave in faves %}
+<div class="card-container card-container1">
+  <div class="index-img-container">
+    <img src="{{fave.image_url}}" class="index-img" />
+  </div>
+  <div class="index-info">
+    <a href="{% url 'details' fave.cafe_id %}" class="index-title">
+      {{fave.name}}
+    </a>
+    {% if fave.rating == '5.0' %}
+    <img src="/static/css/images/yelp_stars/web_and_ios/small/small_5.png" />
+    {% elif fave.rating == '4.5' %}
+    <img
+      src="/static/css/images/yelp_stars/web_and_ios/small/small_4_half.png"
+    />
+    {% elif fave.rating == '4.0' %}
+    <img src="/static/css/images/yelp_stars/web_and_ios/small/small_4.png" />
+    {% elif fave.rating == '3.5' %}
+    <img
+      src="/static/css/images/yelp_stars/web_and_ios/small/small_3_half.png"
+    />
+    {% elif fave.rating == '3.0' %}
+    <img src="/static/css/images/yelp_stars/web_and_ios/small/small_3.png" />
+    {% elif fave.rating == '2.5' %}
+    <img
+      src="/static/css/images/yelp_stars/web_and_ios/small/small_2_half.png"
+    />
+    {% elif fave.rating == '2.0' %}
+    <img src="/static/css/images/yelp_stars/web_and_ios/small/small_2.png" />
+    {% elif fave.rating == '1.5' %}
+    <img
+      src="/static/css/images/yelp_stars/web_and_ios/small/small_1_half.png"
+    />
+    {% elif fave.rating == '1.0' %}
+    <img src="/static/css/images/yelp_stars/web_and_ios/small/small_1.png" />
+    {% elif fave.rating == '0.5' %}
+    <img
+      src="/static/css/images/yelp_stars/web_and_ios/small/small_0_half.png"
+    />
+    {% else %}
+    <img src="/static/css/images/yelp_stars/web_and_ios/small/small_0.png" />
+    {% endif %}
+    <div>{{fave.price}}</div>
+  </div>
+</div>
+
+{% endfor %}
 
 
 

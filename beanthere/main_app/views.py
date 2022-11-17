@@ -15,7 +15,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.http import HttpResponse
 from django.shortcuts import redirect, render
 
-from .models import Review
+from .models import Review, Favourite
 
 from django.contrib.auth.mixins import LoginRequiredMixin
 
@@ -68,7 +68,7 @@ def landing(request):
 @login_required
 def home(request):
   all_reviews = Review.objects.filter(user__exact=request.user)
-  selected_reviews = all_reviews.order_by('-timestamp')[:4]
+  selected_reviews = all_reviews.order_by('-timestamp')[:3]
   recents = []
   for review in selected_reviews:
     response_data = api_details(API_HOST, DETAILS_PATH, API_KEY, review.cafe_id)
@@ -81,7 +81,8 @@ def home(request):
       'cafe_id': response_data.get('id'),
       }
     recents.append(yelp_info)
-  return render(request, 'users/home.html', {'recents': recents})
+  faves = Favourite.objects.filter(user__exact=request.user)
+  return render(request, 'users/home.html', {'recents': recents, 'faves': faves})
 
 # Define the home view
 @login_required
@@ -103,7 +104,11 @@ def details(request, yelp_id):
   global NEW_REVIEW
   display_overlay = NEW_REVIEW
   NEW_REVIEW = False
-  return render(request, 'users/details.html', {'data': response_data, 'hours_data': hours_data, 'reviews': reviews, 'display_overlay': display_overlay})
+  if Favourite.objects.filter(cafe_id__exact=yelp_id).filter(user_id__exact=request.user).count() > 0:
+    fave = True
+  else:
+    fave = False
+  return render(request, 'users/details.html', {'data': response_data, 'hours_data': hours_data, 'reviews': reviews, 'display_overlay': display_overlay, 'fave':fave})
 
 def hours_format(hours_raw):
   hours_clean = []
@@ -138,7 +143,6 @@ def create_review(request, yelp_id):
 @login_required
 def add_review(request, yelp_id):
   data = request.POST
-  print(data)
   lighting = data['lighting']
   sound = data['sound']
   traffic = data['traffic']
@@ -195,3 +199,22 @@ def api_details(host, path, api_key, yelp_id):
   response = requests.request('GET', url, headers=headers)
   return response.json()
 
+def add_favourite(request, yelp_id):
+  data = request.POST
+  name = data['name']
+  rating = data['rating']
+  price = data['price']
+  images = data['image_url']
+  images_strip = images.strip("[']")
+  images_split = images_strip.split("', '")
+  image_url = images_split[0]
+  user = request.user
+  timestamp = datetime.datetime.now()
+  f = Favourite(name=name, rating=rating, price=price, user=user, cafe_id=yelp_id, timestamp=timestamp, image_url=image_url)
+  f.save()
+  return redirect('details', yelp_id=yelp_id)
+
+def remove_favourite(request, yelp_id):
+  delete = Favourite.objects.get(cafe_id=yelp_id, user=request.user)
+  delete.delete()
+  return redirect('details', yelp_id=yelp_id)

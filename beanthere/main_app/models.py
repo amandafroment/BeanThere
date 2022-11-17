@@ -19,3 +19,12 @@ class Review(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     cafe_id = models.CharField(max_length=200)
     timestamp = models.DateTimeField()
+
+class Favourite(models.Model):
+    cafe_id = models.CharField(max_length=200)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    name = models.CharField(max_length=200)
+    rating = models.CharField(max_length=20)
+    price = models.CharField(max_length=20)
+    image_url = models.CharField(max_length=200)
+    timestamp = models.DateTimeField()

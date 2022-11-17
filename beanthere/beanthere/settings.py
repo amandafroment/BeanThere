@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'beanthere.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'beanthere',
+        'NAME': 'beanthere2',
     }
 }
 
