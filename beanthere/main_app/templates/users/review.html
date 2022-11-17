@@ -1,42 +1,47 @@
 {% extends 'base.html' %} {% block content %}
-<h1>Reviews</h1>
 
 <div class="Rectangle-17">
-    <span class="Tell-us-what-you-think-about-this-place">
-  Tell us what you think about this place!</span>
+    
+    <div class="Tell-us-what-you-think-about-this-place">
+        <div class="think">Tell us what you think!</div>
+        <div class="close-1">X</div>
+    </div>
     <form action="{% url 'add_review' yelp_id %}" method="POST">
         {% csrf_token %}
-        <div class="close-1"></div>
-        <div><span class="Ambience">Ambience</span></div>
-            <input type="range" class="slider" id="select1" min="1" max="5" value="3" name="lighting">Lighting</input>
-            <input type="range" class="slider" id="select2" min="1" max="5" value="3" name="sound">Sound</input>
-            <input type="range" class="slider" id="select3" min="1" max="5" value="3" name="traffic">Traffic</input>
-        <div><span class="Food-Drinks">Food & Drinks</span></div>
-            <input type="button" id="select4" class="rev-btn" onclick="selectedButton('select4')" value="Vegan"></input>
-            <input type="hidden" id="select4val" value="false" name="vegan">
-            <input type="button" id="select5" class="rev-btn" onclick="selectedButton('select5')" value="GF"></input>
-            <input type="hidden" id="select5val" value="false" name="gluten_free">
-            <input type="button" id="select6" class="rev-btn" onclick="selectedButton('select6')" value="DF"></input>
-            <input type="hidden" id="select6val" value="false" name="lactose_free">
-        <div><span class="Technical">Technical</span></div>
-            <input type="button" id="select7" class="rev-btn" onclick="selectedButton('select7')" value="Wifi"></input>
-            <input type="hidden" id="select7val" value="false" name="wifi">
-            <input type="button" id="select8" class="rev-btn" onclick="selectedButton('select8')" value="Outlets"></input>
-            <input type="hidden" id="select8val" value="false" name="outlets">
-            <input type="button" id="select9" class="rev-btn" onclick="selectedButton('select9')" value="Patio"></input>
-            <input type="hidden" id="select9val" value="false" name="patio">
-            <input type="button" id="select10" class="rev-btn" onclick="selectedButton('select10')" value="Pet Friendly"></input>
-            <input type="hidden" id="select10val" value="false" name="pet_friendly">
-            <input type="range" class="slider" id="select11" min="1" max="5" value="3" name="service">Service</input>
-        <div><span class="Additional-Comments">Additional Comments</span></div>
-            <div id="select12" class="Rectangle-21"><textarea rows="5" cols="30" name="comment-box"></textarea></div>
+        <div class="form-headers"><span>Ambience</span></div>
+            <div>Lighting</div><div><input type="range" class="slider" id="select1" min="1" max="5" value="3" name="lighting"></input></div>
+            <div>Sound</div><div><input type="range" class="slider" id="select2" min="1" max="5" value="3" name="sound"></input></div>
+            <div>Traffic</div><div><input type="range" class="slider" id="select3" min="1" max="5" value="3" name="traffic"></input></div>
+            <div class="form-headers"><span>The Important Stuff</span></div>
+            <div class="food-drink-btns">
+                <input type="button" id="select4" class="rev-btn" onclick="selectedButton('select4')" value="Vegan"></input>
+                <input type="hidden" id="select4val" value="false" name="vegan">
+                <input type="button" id="select5" class="rev-btn" onclick="selectedButton('select5')" value="GF"></input>
+                <input type="hidden" id="select5val" value="false" name="gluten_free">
+                <input type="button" id="select6" class="rev-btn" onclick="selectedButton('select6')" value="DF"></input>
+                <input type="hidden" id="select6val" value="false" name="lactose_free">
+            </div>
+            <div class="technical-btns">
+                <input type="button" id="select7" class="rev-btn" onclick="selectedButton('select7')" value="Wifi"></input>
+                <input type="hidden" id="select7val" value="false" name="wifi">
+                <input type="button" id="select8" class="rev-btn" onclick="selectedButton('select8')" value="Outlets"></input>
+                <input type="hidden" id="select8val" value="false" name="outlets">
+                <input type="button" id="select9" class="rev-btn" onclick="selectedButton('select9')" value="Patio"></input>
+                <input type="hidden" ispaced="select9val" value="false" name="patio">
+            </div>
+            <div class="technical-btns">
+                <input type="button" id="select10" class="rev-btn" onclick="selectedButton('select10')" value="Pet Friendly"></input>
+                <input type="hidden" id="select10val" value="false" name="pet_friendly">
+            </div>
+            <span class="slider-titles">Service</span><input type="range" class="slider" id="select11" min="1" max="5" value="3" name="service"></input>
+        <div class="form-headers"><span>Additional Comments</span></div>
+            <div id="select12" class="comment-box"><textarea rows="5" cols="29" class="comment-input-box" name="comment-box"></textarea></div>
             <input type="hidden" name="name" value="{{ yelp_data.name }}">
             <input type="hidden" name="rating" value="{{ yelp_data.rating }}">
             <input type="hidden" name="price" value="{{ yelp_data.price }}">
             <input type="hidden" name="image_url" value="{{ yelp_data.image_url }}">
-            <div id="select13" class="Rectangle-20"><button class="Submit">
-            Submit
-        </button></div>
+            <div id="select13" class="submit-div"><button class="submit">Submit</button></div>
+        </div>
     </form>
 </div>
 {% endblock %}
