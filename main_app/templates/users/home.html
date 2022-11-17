@@ -13,7 +13,7 @@
       <a href="{% url 'details' recent.cafe_id %}" class="index-title">
         {{recent.name}}
       </a>
-      <div>{{recent.timestamp}}</div>
+      <div>{{recent.timestamp|date:"D d M Y"}}</div>
       {% if recent.rating == '5.0' %}
       <img src="/static/css/images/yelp_stars/web_and_ios/small/small_5.png" />
       {% elif recent.rating == '4.5' %}

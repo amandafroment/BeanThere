@@ -72,6 +72,7 @@ def index(request):
 @login_required
 def details(request, yelp_id):
   reviews = Review.objects.filter(cafe_id__exact=yelp_id)
+  print(reviews[0].user)
   response_data = api_details(API_HOST, DETAILS_PATH, API_KEY, yelp_id)
   if response_data.get('hours'):
     hours_raw = response_data.get('hours')[0].get('open')
@@ -85,7 +86,6 @@ def details(request, yelp_id):
     fave = True
   else:
     fave = False
-  print()
   return render(request, 'users/details.html', {'data': response_data, 'hours_data': hours_data, 'reviews': reviews, 'display_overlay': display_overlay, 'fave':fave})
 
 def hours_format(hours_raw):
