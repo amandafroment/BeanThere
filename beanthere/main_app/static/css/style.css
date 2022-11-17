@@ -818,66 +818,74 @@ label {
     align-items: center;
     margin-top: 10px;
   }
-
-  .Rectangle-18 {
-    width: 350px;
-    height: 627px;
-    flex-grow: 0;
-    margin: 0 4px 0 0;
-    padding: 21px 0 23px;
-    border-radius: 15px;
-    background-color: #f4f4f4;
-  }
-  .review-page-header{
-    font-family: Mulish;
-  }
-  .Tell-us-what-you-think-about-this-place{
-    font-size: large;
-    color: #212121;
-    margin-bottom: 10px;
-  }
   .Rectangle-17{
     background-color: #c7c7c7;
     color: #212121;
     width: 300px;
-    max-height: 700px;
+    max-height: 760px;
     border-radius: 15px;
-    margin: 20px;
-    padding: 30px;
+    margin: 0px 30px 30px 30px;
+    padding: 22px 30px 30px 30px;
     font-size: 16px;
     font-family: Mulish;
   }
-  .close-1{
+  .Tell-us-what-you-think-about-this-place{
+    display: flex;
+    flex-direction: row;
+    font-size: 18px;
+    font-weight: bolder;
+    color: #212121;
+    margin-bottom: 10px;
+  }
+  /* .close-1{
     display: flex;
     justify-content: flex-end;
     margin-bottom: 10px;
-  }
+  } */
   .form-headers{
     align-self: center;
     padding: 10px;
-    font-size: 20px;
+    font-size: 18px;
+  }
+  .rev-btn {
+    border-radius: 25px;
+    background-color: #a4978a;
+    border-color: #a4978a;
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    font-family: Mulish;
+  }
+  .food-drink-btns{
+    display:flex;
+    justify-content: space-around;
   }
   .comment-box{
     font-size: 14px;
   }
   .comment-input-box{
     width: 300px;
-  }
-  .rev-btn {
-    border-radius: 15px;
-    background-color: #d9d9d9;
-    border-color: #d9d9d9;
-    padding: 10px;
-    margin: 10px;
-  }
-  .food-drink-btns{
-    display:flex;
-    justify-content: space-around;
-    
+    font-size: 14px;
   }
   .technical-btns{
   display:flex;
   justify-content: space-around;
+  }
+  .slider-titles{
+    padding: 5px;
+  }
+  .submit-div {
+    display:flex;
+    justify-content: center;
+  }
+  .submit {
+    border-radius: 15px;
+    background-color: 4e4235;
+    border-color: #d9d9d9;
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    font-family: Mulish;
   }
 
   .search-input {

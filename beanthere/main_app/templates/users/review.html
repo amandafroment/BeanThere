@@ -1,10 +1,9 @@
 {% extends 'base.html' %} {% block content %}
-<h1 class="review-page-header">Reviews</h1>
 
 <div class="Rectangle-17">
-    <div class="close-1">X</div>
+    
     <div class="Tell-us-what-you-think-about-this-place">
-        <span>Tell us what you think about this place!</span>
+        <div>Tell us what you think!</div>
     </div>
     <form action="{% url 'add_review' yelp_id %}" method="POST">
         {% csrf_token %}
@@ -28,13 +27,15 @@
                 <input type="hidden" id="select8val" value="false" name="outlets">
                 <input type="button" id="select9" class="rev-btn" onclick="selectedButton('select9')" value="Patio"></input>
                 <input type="hidden" ispaced="select9val" value="false" name="patio">
+            </div>
+            <div class="technical-btns">
                 <input type="button" id="select10" class="rev-btn" onclick="selectedButton('select10')" value="Pet Friendly"></input>
                 <input type="hidden" id="select10val" value="false" name="pet_friendly">
             </div>
-                <input type="range" class="slider" id="select11" min="1" max="5" value="3" name="service">Service</input>
+            <span class="slider-titles">Service</span><input type="range" class="slider" id="select11" min="1" max="5" value="3" name="service"></input>
         <div class="form-headers"><span>Additional Comments</span></div>
             <div id="select12" class="comment-box"><textarea rows="5" cols="29" class="comment-input-box" name="comment-box"></textarea></div>
-            <div id="select13" class="Rectangle-20"><button class="Submit">Submit</button></div>
+            <div id="select13" class="submit-div"><button class="submit">Submit</button></div>
     </form>
 </div>
 {% endblock %}

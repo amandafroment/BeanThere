@@ -7,11 +7,10 @@ function selectedButton(evt) {
   if (dataVal.value === "false") {
     console.log(dataVal.value);
     displayBtn.style.backgroundColor = "#4e4235";
-    displayBtn.style.color = "#F7F7F7";
     dataVal.value = "true";
   } else {
     console.log(dataVal.value);
-    displayBtn.style.backgroundColor = "#f4f4f4";
+    displayBtn.style.backgroundColor = "#a4978a";
     dataVal.value = "false";
   }
 }
