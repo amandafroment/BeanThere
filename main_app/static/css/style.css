@@ -15,6 +15,19 @@
   text-decoration: none;
 }
 
+.errorlist {
+  font-family: Mulish;
+  color: #a7a7a7;
+  list-style-type: none;
+}
+
+.error-message {
+  font-family: Mulish;
+  color: #a7a7a7;
+  list-style-type: none;
+  text-align: center;
+}
+
 .landing-container {
   display: flex;
   flex-direction: column;
@@ -103,6 +116,14 @@ form {
 
 label {
   font-family: Mulish;
+  margin-top: 10px;
+}
+
+.login-form-styling {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 #id_username {
@@ -215,6 +236,7 @@ label {
   border: solid 0.5px #d9d9d9;
   color: #4e4235;
   align-self: center;
+  text-align: center;
 }
 
 .Rectangle-4 {
@@ -598,7 +620,7 @@ label {
 .Rectangle-17 {
   background-color: #e4e4e4;
   color: #666666;
-  width: 80%;
+  width: 60%;
   max-height: 750px;
   border-radius: 15px;
   margin: 20px 30px 30px 30px;
@@ -828,8 +850,16 @@ label {
     width: 153px;
     height: 50%;
     margin-top: 50px;
-
     align-self: center;
+  }
+
+  .errorlist {
+    max-width: 80%;
+    text-align: center;
+    font-family: Mulish;
+    color: #a7a7a7;
+    list-style-type: none;
+    margin-right: 30px;
   }
 
   .landing-container {
@@ -868,7 +898,7 @@ label {
   .logo {
     width: 87px;
     height: 92px;
-    margin: 70px 0 11px 13px;
+    margin: 70px 0 11px 0px;
   }
 
   .header-container {
@@ -925,14 +955,15 @@ label {
 
   label {
     align-self: left;
+    margin-top: 5px;
   }
 
   #id_username {
     width: 85% !important;
     height: 15px;
     flex-grow: 0;
-    margin: 11px 19px 15px 17px;
-    padding: 17px 0px 17px 16.3px;
+    margin: 10px 19px 15px 5px;
+    padding: 17px 0px 17px 17px;
     border-radius: 16px;
     border: solid 0.5px #909090;
     background-color: #fff;
@@ -943,8 +974,8 @@ label {
     width: 85%;
     height: 15px;
     flex-grow: 0;
-    margin: 11px 19px 5px 13px;
-    padding: 17px 0px 17px 16.3px;
+    margin: 11px 19px 5px 5px;
+    padding: 17px 0px 17px 17px;
     border-radius: 16px;
     border: solid 0.5px #909090;
     background-color: #fff;
@@ -1040,10 +1071,10 @@ label {
     margin-top: 10px;
   }
   .Rectangle-17 {
-    background-color: #c7c7c7;
-    color: #0f0f0f;
+    background-color: #e5e5e5;
+    color: #343434;
     width: 300px;
-    max-height: 600px;
+    max-height: 750px;
     border-radius: 15px;
     margin: 20px 30px 30px 30px;
     padding: 22px 30px 30px 30px;
@@ -1056,12 +1087,13 @@ label {
     justify-content: space-between;
     font-size: 18px;
     margin-bottom: 10px;
-    color: #343434;
+    color: #525252;
   }
   .think {
     font-size: 20px;
-    color: #000000;
+    color: #505050;
   }
+
   .close-1 {
     margin-bottom: 10px;
   }
@@ -1097,7 +1129,7 @@ label {
   .slider-titles {
     padding: 5px;
     margin-bottom: 5px;
-    margin-top: 10px;
+    margin-top: 5px;
     text-align: center;
   }
   .slider-title-1 {

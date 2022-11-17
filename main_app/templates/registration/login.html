@@ -20,7 +20,11 @@
         <span class="Welcome"> Welcome </span>
       </div>
       <div class="desktop-inputs mobile-inputs">
-        <form method="post" action="{% url 'login' %}">
+        <form
+          method="post"
+          action="{% url 'login' %}"
+          class="login-form-styling"
+        >
           {% csrf_token %} {{ form.as_div }}
 
           <input class="login-btn login" type="submit" value="Login" />
