@@ -85,6 +85,7 @@ def details(request, yelp_id):
     fave = True
   else:
     fave = False
+  print()
   return render(request, 'users/details.html', {'data': response_data, 'hours_data': hours_data, 'reviews': reviews, 'display_overlay': display_overlay, 'fave':fave})
 
 def hours_format(hours_raw):
@@ -130,20 +131,26 @@ def create_review(request, yelp_id):
   }
   return render(request, 'users/review.html', {'yelp_id': yelp_id, 'yelp_data': yelp_data})
 
+def boolean_translate(bool_value):
+  if bool_value == 'true':
+    return True
+  else:
+    return False
+
 @login_required
 def add_review(request, yelp_id):
   data = request.POST
   lighting = data['lighting']
   sound = data['sound']
   traffic = data['traffic']
-  vegan = bool(data['vegan'])
-  gluten_free = bool(data['gluten_free'])
-  lactose_free = bool(data['lactose_free'])
+  vegan = boolean_translate(data['vegan'])
+  gluten_free = boolean_translate(data['gluten_free'])
+  lactose_free = boolean_translate(data['lactose_free'])
   service = data['service']
-  wifi = bool(data['wifi'])
-  outlets = bool(data['outlets'])
-  patio = bool(data['patio'])
-  pet_friendly = bool(data['pet_friendly'])
+  wifi = boolean_translate(data['wifi'])
+  outlets = boolean_translate(data['outlets'])
+  patio = boolean_translate(data['patio'])
+  pet_friendly = boolean_translate(data['pet_friendly'])
   comments = data['comment-box']
   cafe_id = yelp_id
   timestamp = datetime.datetime.now()
