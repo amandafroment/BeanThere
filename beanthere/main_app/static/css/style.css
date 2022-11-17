@@ -207,7 +207,7 @@ label {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin: 15px 69px 50px 43px;
+  margin: 15px 69px 25px 43px;
   padding: 17px 120px;
   border-radius: 16px;
   background-color: #4e4235;
@@ -231,7 +231,7 @@ label {
 .Rectangle-4 {
   width: 350px;
   height: 5px;
-  margin: 50px 66px 128px 40px;
+  margin: 25px 66px 25px 40px;
   border-radius: 10px;
   background-color: #d9d9d9;
   font-family: Mulish;
