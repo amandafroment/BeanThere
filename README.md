@@ -3,10 +3,9 @@
 
 # Bean There
 
-Bean There is an online directory for discovering your local cafe scene!
-The application is catered for students and those who work from home that are looking for a change of scenery while they work. 
+Available for both broswer and mobile enjoyment, "Bean There" is an online directory used for discovering your local cafe scene!  It is specifically catered to students or those who work from home and are looking for great workspaces (and caffeine) in their area.
 
-After signing up and logging in, you are able to find cafes in your area using the search bar!  By clicking on the cafe of your choice, you will have access to more cafe information as well as reviews left by other students and WFH'ers. You can even create a review of your own to help others decide if that workspace fits their needs.  Is there reliable wifi and lots of outlets?  Can you bring your fury friend or sit out on the patio?  Do they cater to any dietary restrictions?  Let your friends on Bean There know!
+After signing up and logging in, you are able to find cafes in your area by using the search bar!  After clicking on the cafe of your choice, you will have access to more cafe details as well as reviews left by other students and WFH'ers. You can even create a review of your own to help others decide if that workspace fits their needs.  Is there reliable wifi and lots of outlets?  Can you bring your fury friend or sit out on the patio?  Do they cater to any dietary restrictions?  Let your friends on Bean There know!
 
 
 
@@ -23,6 +22,8 @@ After signing up and logging in, you are able to find cafes in your area using t
 - [@raeganmb](https://github.com/raeganmb)
 - [@rasl76](https://github.com/rasl76)
 
+UXDI: Bijou Siu, Jessica Lee
+
 
 
 ## Tech Stack
@@ -33,6 +34,11 @@ After signing up and logging in, you are able to find cafes in your area using t
 
 **Deployed with:** Heroku
 
+
+
+## Skills Used
+
+Model creation, database creation and manipulation, CRUD operations, one-to-one/one-to-many/many-to-many, making and running migrations, object-relational-mapper, use of database API, Django built-in administrator, Django authentication, Django Template Language, url patterns, form creation, 
 
 
 ## Screenshots
