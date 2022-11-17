@@ -12,7 +12,7 @@ After signing up and logging in, you are able to find cafes in your area using t
 
 ## Try it out!
 
-![Click Here!](projectlink)
+![Click Here!](https://beanthereapp.herokuapp.com/)
 
 
 
@@ -91,14 +91,14 @@ Insert gif or link to demo
 
 ## Icebox Items and Next Steps
 
-- 
-- 
-- 
+- AAU, I want to upload photos with my review
+- AAU, I want to see my profile page
+- AAU, I want to have a "forget my password" option (for developer purposes, we would have to create a User Model instead of relying on Django's built-in authorization 
 
 
 
 ## Project Link
 
-![Click Here!](projectlink)
+![Click Here!](https://beanthereapp.herokuapp.com/)
 
 
