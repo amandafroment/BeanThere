@@ -27,18 +27,7 @@
   width: 390px;
   height: 844px;
   padding: 0 1px 1px 0;
-  opacity: 0.5;
-  background-color: #636363;
-}
-
-.Rectangle-18 {
-  width: 350px;
-  height: 627px;
-  flex-grow: 0;
-  margin: 0 4px 0 0;
-  padding: 21px 0 23px;
-  border-radius: 15px;
-  background-color: #f4f4f4;
+  background-color: #dbdbdb;
 }
 
 .mobile-logo {
@@ -303,8 +292,7 @@ label {
   width: 390px;
   height: 844px;
   padding: 0 1px 1px 0;
-  opacity: 0.5;
-  background-color: #636363;
+  background-color: #dadada;
 }
 
 .Rectangle-18 {
@@ -607,6 +595,140 @@ label {
   flex-wrap: wrap;
 }
 
+<<<<<<< HEAD:beanthere/main_app/static/css/style.css
+.Rectangle-17{
+    background-color: #e4e4e4;
+    color: #666666;
+    width: 80%;
+    max-height: 750px;
+    border-radius: 15px;
+    margin: 20px 30px 30px 30px;
+    padding: 22px 30px 30px 30px;
+    font-size: 16px;
+    font-family: Mulish;
+  }
+
+  .Tell-us-what-you-think-about-this-place{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #343434;
+  }
+  .think{
+    font-size: 20px;
+  }
+  .close-1{
+    margin-bottom: 10px;
+  }
+
+  .form-headers{
+    align-self: center;
+    margin: 15px;
+    font-size: 16px;
+  }
+  .slider-descriptor-tags{
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    margin: 5px, 8px, 0px, 8px;
+    padding: 5px;
+    letter-spacing: 0.5px;
+  }
+  .slider-titles{
+    text-align: center;
+    padding: 5px;
+    margin-bottom: 5px;
+    margin-top: 10px;
+
+  }
+  .slider-title-1{
+    text-align: center;
+    padding: 5px;
+    margin-bottom: 5px;
+    margin-top: 0px;
+  }
+  .slider{
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 8px;
+    border-radius: 50px;  
+    background: rgb(255, 255, 255);
+    outline: none;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+  }
+  
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 23px;
+    height: 24px;
+    border: 0;
+    border-radius: 50px;
+    background: #4e4235;
+    cursor: pointer;
+  }
+  .slider::-moz-range-thumb {
+    width: 23px;
+    height: 25px;
+    border: 0;
+    max-height: 20px;
+    background: #4e4235;
+    cursor: pointer;
+  }
+  .rev-btn {
+    border-radius: 25px;
+    background-color: #a4978a;
+    border: 0;
+    color: #ffffff;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 10px 90px;
+    margin: 8px;
+    font-size: 16px;
+    font-family: Mulish;
+  }
+  
+  .food-drink-btns{
+    display:flex;
+    justify-content: space-around;
+  }
+
+  .comment-input-box{
+    width: 100%;
+    font-size: 14px;
+    font-family: Mulish;
+    margin-top: 10px;
+    border: 0;
+    border-radius: 20px;
+    text-align: center;
+    
+  }
+  .technical-btns{
+    display:flex;
+    justify-content: space-around;
+  }
+
+  .submit-div {
+    display:flex;
+    justify-content: center;
+  }
+  .submit {
+    border-radius: 25px;
+    background-color: #4e4235;
+    border: 0;
+    color: #f3f3f3;
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    font-family: Mulish;
+    letter-spacing: 0.5px;
+  }
+
+=======
 .cafe-title-favourite-btn {
   display: flex;
   flex-direction: row;
@@ -685,6 +807,7 @@ label {
   font-family: Mulish;
   color: #909090;
 }
+>>>>>>> main:main_app/static/css/style.css
 
 /* MOBILE QUERIES ONLY - ALL DESK TOP QUERIES ABOVE*/
 
@@ -916,47 +1039,69 @@ label {
     align-items: center;
     margin-top: 10px;
   }
+<<<<<<< HEAD:beanthere/main_app/static/css/style.css
+
+  .Rectangle-17{
+    background-color: #e4e4e4;
+    color: #666666;
+    max-width: 300px;
+    max-height: 750px;
+=======
   .Rectangle-17 {
     background-color: #c7c7c7;
     color: #0f0f0f;
     width: 300px;
     max-height: 600px;
+>>>>>>> main:main_app/static/css/style.css
     border-radius: 15px;
-    margin: 0px 30px 30px 30px;
+    margin: 20px 30px 30px 30px;
     padding: 22px 30px 30px 30px;
     font-size: 16px;
     font-family: Mulish;
   }
+<<<<<<< HEAD:beanthere/main_app/static/css/style.css
+
+  .Tell-us-what-you-think-about-this-place{
+=======
   .Tell-us-what-you-think-about-this-place {
+>>>>>>> main:main_app/static/css/style.css
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     font-size: 18px;
-    font-weight: bold;
-    color: #000000;
     margin-bottom: 10px;
+    color: #343434;
   }
+  .think{
+    font-size: 20px;
   .think {
     color: #000000;
   }
   .close-1 {
     margin-bottom: 10px;
   }
+<<<<<<< HEAD:beanthere/main_app/static/css/style.css
+
+  .form-headers{
+=======
   .form-headers {
+>>>>>>> main:main_app/static/css/style.css
     align-self: center;
-    padding: 10px;
-    font-size: 18px;
-  }
-  .rev-btn {
-    border-radius: 25px;
-    background-color: #a4978a;
-    border: 0;
-    border-color: #a4978a;
-    padding: 10px 20px;
-    margin: 10px;
+    margin: 15px;
     font-size: 16px;
-    font-family: Mulish;
   }
+<<<<<<< HEAD:beanthere/main_app/static/css/style.css
+  .slider-descriptor-tags{
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    margin: 5px, 8px, 0px, 8px;
+    padding: 5px;
+    letter-spacing: 0.5px;
+  }
+  .slider-titles{
+    text-align: center;
+=======
   .food-drink-btns {
     display: flex;
     justify-content: space-around;
@@ -973,27 +1118,46 @@ label {
     justify-content: space-around;
   }
   .slider-titles {
+>>>>>>> main:main_app/static/css/style.css
     padding: 5px;
+    margin-bottom: 5px;
+    margin-top: 10px;
+
+  }
+  .slider-title-1{
+    text-align: center;
+    padding: 5px;
+    margin-bottom: 5px;
+    margin-top: 0px;
   }
   .slider {
     -webkit-appearance: none;
     appearance: none;
     width: 100%;
     height: 8px;
+<<<<<<< HEAD:beanthere/main_app/static/css/style.css
+    border-radius: 50px;  
+    background: rgb(255, 255, 255);
+    outline: none;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+=======
     border-radius: 5px;
     background: white;
     outline: none;
     opacity: 0.7;
     -webkit-transition: 0.2s;
     transition: opacity 0.2s;
+>>>>>>> main:main_app/static/css/style.css
   }
 
   .slider::-webkit-slider-thumb {
-    /* -webkit-appearance: none;
-    appearance: none; */
+    -webkit-appearance: none;
+    appearance: none;
     width: 23px;
     height: 24px;
     border: 0;
+    border-radius: 50px;
     background: #4e4235;
     cursor: pointer;
   }
@@ -1005,6 +1169,41 @@ label {
     background: #4e4235;
     cursor: pointer;
   }
+  .rev-btn {
+    border-radius: 25px;
+    background-color: #a4978a;
+    border: 0;
+    color: #ffffff;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 10px 20px;
+    margin: 8px;
+    font-size: 16px;
+    font-family: Mulish;
+  }
+  
+  .food-drink-btns{
+    display:flex;
+    justify-content: space-around;
+  }
+  /* .comment-box{
+    /* font-size: 14px; */
+   /* } */ 
+  .comment-input-box{
+    width: 300px;
+    font-size: 14px;
+    font-family: Mulish;
+    margin-top: 10px;
+    border: 0;
+    border-radius: 20px;
+    text-align: center;
+    
+  }
+  .technical-btns{
+    display:flex;
+    justify-content: space-around;
+  }
+
   .submit-div {
     display: flex;
     justify-content: center;
@@ -1013,11 +1212,12 @@ label {
     border-radius: 25px;
     background-color: #4e4235;
     border: 0;
-    color: #000000;
+    color: #f3f3f3;
     padding: 10px 20px;
     margin: 10px;
     font-size: 16px;
     font-family: Mulish;
+    letter-spacing: 0.5px;
   }
 
   .search-input {
