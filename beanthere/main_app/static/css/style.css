@@ -44,7 +44,7 @@
 .mobile-logo {
   width: 348px;
   height: 368px;
-  margin-top: 200px;
+  margin-top: 100px;
   align-self: center;
 }
 
@@ -58,7 +58,7 @@
 .logo {
   width: 348px;
   height: 368px;
-  margin: 200px 25px 0 29px;
+  margin: 100px 25px 0 29px;
   align-self: center;
 }
 
@@ -207,7 +207,7 @@ label {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin: 15px 69px 0 43px;
+  margin: 15px 69px 25px 43px;
   padding: 17px 120px;
   border-radius: 16px;
   background-color: #4e4235;
@@ -231,7 +231,7 @@ label {
 .Rectangle-4 {
   width: 350px;
   height: 5px;
-  margin: 50px 66px 128px 40px;
+  margin: 25px 66px 25px 40px;
   border-radius: 10px;
   background-color: #d9d9d9;
   font-family: Mulish;
@@ -322,6 +322,7 @@ label {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 50px;
 }
 
 .card-container {
@@ -715,6 +716,7 @@ label {
     align-items: center;
     align-content: center;
     margin-top: 150px;
+    margin-bottom: 50px;
   }
 
   .landing-header {
@@ -892,7 +894,7 @@ label {
   }
 
   .join-us-btn {
-    margin: 15px 15px 0 16px;
+    margin: 15px 15px 0px 16px;
   }
 
   .signup-btn {
