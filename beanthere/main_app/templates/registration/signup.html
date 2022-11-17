@@ -21,9 +21,9 @@
       </div>
       <div class="desktop-inputs">
         <form method="post" action="{% url 'signup' %}">
-          {% csrf_token %} {{ form }} {% for message in error_message %}
-          <div>{{ message }}</div>
-          {% endfor %}
+          {% csrf_token %} {% for message in error_message %}
+          <li>{{ message }}</li>
+          {% endfor %} {{ form }}
           <input type="submit" class="signup-btn login-btn" value="Sign Up" />
           <input type="hidden" name="next" value="{{ next }}" />
         </form>
