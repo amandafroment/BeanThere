@@ -36,7 +36,12 @@
             <span class="slider-titles">Service</span><input type="range" class="slider" id="select11" min="1" max="5" value="3" name="service"></input>
         <div class="form-headers"><span>Additional Comments</span></div>
             <div id="select12" class="comment-box"><textarea rows="5" cols="29" class="comment-input-box" name="comment-box"></textarea></div>
+            <input type="hidden" name="name" value="{{ yelp_data.name }}">
+            <input type="hidden" name="rating" value="{{ yelp_data.rating }}">
+            <input type="hidden" name="price" value="{{ yelp_data.price }}">
+            <input type="hidden" name="image_url" value="{{ yelp_data.image_url }}">
             <div id="select13" class="submit-div"><button class="submit">Submit</button></div>
+        </div>
     </form>
 </div>
 {% endblock %}
