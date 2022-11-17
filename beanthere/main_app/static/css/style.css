@@ -540,6 +540,7 @@ label {
   font-family: Mulish;
   font-size: 16px;
   border: none;
+  cursor: pointer;
 }
 
 .username-delete {
@@ -574,19 +575,95 @@ label {
   margin-top: 0;
 }
 
+.review-body > h4 {
+  margin-bottom: 5px;
+  font-size: 17px;
+}
+
+.review-body-first-header {
+  margin-top: 0;
+}
+
+.review-body-header {
+  margin-top: 15px;
+}
+
 .inner-review-body {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
+
 .inner-review-body > p {
-  margin: 5px 0px 5px 0px;
+  margin: 5px 20px 5px 0px;
 }
 
 .comments-div {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+}
+
+.cafe-title-favourite-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.favourite-btn {
+  width: 150px;
+  height: 48px;
+  border-radius: 16px;
+  background-color: #d9d9d9;
+  font-family: Mulish;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.delete-page {
+  width: 50%;
+  margin-top: 20%;
+}
+
+.delete-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  border: solid 0.3px #909090;
+  border-radius: 16px;
+  padding: 10px;
+  margin-left: 5px;
+  width: 100%;
+  font-family: Mulish;
+  color: #909090;
+}
+
+.delete-container > h1 {
+  margin-bottom: 0px;
+}
+
+.delete-form-btn {
+  width: 124px;
+  height: 40px;
+  border-radius: 16px;
+  background-color: #d9d9d9;
+  color: #4e4235;
+  font-family: Mulish;
+  font-size: 16px;
+  border: 0;
+  cursor: pointer;
+}
+
+.cancel {
+  margin: 10px;
+  align-self: center;
+  font-family: Mulish;
+  color: #909090;
 }
 
 /* MOBILE QUERIES ONLY - ALL DESK TOP QUERIES ABOVE*/
@@ -1070,7 +1147,7 @@ label {
     flex-direction: row;
     align-content: flex-start;
     width: 100%;
-    margin: 5;
+    margin: 0px;
   }
 
   .detail-imgs {
@@ -1084,6 +1161,19 @@ label {
     font-size: 20px;
     color: #787878;
     margin-bottom: 2px;
+  }
+
+  .favourite-btn {
+    width: 130px;
+    height: 40px;
+    border-radius: 16px;
+    background-color: #d9d9d9;
+    font-family: Mulish;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 5px;
+    margin-left: 15px;
   }
 
   .rating-container > img {
@@ -1128,14 +1218,21 @@ label {
     font-family: Mulish;
   }
 
+  .review-body > h4 {
+    margin-left: 5px;
+  }
+
+  .review-body-header {
+    margin-top: 5px;
+  }
+
   .review-btn {
     width: 124px;
-    height: 48px;
+    height: 40px;
     border-radius: 16px;
     background-color: #d9d9d9;
     font-family: Mulish;
     font-size: 16px;
-    border: none;
   }
 
   .username-delete {
@@ -1183,5 +1280,49 @@ label {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+  }
+
+  .delete-page {
+    margin-top: 50%;
+    width: 100%;
+  }
+
+  .delete-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    border: solid 0.3px #909090;
+    border-radius: 16px;
+    padding: 10px;
+    margin-left: 5px;
+    width: 90%;
+    font-family: Mulish;
+    color: #909090;
+  }
+
+  .delete-container > h1 {
+    margin-bottom: 0px;
+  }
+
+  .delete-form-btn {
+    width: 124px;
+    height: 40px;
+    border-radius: 16px;
+    background-color: #d9d9d9;
+    color: #4e4235;
+    font-family: Mulish;
+    font-size: 16px;
+    border: 0;
+    cursor: pointer;
+  }
+
+  .cancel {
+    margin: 10px;
+    align-self: center;
+    font-family: Mulish;
+    color: #909090;
   }
 }
