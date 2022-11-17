@@ -129,13 +129,16 @@
       <div>
         <div class="detail-review-form">
           <div class="username-delete">
-            <p class="username-lbl">Review by: {{user.get_username}}</p>
+            <p class="username-lbl">Review by: {{ review.user }}</p>
             <div>
+              <!-- prettier-ignore -->
+              {% if review.user|stringformat:"s" == user.get_username|stringformat:"s" %}
               <a
                 href="{% url 'delete_review' data.id review.id %}"
                 class="delete-btn"
                 >X</a
               >
+              {% endif %}
             </div>
           </div>
 

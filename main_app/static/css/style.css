@@ -1247,7 +1247,6 @@ label {
     text-align: center;
   }
   .slider-title-1 {
-  .slider-title-1 {
     text-align: center;
     padding: 5px;
     margin-bottom: 5px;
@@ -1301,16 +1300,9 @@ label {
 
   .food-drink-btns {
     display: flex;
-
-  .food-drink-btns {
-    display: flex;
     justify-content: space-around;
   }
-  /* .comment-box{
-    /* font-size: 14px; */
-  /* } */
-  .comment-input-box {
-  /* } */
+
   .comment-input-box {
     width: 300px;
     font-size: 14px;
@@ -1320,8 +1312,7 @@ label {
     border-radius: 20px;
     text-align: center;
   }
-  .technical-btns {
-    display: flex;
+
   .technical-btns {
     display: flex;
     justify-content: space-around;
