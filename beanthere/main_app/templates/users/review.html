@@ -3,24 +3,24 @@
 <div class="Rectangle-17">
     
     <div class="Tell-us-what-you-think-about-this-place">
-        <div>Tell us what you think!</div>
+        <div class="think">Tell us what you think!</div>
         <div class="close-1">X</div>
     </div>
     <form action="{% url 'add_review' yelp_id %}" method="POST">
         {% csrf_token %}
         <div class="form-headers"><span>Ambience</span></div>
-            <div>Lighting</div><input type="range" class="slider" id="select1" min="1" max="5" value="3" name="lighting"></input>
-            <div>Sound</div><input type="range" class="slider" id="select2" min="1" max="5" value="3" name="sound"></input>
-            <div>Traffic</div><input type="range" class="slider" id="select3" min="1" max="5" value="3" name="traffic"></input>
-        <div class="form-headers"><span>Food & Drinks</span></div>
-            <div class="food-drink-btns"><input type="button" id="select4" class="rev-btn" onclick="selectedButton('select4')" value="Vegan"></input>
+            <div>Lighting</div><div><input type="range" class="slider" id="select1" min="1" max="5" value="3" name="lighting"></input></div>
+            <div>Sound</div><div><input type="range" class="slider" id="select2" min="1" max="5" value="3" name="sound"></input></div>
+            <div>Traffic</div><div><input type="range" class="slider" id="select3" min="1" max="5" value="3" name="traffic"></input></div>
+            <div class="form-headers"><span>The Important Stuff</span></div>
+            <div class="food-drink-btns">
+                <input type="button" id="select4" class="rev-btn" onclick="selectedButton('select4')" value="Vegan"></input>
                 <input type="hidden" id="select4val" value="false" name="vegan">
                 <input type="button" id="select5" class="rev-btn" onclick="selectedButton('select5')" value="GF"></input>
                 <input type="hidden" id="select5val" value="false" name="gluten_free">
                 <input type="button" id="select6" class="rev-btn" onclick="selectedButton('select6')" value="DF"></input>
                 <input type="hidden" id="select6val" value="false" name="lactose_free">
             </div>
-        <div class="form-headers"><span>The Important Stuff</span></div>
             <div class="technical-btns">
                 <input type="button" id="select7" class="rev-btn" onclick="selectedButton('select7')" value="Wifi"></input>
                 <input type="hidden" id="select7val" value="false" name="wifi">

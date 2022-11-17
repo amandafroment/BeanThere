@@ -820,9 +820,9 @@ label {
   }
   .Rectangle-17{
     background-color: #c7c7c7;
-    color: #212121;
+    color: #0f0f0f;
     width: 300px;
-    max-height: 760px;
+    max-height: 600px;
     border-radius: 15px;
     margin: 0px 30px 30px 30px;
     padding: 22px 30px 30px 30px;
@@ -834,9 +834,12 @@ label {
     flex-direction: row;
     justify-content: space-between;
     font-size: 18px;
-    font-weight: bolder;
-    color: #212121;
+    font-weight: bold;
+    color: #000000;
     margin-bottom: 10px;
+  }
+  .think{
+      color: #000000;
   }
   .close-1{
     margin-bottom: 10px;
