@@ -30,16 +30,6 @@
   background-color: #dbdbdb;
 }
 
-.Rectangle-18 {
-  width: 350px;
-  height: 627px;
-  flex-grow: 0;
-  margin: 0 4px 0 0;
-  padding: 21px 0 23px;
-  border-radius: 15px;
-  background-color: #f4f4f4;
-}
-
 .mobile-logo {
   width: 348px;
   height: 368px;
@@ -816,71 +806,59 @@ label {
     align-items: center;
     margin-top: 10px;
   }
+
   .Rectangle-17{
     background-color: #e4e4e4;
     color: #666666;
     max-width: 300px;
-    max-height: 700px;
+    max-height: 750px;
     border-radius: 15px;
     margin: 20px 30px 30px 30px;
     padding: 22px 30px 30px 30px;
     font-size: 16px;
     font-family: Mulish;
   }
+
   .Tell-us-what-you-think-about-this-place{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     font-size: 18px;
-    font-weight: bold;
     margin-bottom: 10px;
+    color: #343434;
   }
   .think{
-      color: #565656;
-      font-weight: bold;
+    font-size: 20px;
   }
   .close-1{
     margin-bottom: 10px;
   }
+
   .form-headers{
     align-self: center;
     margin: 15px;
-    font-size: 18px;
+    font-size: 16px;
   }
   .slider-descriptor-tags{
     display: flex;
     justify-content: space-between;
     font-size: 12px;
-  }
-  .rev-btn {
-    border-radius: 25px;
-    background-color: #a4978a;
-    border: 0;
-    border-color: #a4978a;
-    padding: 10px 20px;
-    margin: 10px;
-    font-size: 16px;
-    font-family: Mulish;
-  }
-  .food-drink-btns{
-    display:flex;
-    justify-content: space-around;
-  }
-  .comment-box{
-    font-size: 14px;
-  }
-  .comment-input-box{
-    width: 300px;
-    font-size: 14px;
-  }
-  .technical-btns{
-    display:flex;
-    justify-content: space-around;
+    margin: 5px, 8px, 0px, 8px;
+    padding: 5px;
+    letter-spacing: 0.5px;
   }
   .slider-titles{
+    text-align: center;
     padding: 5px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     margin-top: 10px;
+
+  }
+  .slider-title-1{
+    text-align: center;
+    padding: 5px;
+    margin-bottom: 5px;
+    margin-top: 0px;
   }
   .slider{
     -webkit-appearance: none;
@@ -890,9 +868,8 @@ label {
     border-radius: 50px;  
     background: rgb(255, 255, 255);
     outline: none;
-    opacity: 0.7;
     -webkit-transition: .2s;
-    /* transition: opacity .2s; */
+    transition: opacity .2s;
   }
   
   .slider::-webkit-slider-thumb {
@@ -901,6 +878,7 @@ label {
     width: 23px;
     height: 24px;
     border: 0;
+    border-radius: 50px;
     background: #4e4235;
     cursor: pointer;
   }
@@ -912,6 +890,41 @@ label {
     background: #4e4235;
     cursor: pointer;
   }
+  .rev-btn {
+    border-radius: 25px;
+    background-color: #a4978a;
+    border: 0;
+    color: #ffffff;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 10px 20px;
+    margin: 8px;
+    font-size: 16px;
+    font-family: Mulish;
+  }
+  
+  .food-drink-btns{
+    display:flex;
+    justify-content: space-around;
+  }
+  /* .comment-box{
+    /* font-size: 14px; */
+   /* } */ 
+  .comment-input-box{
+    width: 300px;
+    font-size: 14px;
+    font-family: Mulish;
+    margin-top: 10px;
+    border: 0;
+    border-radius: 20px;
+    text-align: center;
+    
+  }
+  .technical-btns{
+    display:flex;
+    justify-content: space-around;
+  }
+
   .submit-div {
     display:flex;
     justify-content: center;
@@ -920,11 +933,12 @@ label {
     border-radius: 25px;
     background-color: #4e4235;
     border: 0;
-    color: #000000;
+    color: #f3f3f3;
     padding: 10px 20px;
     margin: 10px;
     font-size: 16px;
     font-family: Mulish;
+    letter-spacing: 0.5px;
   }
 
   .search-input {

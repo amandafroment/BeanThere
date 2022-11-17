@@ -8,14 +8,17 @@
     </div>
     <form action="{% url 'add_review' yelp_id %}" method="POST">
         {% csrf_token %}
-            <div class="slider-titles">Lighting</div><div><input type="range" class="slider" id="select1" min="1" max="5" value="3" name="lighting"></input></div>
+            <div class="slider-title-1">Lighting</div>
+            <div><input type="range" class="slider" id="select1" min="1" max="5" value="3" name="lighting"></input></div>
             <div class="slider-descriptor-tags"><span>Dark</span><span>Bright</span></div>
-            <div class="slider-titles">Sound</div><div><input type="range" class="slider" id="select2" min="1" max="5" value="3" name="sound"></input></div>
+            <div class="slider-titles">Sound</div>
+            <div><input type="range" class="slider" id="select2" min="1" max="5" value="3" name="sound"></input></div>
             <div class="slider-descriptor-tags"><span>Noisy</span><span>Quiet</span></div>
-            <div class="slider-titles">Traffic</div><div><input type="range" class="slider" id="select3" min="1" max="5" value="3" name="traffic"></input></div>
+            <div class="slider-titles">Traffic</div>
+            <div><input type="range" class="slider" id="select3" min="1" max="5" value="3" name="traffic"></input></div>
             <div class="slider-descriptor-tags"><span>Busy</span><span>Workable</span></div>
             <span class="slider-titles">Service</span><input type="range" class="slider" id="select11" min="1" max="5" value="3" name="service"></input>
-            <div class="slider-descriptor-tags"><span>Busy</span><span>Workable</span></div>
+            <div class="slider-descriptor-tags"><span>Poor</span><span>Excellent</span></div>
         <div class="form-headers">The Important Stuff</div>
             <div class="food-drink-btns">
                 <input type="button" id="select4" class="rev-btn" onclick="selectedButton('select4')" value="Vegan"></input>
@@ -24,6 +27,8 @@
                 <input type="hidden" id="select5val" value="false" name="gluten_free">
                 <input type="button" id="select6" class="rev-btn" onclick="selectedButton('select6')" value="DF"></input>
                 <input type="hidden" id="select6val" value="false" name="lactose_free">
+            </div>
+            <div class="technical-btns">
                 <input type="button" id="select7" class="rev-btn" onclick="selectedButton('select7')" value="Wifi"></input>
                 <input type="hidden" id="select7val" value="false" name="wifi">
                 <input type="button" id="select8" class="rev-btn" onclick="selectedButton('select8')" value="Outlets"></input>
@@ -35,14 +40,12 @@
                 <input type="button" id="select10" class="rev-btn" onclick="selectedButton('select10')" value="Pet Friendly"></input>
                 <input type="hidden" id="select10val" value="false" name="pet_friendly">
             </div>
-        <div class="form-headers">Additional Comments</div>
-            <div id="select12" class="comment-box"><textarea rows="5" cols="29" class="comment-input-box" name="comment-box"></textarea></div>
+            <div id="select12" class="comment-box"><textarea rows="5" cols="29" class="comment-input-box" name="comment-box" placeholder="Additional comments?"></textarea></div>
             <input type="hidden" name="name" value="{{ yelp_data.name }}">
             <input type="hidden" name="rating" value="{{ yelp_data.rating }}">
             <input type="hidden" name="price" value="{{ yelp_data.price }}">
             <input type="hidden" name="image_url" value="{{ yelp_data.image_url }}">
-            <div id="select13" class="submit-div"><button class="submit">Submit</button></div>
-        </div>
+        <div id="select13" class="submit-div"><button class="submit">Submit</button></div>
     </form>
 </div>
 {% endblock %}
