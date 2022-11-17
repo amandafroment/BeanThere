@@ -27,8 +27,7 @@
   width: 390px;
   height: 844px;
   padding: 0 1px 1px 0;
-  opacity: 0.5;
-  background-color: #636363;
+  background-color: #dbdbdb;
 }
 
 .Rectangle-18 {
@@ -303,8 +302,7 @@ label {
   width: 390px;
   height: 844px;
   padding: 0 1px 1px 0;
-  opacity: 0.5;
-  background-color: #636363;
+  background-color: #dadada;
 }
 
 .Rectangle-18 {
@@ -819,12 +817,12 @@ label {
     margin-top: 10px;
   }
   .Rectangle-17{
-    background-color: #c7c7c7;
-    color: #0f0f0f;
-    width: 300px;
-    max-height: 600px;
+    background-color: #e4e4e4;
+    color: #666666;
+    max-width: 300px;
+    max-height: 700px;
     border-radius: 15px;
-    margin: 0px 30px 30px 30px;
+    margin: 20px 30px 30px 30px;
     padding: 22px 30px 30px 30px;
     font-size: 16px;
     font-family: Mulish;
@@ -835,19 +833,24 @@ label {
     justify-content: space-between;
     font-size: 18px;
     font-weight: bold;
-    color: #000000;
     margin-bottom: 10px;
   }
   .think{
-      color: #000000;
+      color: #565656;
+      font-weight: bold;
   }
   .close-1{
     margin-bottom: 10px;
   }
   .form-headers{
     align-self: center;
-    padding: 10px;
+    margin: 15px;
     font-size: 18px;
+  }
+  .slider-descriptor-tags{
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
   }
   .rev-btn {
     border-radius: 25px;
@@ -876,23 +879,25 @@ label {
   }
   .slider-titles{
     padding: 5px;
+    margin-bottom: 10px;
+    margin-top: 10px;
   }
   .slider{
     -webkit-appearance: none;
     appearance: none;
     width: 100%;
     height: 8px;
-    border-radius: 5px;  
-    background: white;
+    border-radius: 50px;  
+    background: rgb(255, 255, 255);
     outline: none;
     opacity: 0.7;
     -webkit-transition: .2s;
-    transition: opacity .2s;
+    /* transition: opacity .2s; */
   }
   
   .slider::-webkit-slider-thumb {
-    /* -webkit-appearance: none;
-    appearance: none; */
+    -webkit-appearance: none;
+    appearance: none;
     width: 23px;
     height: 24px;
     border: 0;
