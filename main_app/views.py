@@ -43,7 +43,6 @@ def signup(request):
         'Password must conatin letters and numbers']
   form = UserCreationForm()
   context = {'form': form, 'error_message': error_message}
-  print(error_message)
   return render(request, 'registration/signup.html', context)
 
 @login_required
@@ -72,7 +71,6 @@ def index(request):
 @login_required
 def details(request, yelp_id):
   reviews = Review.objects.filter(cafe_id__exact=yelp_id)
-  print(reviews[0].user)
   response_data = api_details(API_HOST, DETAILS_PATH, API_KEY, yelp_id)
   if response_data.get('hours'):
     hours_raw = response_data.get('hours')[0].get('open')
