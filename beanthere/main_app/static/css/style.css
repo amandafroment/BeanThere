@@ -580,7 +580,7 @@ label {
 .Rectangle-17{
     background-color: #e4e4e4;
     color: #666666;
-    max-width: 300px;
+    width: 80%;
     max-height: 750px;
     border-radius: 15px;
     margin: 20px 30px 30px 30px;
@@ -667,7 +667,7 @@ label {
     color: #ffffff;
     font-weight: bold;
     letter-spacing: 1px;
-    padding: 10px 20px;
+    padding: 10px 90px;
     margin: 8px;
     font-size: 16px;
     font-family: Mulish;
@@ -677,11 +677,9 @@ label {
     display:flex;
     justify-content: space-around;
   }
-  /* .comment-box{
-    /* font-size: 14px; */
-   /* } */ 
+
   .comment-input-box{
-    width: 300px;
+    width: 100%;
     font-size: 14px;
     font-family: Mulish;
     margin-top: 10px;
