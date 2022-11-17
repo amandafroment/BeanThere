@@ -612,14 +612,31 @@ label {
 }
 
 .favourite-btn {
-  width: 150px;
+  width: 75px;
   height: 48px;
   border-radius: 16px;
   background-color: #d9d9d9;
   font-family: Mulish;
-  font-size: 16px;
+  font-size: 14px;
   border: none;
   cursor: pointer;
+  margin-bottom: 5px;
+  margin-left: 15px;
+  position: relative;
+}
+
+.bigger-favourite-btn {
+  background-color: white;
+  border: none;
+  position: relative;
+}
+
+.favourite-bean {
+  width: 25px;
+  height: 35px;
+  right: 25px;
+  top: 5px;
+  position: absolute;
 }
 
 .delete-page {
