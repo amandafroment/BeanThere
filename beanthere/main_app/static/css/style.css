@@ -840,15 +840,22 @@ label {
     background-color: #c7c7c7;
     color: #212121;
     width: 300px;
+    max-height: 700px;
     border-radius: 15px;
     margin: 20px;
     padding: 30px;
-    font-size: 14px;
+    font-size: 16px;
     font-family: Mulish;
+  }
+  .close-1{
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
   }
   .form-headers{
     align-self: center;
     padding: 10px;
+    font-size: 20px;
   }
   .comment-box{
     font-size: 14px;
@@ -856,7 +863,22 @@ label {
   .comment-input-box{
     width: 300px;
   }
-
+  .rev-btn {
+    border-radius: 15px;
+    background-color: #d9d9d9;
+    border-color: #d9d9d9;
+    padding: 10px;
+    margin: 10px;
+  }
+  .food-drink-btns{
+    display:flex;
+    justify-content: space-around;
+    
+  }
+  .technical-btns{
+  display:flex;
+  justify-content: space-around;
+  }
 
   .search-input {
     width: 75px;
