@@ -1204,9 +1204,8 @@ label {
     width: 25px;
     height: 35px;
     position: absolute;
-    top: 312px;
-    right: 45px;
-    transform: translate(-50%, -50%);
+    right: 25px;
+    top: 5px;
   }
 
   .rating-container > img {
