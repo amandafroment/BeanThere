@@ -11,7 +11,7 @@ After signing up and logging in, you are able to find cafes in your area by usin
 
 ## Try it out!
 
-![Click Here!](https://beanthereapp.herokuapp.com/)
+[Click Here!](https://beanthereapp.herokuapp.com/)
 
 
 
