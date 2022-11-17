@@ -828,16 +828,35 @@ label {
     border-radius: 15px;
     background-color: #f4f4f4;
   }
-
-  .Rectangle-16 {
-    width: 125px;
-    height: 36px;
-    flex-grow: 0;
-    margin: 5px 5px 12px 0;
-    padding: 9px 34px 5px 36px;
-    border-radius: 15px;
-    background-color: #d9d9d9;
+  .review-page-header{
+    font-family: Mulish;
   }
+  .Tell-us-what-you-think-about-this-place{
+    font-size: large;
+    color: #212121;
+    margin-bottom: 10px;
+  }
+  .Rectangle-17{
+    background-color: #c7c7c7;
+    color: #212121;
+    width: 300px;
+    border-radius: 15px;
+    margin: 20px;
+    padding: 30px;
+    font-size: 14px;
+    font-family: Mulish;
+  }
+  .form-headers{
+    align-self: center;
+    padding: 10px;
+  }
+  .comment-box{
+    font-size: 14px;
+  }
+  .comment-input-box{
+    width: 300px;
+  }
+
 
   .search-input {
     width: 75px;
