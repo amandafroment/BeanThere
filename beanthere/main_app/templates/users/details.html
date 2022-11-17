@@ -17,7 +17,13 @@
         {% if fave %}
         <form action="{% url 'remove_favourite' data.id %}" method="POST">
           {% csrf_token %}
-          <input type="submit" value="Remove Favourite" class="favourite-btn" />
+          <button class="bigger-favourite-btn">
+            <input type="submit" value="" class="favourite-btn" />
+            <img
+              src="/static/css/images/solid-fave-bean.png"
+              class="favourite-bean"
+            />
+          </button>
         </form>
         {% else %}
         <form action="{% url 'add_favourite' data.id %}" method="POST">
@@ -26,7 +32,12 @@
           <input type="hidden" name="rating" value="{{ data.rating }}" />
           <input type="hidden" name="price" value="{{ data.price }}" />
           <input type="hidden" name="image_url" value="{{ data.photos }}" />
-          <input type="submit" value="Add As Favourite" class="favourite-btn" />
+          <button class="bigger-favourite-btn">
+            <input type="submit" value="" class="favourite-btn" /><img
+              src="/static/css/images/fave-bean-stencil.png"
+              class="favourite-bean"
+            />
+          </button>
         </form>
         {% endif %}
       </div>
