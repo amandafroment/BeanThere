@@ -121,7 +121,7 @@ Coming soon!!
 
 
 
-## Icebox Items and Next Steps
+## Future Enhancements (Icebox Items)
 
 - AAU, I want to upload photos with my review
 - AAU, I want to see my profile page
@@ -134,5 +134,11 @@ Coming soon!!
 ## Project Link
 
 [Click Here!](https://beanthereapp.herokuapp.com/)
+
+
+## Others Links
+
+[Trello Board](https://trello.com/b/7j1osg7L/django-group-project)
+[Entity Relationship Diagram (ERD)]()
 
 
