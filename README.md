@@ -1,5 +1,6 @@
-
+<p align="center">
 <img src="main_app/static/css/images/logo.png" width="200">         
+</p>
 
 # Bean There
 
