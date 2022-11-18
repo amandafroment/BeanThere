@@ -6,7 +6,7 @@
 
 Available for both broswer and mobile enjoyment, "Bean There" is an online directory used for discovering your local cafe scene!  It is specifically catered to students or those who work from home and are looking for great workspaces (and caffeine!) in their area.
 
-Once you have signing up and logging in, you will be able to find cafes in your area by using the search bar thanks to the YELP Fusion API.  After clicking on the cafe of your choice, you will have access to more cafe details as well as reviews left by other students and WFH'ers. You can even create a review of your own to help others decide if that workspace fits their needs.  Is there reliable wifi and lots of outlets?  Can you bring your fury friend or sit out on the patio?  Do they cater to any dietary restrictions?  Let your friends on Bean There know!
+Once you have signed up and logged in, you will be able to find cafes in your area by using the search bar thanks to the YELP Fusion API.  After clicking on the cafe of your choice, you will have access to more cafe details as well as reviews left by other students and WFH'ers. You can even create a review of your own to help others decide if that workspace fits their needs.  Is there reliable wifi and lots of outlets?  Can you bring your fury friend or sit out on the patio?  Do they cater to any dietary restrictions?  Let your friends on Bean There know!
 
 
 
@@ -124,11 +124,11 @@ Coming soon!!
 
 ## Future Enhancements (Icebox Items)
 
-- AAU, I want to upload photos with my review
-- AAU, I want to see my profile page
-- AAU, I want to have a "forget my password" option (for developer purposes, we would have to create a User Model instead of relying on Django's built-in authorization 
-- AAU, I want to login through a third-party site (OAuth)
-- AAU, I want to be able to view friends' profiles and see their favourite cafes
+- AAU, I want to upload and post photos with my review
+- AAU, I want to see my profile page, edit my user details, and add a profile photo or avatar 
+- AAU, I want to have a "forget my password" option (for developer purposes, we would have to create a User Model instead of relying on Django's built-in authorization)
+- AAU, I want to login through my existing account on a third-party site (OAuth)
+- AAU, I want to be able to view friends' profiles and see their favourite cafes and recent reviews
 
 
 
