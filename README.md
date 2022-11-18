@@ -67,6 +67,10 @@ Your Review!:
 
 <img src="main_app/static/css/images/readme/6.jpeg" width="1000">
 
+Examples of Mobile View:
+
+<img src="main_app/static/css/images/readme/3.jpeg" width="333"> <img src="main_app/static/css/images/readme/2.jpeg" width="333"> <img src="main_app/static/css/images/readme/1.jpeg" width="333">
+
 ## Example Code
 
 Example taken from views.py - defining the details view:
