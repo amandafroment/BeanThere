@@ -55,11 +55,17 @@ Profile Page with User's Recent Reviews and Favourite Cafes:
 
 <img src="main_app/static/css/images/readme/4.jpeg" width="1000">
 
+Search Results and Cafes in your area:
+
+<img src="main_app/static/css/images/readme/8.jpeg" width="500"> <img src="main_app/static/css/images/readme/9.jpeg" width="500">
+
 Create a Review or Delete a Review:
 
-<img src="main_app/static/css/images/readme/10.jpeg" width="5000">  <img src="main_app/static/css/images/readme/5.jpeg" width="800">
+<img src="main_app/static/css/images/readme/10.jpeg" width="500">  <img src="main_app/static/css/images/readme/5.jpeg" width="500">
 
+Your Review!:
 
+<img src="main_app/static/css/images/readme/6.jpeg" width="1000">
 
 ## Example Code
 
