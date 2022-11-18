@@ -140,6 +140,7 @@ Coming soon!!
 ## Others Links
 
 [Trello Board](https://trello.com/b/7j1osg7L/django-group-project)
+
 [Entity Relationship Diagram (ERD)]()
 
 
