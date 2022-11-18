@@ -3,9 +3,9 @@
 
 # Bean There
 
-Available for both broswer and mobile enjoyment, "Bean There" is an online directory used for discovering your local cafe scene!  It is specifically catered to students or those who work from home and are looking for great workspaces (and caffeine) in their area.
+Available for both broswer and mobile enjoyment, "Bean There" is an online directory used for discovering your local cafe scene!  It is specifically catered to students or those who work from home and are looking for great workspaces (and caffeine!) in their area.
 
-After signing up and logging in, you are able to find cafes in your area by using the search bar!  After clicking on the cafe of your choice, you will have access to more cafe details as well as reviews left by other students and WFH'ers. You can even create a review of your own to help others decide if that workspace fits their needs.  Is there reliable wifi and lots of outlets?  Can you bring your fury friend or sit out on the patio?  Do they cater to any dietary restrictions?  Let your friends on Bean There know!
+Once you have signing up and logging in, you will be able to find cafes in your area by using the search bar thanks to the YELP Fusion API.  After clicking on the cafe of your choice, you will have access to more cafe details as well as reviews left by other students and WFH'ers. You can even create a review of your own to help others decide if that workspace fits their needs.  Is there reliable wifi and lots of outlets?  Can you bring your fury friend or sit out on the patio?  Do they cater to any dietary restrictions?  Let your friends on Bean There know!
 
 
 
@@ -38,7 +38,7 @@ UXDI Team: Bijou Siu, Jessica Lee
 
 ## Skills Used
 
-Model creation, database creation and manipulation, CRUD operations, one-to-one/one-to-many/many-to-many, making and running migrations, object-relational-mapper, use of database API, Django built-in administrator, Django authentication, Django Template Language, url patterns, form creation, error message returns, Heroku deployment, mobile-first design, media queries, overlay, -webkit- and -moz-, 
+Model creation, database creation and manipulation, CRUD operations, one-to-one/one-to-many/many-to-many, making and running migrations, object-relational-mapper, use of database API, Django built-in administrator, Django authentication, Django Template Language, url patterns, form creation, error message returns, Heroku deployment, mobile-first design, media queries, overlay, -webkit- and -moz-
 
 
 ## Screenshots
@@ -52,7 +52,7 @@ Take a look at the review form:
 
 ## Example Code
 
-views.py - defining the details view:
+Example taken from views.py - defining the details view:
 
 ```views.py
 from .models import Review
@@ -94,7 +94,9 @@ def details(request, yelp_id):
 
 ## Demo
 
-Insert gif or link to demo
+Coming soon!! 
+
+[Application Demo Video]()
 
 
 
@@ -103,11 +105,13 @@ Insert gif or link to demo
 - AAU, I want to upload photos with my review
 - AAU, I want to see my profile page
 - AAU, I want to have a "forget my password" option (for developer purposes, we would have to create a User Model instead of relying on Django's built-in authorization 
+- AAU, I want to login through a third-party site (OAuth)
+- AAU, I want to be able to view friends' profiles and see their favourite cafes
 
 
 
 ## Project Link
 
-![Click Here!](https://beanthereapp.herokuapp.com/)
+[Click Here!](https://beanthereapp.herokuapp.com/)
 
 
