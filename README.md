@@ -141,6 +141,9 @@ Coming soon!!
 
 [Trello Board](https://trello.com/b/7j1osg7L/django-group-project)
 
-[Entity Relationship Diagram (ERD)]()
+[Entity Relationship Diagram (ERD)](https://lucid.app/lucidchart/7e15e4df-87b7-4077-b626-0ce4316a2f2b/edit?viewport_l[…]C938%2C0_0&invitationId=inv_bacb5ce4-3f20-41e8-ae29-45f23a26cf32)
+
+<img src="D07A24D1-DC89-4F2B-9F2B-AF9FBD94BEB5.jpeg" width="300">
+
 
 
