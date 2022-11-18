@@ -44,9 +44,13 @@ Model creation, database creation and manipulation, CRUD operations, one-to-one/
 ## Screenshots
 
 
+Login and Sign up pages:
+
+<img src="main_app/static/css/images/readme/11.jpeg" width="400"> <img src="main_app/static/css/images/readme/11.jpeg" width="400">
+
 Take a look at the review form:
 
-<img src="main_app/static/css/images/readme/10.jpeg" width="600"> 
+<img src="main_app/static/css/images/readme/10.jpeg" width="800"> 
 
 
 
