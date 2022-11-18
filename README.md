@@ -1,5 +1,5 @@
 <p align="center">
-<img src="main_app/static/css/images/logo.png" width="250">         
+<img src="main_app/static/css/images/logo.png" width="350">         
 </p>
 
 # Bean There
