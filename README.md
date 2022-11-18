@@ -43,14 +43,21 @@ Model creation, database creation and manipulation, CRUD operations, one-to-one/
 
 ## Screenshots
 
+Welcome to Bean There!:
+
+<img src="main_app/static/css/images/readme/13.jpeg" width="1000">
 
 Login and Sign up pages:
 
-<img src="main_app/static/css/images/readme/11.jpeg" width="400"> <img src="main_app/static/css/images/readme/11.jpeg" width="400">
+<img src="main_app/static/css/images/readme/12.jpeg" width="500"> <img src="main_app/static/css/images/readme/11.jpeg" width="500">
 
-Take a look at the review form:
+Profile Page with User's Recent Reviews and Favourite Cafes:
 
-<img src="main_app/static/css/images/readme/10.jpeg" width="800"> 
+<img src="main_app/static/css/images/readme/4.jpeg" width="1000">
+
+Create a Review or Delete a Review:
+
+<img src="main_app/static/css/images/readme/10.jpeg" width="5000">  <img src="main_app/static/css/images/readme/5.jpeg" width="800">
 
 
 
