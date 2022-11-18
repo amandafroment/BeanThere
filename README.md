@@ -22,7 +22,7 @@ After signing up and logging in, you are able to find cafes in your area by usin
 - [@raeganmb](https://github.com/raeganmb)
 - [@rasl76](https://github.com/rasl76)
 
-UXDI: Bijou Siu, Jessica Lee
+UXDI Team: Bijou Siu, Jessica Lee
 
 
 
@@ -38,12 +38,15 @@ UXDI: Bijou Siu, Jessica Lee
 
 ## Skills Used
 
-Model creation, database creation and manipulation, CRUD operations, one-to-one/one-to-many/many-to-many, making and running migrations, object-relational-mapper, use of database API, Django built-in administrator, Django authentication, Django Template Language, url patterns, form creation, 
+Model creation, database creation and manipulation, CRUD operations, one-to-one/one-to-many/many-to-many, making and running migrations, object-relational-mapper, use of database API, Django built-in administrator, Django authentication, Django Template Language, url patterns, form creation, error message returns, Heroku deployment, mobile-first design, media queries, overlay, -webkit- and -moz-, 
 
 
 ## Screenshots
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+
+
+Take a look at the review form:
+<img src="BeanThere/main_app/static/css/images/readme/1.jpeg" width="200"> 
 
 
 
