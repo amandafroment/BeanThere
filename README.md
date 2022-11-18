@@ -46,7 +46,7 @@ Model creation, database creation and manipulation, CRUD operations, one-to-one/
 
 
 Take a look at the review form:
-<img src="main_app/static/css/images/readme/1.jpeg" width="200"> 
+<img src="main_app/static/css/images/readme/10.jpeg" width="200"> 
 
 
 
